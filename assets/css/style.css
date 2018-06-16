@@ -1,0 +1,142 @@
+body,
+html {
+	height: 100%;
+	margin: 0;
+}
+
+body {
+	background-image: url();
+	background-size: cover;
+	background-repeat: none;
+
+} 
+
+/*header tags*/
+h2 {
+	text-align: center;
+	font-size: 50px;
+	margin: 40px;
+	color: #292929;
+	font-family: 'Righteous', cursive;
+}
+
+h3 {
+	text-align: center;
+	font-size: 50px;
+	margin: 40px;
+	color: #19c7cd;
+	font-family: 'Righteous', cursive;
+}
+
+h4 {
+	text-align: center;
+	font-size: 50px;
+	margin: 40px;
+	color: #292929;
+	font-family: 'Righteous', cursive;
+}
+
+/*navigation menu*/
+.navbar {
+	position: absolute;
+	width: 80%!important;
+	margin: 35px 10%!important;
+	padding: 0!important;
+	height: 60px!important;
+	background-color: rgba(255,255,255,0.7)!important;
+}
+
+.nav {
+	height: 100%!important
+}
+
+.nav-link {
+	width: 350px!important;
+	text-align: center!important;
+	margin: 0!important;
+	height: 100%!important;
+	border-radius: 0!important;
+}
+
+.nav-item .active {
+	background-color: #19c7cd!important;
+}
+
+.nav-link:hover {
+	background-color: #4aaaa5;
+	color: #fff;
+}
+
+/*introduction*/
+.welcome {
+	margin: auto;
+	width: 800px;
+	height: 380px;
+	background-color: rgba(255,255,255,0.6);
+	margin-top: 160px;
+	padding: 30px;
+	border: solid 2px #fff;
+}
+
+.jumbotron {
+	height: 700px!important;
+	background-image: url("../images/ggbridge.jpg")!important;
+	background-size: cover!important;
+	background-position: center!important;
+	background-attachment: fixed!important;
+	background-repeat: no-repeat!important;
+}
+
+/*slideshow*/
+#clientshowcase {
+	background-color: #292929;
+	padding: 20px;
+}
+
+#stepstext {
+	color: #fff;
+}
+
+img {
+	width: 150px!important;
+}
+
+.row {
+	margin: auto!important;
+}
+
+.d-block {
+	width: 350px!important;
+}
+
+.picture {
+	width: 200px!important;
+	margin-left: 40px!important;
+}
+
+.picturemiddle {
+	width: 200px!important;
+}
+
+/*the team*/
+.card-img-top {
+	width: 318px!important;
+}
+
+/*footer*/
+#contact, 
+#work {
+	height: 350px;
+	width: 50%;
+	padding: 0px 50px;
+}
+
+#contact {
+	float: left;
+	background-color: #292929;
+}
+
+#work {
+	float: right;
+	background-color: #4aaaa5;
+}
