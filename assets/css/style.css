@@ -1,137 +1,145 @@
-body,
-html {
-	height: 100%;
-	margin: 0;
+html,
+body {
+    height: 100%!important;
+    margin: 0;
 }
 
-body {
-	background-image: url();
-	background-size: cover;
-	background-repeat: none;
-
-} 
-
 /*header tags*/
+
 h2 {
-	text-align: center;
-	font-size: 50px;
-	margin: 40px;
-	color: #292929;
-	font-family: 'Righteous', cursive;
+    text-align: center;
+    font-size: 50px;
+    margin: 40px;
+    color: #292929;
+    font-family: 'Righteous', cursive;
 }
 
 h3 {
-	text-align: center;
-	font-size: 50px;
-	padding: 10px;
-	color: #19c7cd;
-	font-family: 'Righteous', cursive;
+    text-align: center;
+    font-size: 50px;
+    padding: 10px;
+    color: #19c7cd;
+    font-family: 'Righteous', cursive;
 }
 
 h4 {
-	text-align: center;
-	font-size: 50px;
-	margin: 40px;
-	color: #292929;
-	font-family: 'Righteous', cursive;
+    text-align: center;
+    font-size: 50px;
+    margin: 40px;
+    color: #292929;
+    font-family: 'Righteous', cursive;
 }
+
 
 /*navigation menu*/
-.navbar {
-	position: absolute;
-	width: 80%!important;
-	margin: 35px 10%!important;
-	padding: 0!important;
-	height: 60px!important;
-	background-color: rgba(255,255,255,0.7)!important;
+#wrapper {
+	float: right;
+	margin: 20px 40px;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
-.nav {
-	height: 100%!important
-}
-
-.nav-link {
-	width: 350px!important;
-	text-align: center!important;
-	margin: 0!important;
-	height: 100%!important;
-	border-radius: 0!important;
-}
-
-.nav-item .active {
-	background-color: #19c7cd!important;
-}
-
-.nav-link:hover {
-	background-color: #4aaaa5;
+li {
+	display: inline;
+	float: left; 
+	padding: 0px 20px;
 	color: #fff;
+	font-size: 20px;
+	font-family: 
 }
-
 /*introduction*/
+
 .welcome {
-	margin: auto;
-	width: 800px;
-	height: 380px;
-	background-color: rgba(255,255,255,0.6	);
-	margin-top: 160px;
-	padding: 30px;
-	border: solid 2px #fff;
+    margin: auto;
+    width: 800px;
+    height: 380px;
+    background-color: rgba(255, 255, 255, 0.6);
+    margin-top: 20px;
+    padding: 30px;
+    border: solid 2px #fff;
 }
 
-.jumbotron {
-	height: 700px!important;
-	background-image: url("../images/ggbridge.jpg")!important;
-	background-size: cover!important;
-	background-position: center!important;
-	background-attachment: fixed!important;
-	background-repeat: no-repeat!important;
+#intro {
+	height: 100%;
 }
+
+.hello {
+    height: 100%;
+    background-image: url("../images/ggbridge.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    border-radius: 0;
+}
+
+
+
 
 /*slideshow*/
+
 #clientshowcase {
-	background-color: #292929;
-	padding: 20px;
+    background-color: #292929;
+    padding: 20px;
 }
 
 #stepstext {
-	color: #fff;
+    color: #fff;
 }
 
 img {
-	width: 150px!important;
+    width: 150px!important;
 }
 
 .row {
-	margin: auto!important;
+    margin: auto!important;
 }
 
 .d-block {
-	width: 350px!important;
+    width: 350px!important;
 }
 
 .picture {
-	width: 200px!important;
-	margin-left: 40px!important;
+    width: 200px!important;
+    margin-left: 40px!important;
 }
 
 .picturemiddle {
-	width: 200px!important;
+    width: 200px!important;
 }
+
 
 /*the team*/
-.card-img-top {
-	width: 318px!important;
+
+.profileimg {
+    width: 240px!important;
+    border-radius: 10px!important;
 }
 
+h5 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.row {
+    padding-bottom: 40px!important;
+}
+
+
 /*footer*/
+
 .footer {
-	height: 300px;
-	width: 100%;
-	padding: 0px 30px;
-	background-color: #292929;
+    height: 300px;
+    width: 100%;
+    padding: 0px 30px;
+    background-color: #292929;
 }
 
 #contact {
-	width: 50%;
-	float: right;
+    width: 50%;
+    float: right;
 }

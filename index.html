@@ -9,41 +9,27 @@
     <!-- External CSS -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <!-- Riteous Font -->
-    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Righteous|Source+Sans+Pro" rel="stylesheet">
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-dark bg-dark">
-            <ul class="nav nav-pills card-header-pills mx-auto">
-                <li class="nav-item">
-                    <a class="nav-link active" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Form</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+    <div id="wrapper">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </div>
     <!-- welcome section -->
-    <section>
-        <div class="jumbotron">
-            <div class="welcome">
-                <h1 class="display-3">Hello, world!</h1>
-                <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-                <hr class="my-4">
-                <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-                <p class="lead">
-                    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-                </p>
+    <section id="intro"> 
+        <div class="hello">
+            <div class="hi">
+                Hello
             </div>
         </div>
     </section>
     <!-- client showcase slideshow -->
-    <section>
+    <section id="clients">
         <h2>See Our Past Clients</h2>
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="3000">
             <ol class="carousel-indicators">
@@ -102,11 +88,10 @@
             </a>
         </div>
     </section>
-
-<!-- our process -->
+    <!-- our process -->
     <section id="clientshowcase">
         <div class="container">
-            <h3>Easy as 1, 2, 3....</h3>
+            <h3>Follow Our Easy 3 Step Process</h3>
             <div class="row">
                 <div class="col-lg-4">
                     <img src="assets/svg/step2.svg" class="picture">
@@ -120,7 +105,7 @@
             <div class="row">
                 <div class="col-sm-8">
                     <p id="stepstext">
-                    Create a new html file called add.html //make a function called "adder" that take three arguments (x, y, z). // The function should add the arguments together, and log the result to the console. //check if your function works by trying the following lines: /*</p>
+                        Create a new html file called add.html //make a function called "adder" that take three arguments (x, y, z). // The function should add the arguments together, and log the result to the console. //check if your function works by trying the following lines: /*</p>
                 </div>
                 <div class="col-sm-4">
                     <img src="assets/svg/step2.svg" class="picturemiddle">
@@ -132,38 +117,40 @@
                 </div>
                 <div class="col-sm-8">
                     <p id="stepstext">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 </div>
             </div>
         </div>
     </section>
-    <section>
+    <section id="team">
         <h2>Meet The Team</h2>
-        <div class="container mb-5">
+        <div class="container">
             <div class="row">
-                <div class="col-lg-6 col-sm-12">
-                    <div class="card mx-auto" style="width: 20rem;">
-                        <img class="card-img-top" src="assets/images/Christina_pic.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h4 class="card-title mt-0">Card title</h4>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-lg">
+                            <img src="assets/images/Christina_pic.jpg" class="profileimg">
+                        </div>
+                        <div class="col-lg p-0">
+                            <h5>Christina Sayegh</h5>
+                            <p class="aboutinfo">Graphic Designer/Illustrator</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 col-sm-12">
-                    <div class="card mx-auto" style="width: 20rem;">
-                        <img class="card-img-top" src="assets/images/Kevin_pic.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h4 class="card-title mt-0">Card title</h4>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-lg">
+                            <img src="assets/images/Kevin_pic.jpg" class="profileimg">
+                        </div>
+                        <div class="col-lg p-0">
+                            <h5>Kevin Yeh</h5>
+                            <p class="aboutinfo">Graphic Designer/Web Developer</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
     <footer class="footer">
         <div id="contact">
             <h3>Send Us An Email</h3>
@@ -171,7 +158,7 @@
                 <div class="form-group">
                     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
                     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                     <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Your Message" rows="3"></textarea>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Your Message" rows="3"></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
