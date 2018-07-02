@@ -2,91 +2,143 @@ html,
 body {
     height: 100%!important;
     margin: 0;
+    padding: 0;
 }
 
-/*header tags*/
+/*navigation menu*/
+nav {
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+}
+	
+nav ul {
+    margin: 40px 50px;
+    display: flex;
+    float: right;
+    transition: .3s;
+    height: 60px;
+    padding: 16px;
+}
 
+nav ul:hover {
+	background-color: #fed402;
+	border-radius: 5px;
+}
+
+nav ul:hover > li a {
+    color: #292929;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 0px 10px;
+    text-align: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    transition: .3s;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif; 
+
+}
+
+nav ul li a.tgjactive {
+    color: #19c7cd;
+}
+
+nav ul.color {
+    background-color: #fed402;
+    border-radius: 5px;
+}
+
+nav ul.color li a {
+    color: #292929;
+}
+
+nav ul.color li a:hover {
+    color: #fff;
+}
+
+nav ul.color li a.tgjactive {
+    color: #19c7cd;
+}
+
+/*introduction*/
+#sec1 {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    background-image: url("../images/ggbridge.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    border-radius: 0;
+    color: #fff;
+    z-index: -1;
+}
+
+/*client slideshow*/
 h2 {
     text-align: center;
     font-size: 50px;
-    margin: 40px;
+    /*margin: 40px;*/
     color: #292929;
-    font-family: 'Righteous', cursive;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
+#sec2 {
+	background: linear-gradient(transparent, rgba(255, 255, 255, 0.8), #fff);
+	padding: 400px 0 0;
+}
+
+p.clients,
+p.comment {
+	color: #000;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+	width: 40px!important;
+	height: 40px!important;
+}
+
+.carousel-control-prev-icon {
+	background-image: url('../images/prev_arrow.svg')!important;
+}
+
+.carousel-control-next-icon {
+	background-image: url('../images/next_arrow.svg')!important;
+}
+
+.carousel-indicators .active {
+	background-color: #000!important;
+}
+
+.carousel-indicators li {
+	background-color: rgba(0,0,0,0.5)!important;
+}
+
+/*3 step process*/
 h3 {
     text-align: center;
     font-size: 50px;
     padding: 10px;
     color: #19c7cd;
-    font-family: 'Righteous', cursive;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
-h4 {
-    text-align: center;
-    font-size: 50px;
-    margin: 40px;
-    color: #292929;
-    font-family: 'Righteous', cursive;
-}
-
-
-/*navigation menu*/
-#wrapper {
-	float: right;
-	margin: 20px 40px;
-}
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-li {
-	display: inline;
-	float: left; 
-	padding: 0px 20px;
-	color: #fff;
-	font-size: 20px;
-	font-family: 
-}
-/*introduction*/
-
-.welcome {
-    margin: auto;
-    width: 800px;
-    height: 380px;
-    background-color: rgba(255, 255, 255, 0.6);
-    margin-top: 20px;
-    padding: 30px;
-    border: solid 2px #fff;
-}
-
-#intro {
-	height: 100%;
-}
-
-.hello {
-    height: 100%;
-    background-image: url("../images/ggbridge.jpg");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    border-radius: 0;
-}
-
-
-
-
-/*slideshow*/
-
-#clientshowcase {
+#sec3 {
     background-color: #292929;
     padding: 20px;
 }
 
-#stepstext {
+p.stepstext {
     color: #fff;
 }
 
@@ -111,23 +163,34 @@ img {
     width: 200px!important;
 }
 
-
 /*the team*/
+#sec4 {
+	height: 70%;
+	background-color: #fff;
+	padding: 50px 0;
+}
 
 .profileimg {
     width: 240px!important;
     border-radius: 10px!important;
 }
 
-h5 {
+h4 {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 30px;
     font-weight: bold;
+    color: #000;
+}
+
+p.aboutinfo {
+	color: #000;
 }
 
 .row {
     padding-bottom: 40px!important;
 }
+
+
 
 
 /*footer*/
