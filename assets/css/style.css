@@ -14,30 +14,30 @@ body {
 }
 
 /*start design button*/
-	button {
+	.startbutton {
 			display: block;
 			border-radius: 3px;
 			background-color: #FF8E3A;
 			border: none;
 			color: #fff;
-			font-size: 18px;
+			font-size: 22px;
 			padding: 3px;
-			width: 140px;
-			height: 40px;
+			width: 150px;
+			height: 50px;
 			transition: all 0.5s;
 			cursor: pointer;
 			margin: auto;
 			font-family: 'Source Sans Pro', sans-serif;
 		}
 
-	button span {
+	.startbutton span {
 			cursor: pointer;
 			display: inline-block;
 			position: relative;
 			transition: 0.5s;
 		}
 
-	button span:after {
+	.startbutton span:after {
 			content: '\00bb';
 			position: absolute;
 			opacity: 0;
@@ -46,11 +46,11 @@ body {
 			transition: 0.5s;
 		}
 
-	button:hover span {
+	.startbutton:hover span {
 			padding-right: 15px;
 		}
 
-	button:hover span:after {
+	.startbutton:hover span:after {
 			opacity: 1;
 			right: 0;
 		}
@@ -65,21 +65,21 @@ body {
 	}
 
 	header #logo {
-	    margin: 5px 0px 0px 30%;
+	    margin: 3px 0px 0px 30%;
 	    height: 70px;
 	}
 
 	#headerBut {
 		margin: auto;
 		display: block;	
-		padding: 20px 0 0;
+		padding: 12px 0 0;
 	}
 
 	nav ul {
 	    display: flex;
 	    float: right;
 	    transition: .3s;
-	    padding: 26px 60px 0;
+	    padding: 28px 60px 0;
 	}
 
 	nav ul li {
@@ -93,7 +93,7 @@ body {
 	    text-transform: uppercase;
 	    color: #fff;
 	    transition: .3s;
-	    font-size: 14px;
+	    font-size: 18px;
 	    font-family: 'Montserrat', sans-serif;
 	}
 
@@ -141,7 +141,7 @@ body {
 	    text-align: center;
 	}
 
-/*Our Service*/
+/*our service*/
 	h5 {
 		color: #000;
 		text-align: center;
@@ -163,6 +163,7 @@ body {
 		display: block;
 
 	}
+
 /*3 step process*/
 	h3 {
 	    text-align: center;
@@ -174,29 +175,30 @@ body {
 
 	#sec3 {
 	    background-color: #eaeaea;
-	    padding: 20px;
-	    /*clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0 100%);*/
 	}
 
-	p.stepstext {
-	    color: #000;
+	iframe {
+		margin: 60px;
+		width: 700px;
+		height: 400px;
 	}
 
-	.row {
-	    margin: auto!important;
+	#steptext {
+		margin: 140px 0 0;
+		height: 200px;
 	}
 
-	.d-block {
-	    width: 350px!important;
+	#sec3 .row #steptext p {
+		color: #000;
 	}
 
-	.picture {
-	    width: 200px!important;
-	    margin-left: 40px!important;
+	#stepone, #steptwo, #stepthree {
+		visibility: hidden;
+		position: absolute;
 	}
 
-	.picturemiddle {
-	    width: 200px!important;
+	.active {
+		visibility: visible!important;
 	}
 
 /*FAQ*/
@@ -226,6 +228,7 @@ body {
 
 	img.d-block {
 		width: 200px!important; 
+		margin: 30px 60px 0!important;
 	}
 
 	p.clients,
