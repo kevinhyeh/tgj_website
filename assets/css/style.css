@@ -79,7 +79,7 @@ body {
 	    display: flex;
 	    float: right;
 	    transition: .3s;
-	    padding: 28px 60px 0;
+	    padding: 28px 25% 0 0;
 	}
 
 	nav ul li {
@@ -260,6 +260,34 @@ body {
 
 	.carousel-item {
 	    transition: 1s!important;
+	}
+
+/*form*/
+	#form {
+		height: 100%;
+	}
+
+	/*start button*/
+	#designstartbutton {
+		padding: 200px 0 0;
+	}
+
+	#form .container #designstartbutton button {
+		margin: auto;
+		display: block;
+	}
+
+	/*choose project*/
+	#designstartbutton, #chooseproject {
+		visibility: hidden;
+	}
+
+	#chooseproject img {
+		width: 150px;
+	}
+
+	#chooseproject .card-body button {
+		margin-left: 20px;
 	}
 
 /*footer*/

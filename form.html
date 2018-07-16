@@ -1,19 +1,124 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title></title>
+    <title>The Graphic Jar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- External CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!-- Riteous Font -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Source+Sans+Pro" rel="stylesheet">
 </head>
+
 <body>
-<form action="assets/php/contactform.php" method="post">
-	<div>Name</div>
-	<input type="text" class="name">
-	<div>Email</div>
-	<input type="text" class="email">
-	<div>Subject</div>
-	<input type="text" class="subject">
-	<div>Message</div>
-	<textarea class="message"></textarea>
-	<button class="submit">Submit</button>
-</form>
+    <!-- navigation bar -->
+    <header>
+        <div class="row">
+            <div class="col-lg-4">
+                <img id="logo" src="assets/svg/tgjlogoheader(white)2.svg">
+            </div>
+            <div class="col-lg-4">
+                <div id="headerBut">
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a class="tgjactive" href="form.html">Form</a></li>
+                        <li><a href="#">Showcase</a></li>
+                        <div></div>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- tgj design form -->
+    <section id="form">
+        <div class="container">
+            <div id="designstartbutton" class="active">
+                <h3>Intro Text</h3>
+                <button id="startdesign">Start</button>
+            </div>
+            <div id="chooseproject">
+                <div class="accordion" id="accordionExample">
+                    <div class="card">
+                        <h5 class="mb-0">
+        <button class="btn btn-link card-header collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" id="headingOne">Logo</button></h5>
+                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-lg-7">
+                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <img src="assets/svg/trial.svg">
+                                        <button>Choose Project</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h5 class="mb-0">
+        <button class="btn btn-link card-header collapsed" id="headingTwo" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Illustration</button></h5>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-lg-7">
+                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <img src="assets/svg/trial.svg">
+                                        <button>Choose Project</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h5 class="mb-0">
+        <button class="btn btn-link card-header collapsed" id="headingThree" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Website Design</button></h5>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-lg-7">
+                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <img src="assets/svg/trial.svg">
+                                        <button>Choose Project</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- footer -->
+    <footer class="footer">
+        <div id="contact">
+            <h3>Send Us An Email</h3>
+            <form>
+                <div class="form-group">
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Your Message" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </footer>
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/javascript.js"></script>
 </body>
+
 </html>

@@ -8,6 +8,7 @@ button.addClass('startbutton');
 
 $('#sec1But').html(newBut);
 
+// header scroll function
 $(document).on('scroll', function() {
     newBut = $('<a>').attr('href', 'form.html');
     button = $('<button>');
@@ -28,21 +29,31 @@ $(document).on('scroll', function() {
     }
 });
 
-$(document).on('click', '.top', function() {
-    $('html, body').animate({ scrollTop: 0 }, 1000);
-});
+// auto scroll function
+	// $(document).on('click', '.top', function() {
+	//     $('html, body').animate({ scrollTop: 0 }, 1000);
+	// });
 
-$(document).on('click', '#steponebutton', function() {
-	$('#steptext > p').removeClass('active');
-	$('#stepone').addClass('active');
-});
+// homepage step one function
+	$(document).on('click', '#steponebutton', function() {
+		$('#steptext > p').removeClass('active');
+		$('#stepone').addClass('active');
+	});
 
-$(document).on('click', '#steptwobutton', function() {
-	$('#steptext > p').removeClass('active');
-	$('#steptwo').addClass('active');
-})
+// homepage step two function
+	$(document).on('click', '#steptwobutton', function() {
+		$('#steptext > p').removeClass('active');
+		$('#steptwo').addClass('active');
+	});
 
-$(document).on('click', '#stepthreebutton', function() {
-	$('#steptext > p').removeClass('active');
-	$('#stepthree').addClass('active');
-})
+// homepage step three function
+	$(document).on('click', '#stepthreebutton', function() {
+		$('#steptext > p').removeClass('active');
+		$('#stepthree').addClass('active');
+	});
+
+// form page start button
+	$(document).on('click', '#startdesign', function() {
+		$('#designstartbutton').removeClass('active');
+		$('#chooseproject').addClass('active');
+	});
