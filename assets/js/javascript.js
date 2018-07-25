@@ -4,7 +4,7 @@ var span = $('<span>').html('Start Design');
 newBut.html(button);
 button.html(span);
 button.addClass('startbutton');
-
+ 
 
 $('#sec1But').html(newBut);
 
@@ -29,31 +29,41 @@ $(document).on('scroll', function() {
     }
 });
 
-// auto scroll function
-	// $(document).on('click', '.top', function() {
-	//     $('html, body').animate({ scrollTop: 0 }, 1000);
-	// });
+$('#steponebutton').on('click', function() {
+    $('.process').removeClass('processactive');
+    $(this).addClass('processactive');
+    $('#steptwoprocess, #stepthreeprocess').addClass('active');
+    $('#steponeprocess').removeClass('active');
+});
 
-// homepage step one function
-	$(document).on('click', '#steponebutton', function() {
-		$('#steptext > p').removeClass('active');
-		$('#stepone').addClass('active');
-	});
+$('#steptwobutton').on('click', function() {
+    $('.process').removeClass('processactive');
+    $(this).addClass('processactive');
+    $('#steponeprocess, #stepthreeprocess').addClass('active');
+    $('#steptwoprocess').removeClass('active');
+});
 
-// homepage step two function
-	$(document).on('click', '#steptwobutton', function() {
-		$('#steptext > p').removeClass('active');
-		$('#steptwo').addClass('active');
-	});
+$('#stepthreebutton').on('click', function() {
+    $('.process').removeClass('processactive');
+    $(this).addClass('processactive');
+    $('#steponeprocess, #steptwoprocess').addClass('active');
+    $('#stepthreeprocess').removeClass('active');
+});
 
-// homepage step three function
-	$(document).on('click', '#stepthreebutton', function() {
-		$('#steptext > p').removeClass('active');
-		$('#stepthree').addClass('active');
-	});
-
+$('#chooseproject').hide();
 // form page start button
-	$(document).on('click', '#startdesign', function() {
-		$('#designstartbutton').removeClass('active');
-		$('#chooseproject').addClass('active');
-	});
+$(document).on('click', '#startdesign', function() {
+    $('#designstartbutton').hide();
+    $('#chooseproject').show();
+});
+
+
+
+
+
+
+
+// auto scroll function
+// $(document).on('click', '.top', function() {
+//     $('html, body').animate({ scrollTop: 0 }, 1000);
+// });

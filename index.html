@@ -17,7 +17,7 @@
     <header>
         <div class="row">
             <div class="col-lg-4">
-                <img id="logo" src="assets/svg/tgjlogoheader(white)2.svg">
+                <a href="index.html"><img id="logo" src="assets/svg/tgjlogoheader(white)2.svg"></a>
             </div>
             <div class="col-lg-4">
                 <div id="headerBut">
@@ -28,7 +28,7 @@
                     <ul>
                         <li><a class="tgjactive" href="index.html">Home</a></li>
                         <li><a href="form.html">Form</a></li>
-                        <li><a href="#">Showcase</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                         <div></div>
                     </ul>
                 </nav>
@@ -37,29 +37,36 @@
     </header>
     <!-- welcome section -->
     <section id="sec1">
-        <h1>Create designs easy<br> and effortlessly.</h1>
-        <p>The Graphic Jar is here to help create your one of kind design project.</p>
-        <p>We spent many hours creating a system that ensures the visions that you have </p>
-        <div id="sec1But">
+        <div class="row">
+            <div class="col-lg-7">
+                <h1>Create designs easy<br> and effortlessly.</h1>
+                <p>The Graphic Jar is here to help create your one of kind design project.</p>
+                <p>We spent many hours creating a system that ensures the visions that you have </p>
+                <div id="sec1But">
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <img src="assets/svg/sec1_picture.svg">
+            </div>
         </div>
     </section>
-    <!-- what makes us -->
-    <section id="sec5">
+    <!-- why we are different -->
+    <section id="sec2">
         <div class="container">
-            <h5>Why Are We Different?</h5>
+            <h2>Why Are We Different?</h2>
             <div class="row">
                 <div class="col-lg-4">
-                    <h5>Illustration/Fresh Designs</h5>
+                    <h3>Fresh Designs</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     <img src="assets/svg/up_arrow.svg">
                 </div>
                 <div class="col-lg-4">
-                    <h5>Branding/Premium And Efficient</h5>
+                    <h3>Premium And Efficient</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     <img src="assets/svg/up_arrow.svg">
                 </div>
                 <div class="col-lg-4">
-                    <h5>Web Design/Around The Clock Care</h5>
+                    <h3>Around The Clock Care</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     <img src="assets/svg/up_arrow.svg">
                 </div>
@@ -68,37 +75,38 @@
     </section>
     <!-- 3 step process -->
     <section id="sec3">
-        <h3>Follow Our Easy 3 Step Process</h3>
-        <div class="row">
-            <div class="col-lg-7">
-                <iframe src=""></iframe>
-            </div>
-            <div class="col-lg-4">
-                <div class="row">
-                    <div id="steptext">
-                        <p id="stepone" class="active">
-                            Choose a project. Start by choosing the type of design you would like. We offer many options to choose from. We specialize in branding.
-                        </p>
-                        <p id="steptwo">
-                            Fill out our simple straight forward survey that will help us create your one of a kind design.
-                        </p>
-                        <p id="stepthree">
-                            Click send and we'll get back to you withing 24hours</p>
-                    </div>
+        <h2>Follow Our Easy 3 Step Process</h2>
+        <div class="container" id="threestepprocess">
+            <div class="row">
+                <div class="col-lg-4">
+                    <button id="steponebutton" class="process processactive">1. Choose Your Project</button>
                 </div>
-                <div class="row">
-                    <div id="stepbutton">
-                        <button id="steponebutton">Step 1</button>
-                        <button id="steptwobutton">Step 2</button>
-                        <button id="stepthreebutton">Step 3</button>
-                    </div>
+                <div class="col-lg-4">
+                    <button id="steptwobutton" class="process">2. Fill Out Our Design Survey</button>
+                </div>
+                <div class="col-lg-4">
+                    <button id="stepthreebutton" class="process">3. Submit And Wait</button>
+                </div>
+            </div>
+            <div class="row" id="fullprocess">
+                <div class="col-lg-7">
+                    Picture
+                </div>
+                <div class="col-lg-4">
+                    <p id="steponeprocess">
+                        First things first, we need to know what kind of design project you want.
+                    </p>
+                    <p id="steptwoprocess" class="active">
+                        Next, we have a straightforward design survey that will help us determine the vision of your project.
+                    </p>
+                    <p id="stepthreeprocess" class="active">
+                        And that's it! Press submit and just wait. We will contact you within the next 24 hours to setup a free consultation.
+                    </p>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- FAQ -->
-    <section id="sec4">
-        <div class="container">
+        <!-- FAQ -->
+        <div id="faq" class="container">
             <div class="accordion" id="accordionExample">
                 <div class="card">
                     <h5 class="mb-0">
@@ -138,10 +146,12 @@
                 </div>
             </div>
         </div>
+        <div id="empty">
+        </div>
     </section>
     <!-- client showcase slideshow -->
-    <section id="sec2">
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="4000">
+    <section id="sec5">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="false">
             <ol class="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -151,27 +161,12 @@
                 <div class="carousel-item active mb-5">
                     <div class="container">
                         <div class="row">
-                            <div class="col-lg-4 mx-auto">
-                                <img class="d-block w-100" src="assets/svg/carousel1.svg" alt="First slide">
-                            </div>
                             <div class="col-lg-7 my-auto ml-0">
                                 <p class="clients">Create a new html file called add.html //make a function called "adder" that take three arguments (x, y, z). // The function should add the arguments together, and log the result to the console. //check if your function works by trying the following lines: /* add(1,2,3); add(3,2,1); add(4,4,4); add(5,6,7); */</p>
                                 <p class="comment">result to the console. //check if your function works by trying the following lines: /* add(1,2,3); add(3,2,1); add(4,4,4); add(5,6,7); </p>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item mb-5">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-4 mx-auto">
+                            <div class="col-lg-4">
                                 <img class="d-block w-100" src="assets/svg/carousel1.svg" alt="First slide">
-                            </div>
-                            <div class="col-lg-7 my-auto ml-0">
-                                <p class="clients">
-                                    Create a new html file called add.html //make a function called "adder" that take three arguments (x, y, z). // The function should add the arguments together, and log the result to the console. //check if your function works by trying the following lines: /* add(1,2,3); add(3,2,1); add(4,4,4); add(5,6,7); */
-                                </p>
-                                <p class="comment">result to the console. //check if your function works by trying the following lines: /* add(1,2,3); add(3,2,1); add(4,4,4); add(5,6,7); </p>
                             </div>
                         </div>
                     </div>
@@ -179,14 +174,25 @@
                 <div class="carousel-item mb-5">
                     <div class="container">
                         <div class="row">
-                            <div class="col-lg-4 mx-auto">
+                            <div class="col-lg-7 my-auto ml-0">
+                                <p class="clients">Create a new html file called add.html //make a function called "adder" that take three arguments (x, y, z). // The function should add the arguments together, and log the result to the console. //check if your function works by trying the following lines: /* add(1,2,3); add(3,2,1); add(4,4,4); add(5,6,7); */</p>
+                                <p class="comment">result to the console. //check if your function works by trying the following lines: /* add(1,2,3); add(3,2,1); add(4,4,4); add(5,6,7); </p>
+                            </div>
+                            <div class="col-lg-4">
                                 <img class="d-block w-100" src="assets/svg/carousel1.svg" alt="First slide">
                             </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item mb-5">
+                    <div class="container">
+                        <div class="row">
                             <div class="col-lg-7 my-auto ml-0">
-                                <p class="clients">
-                                    Create a new html file called add.html //make a function called "adder" that take three arguments (x, y, z). // The function should add the arguments together, and log the result to the console. //check if your function works by trying the following lines: /* add(1,2,3); add(3,2,1); add(4,4,4); add(5,6,7); */
-                                </p>
+                                <p class="clients">Create a new html file called add.html //make a function called "adder" that take three arguments (x, y, z). // The function should add the arguments together, and log the result to the console. //check if your function works by trying the following lines: /* add(1,2,3); add(3,2,1); add(4,4,4); add(5,6,7); */</p>
                                 <p class="comment">result to the console. //check if your function works by trying the following lines: /* add(1,2,3); add(3,2,1); add(4,4,4); add(5,6,7); </p>
+                            </div>
+                            <div class="col-lg-4">
+                                <img class="d-block w-100" src="assets/svg/carousel1.svg" alt="First slide">
                             </div>
                         </div>
                     </div>
@@ -203,17 +209,6 @@
         </div>
     </section>
     <footer class="footer">
-        <div id="contact">
-            <h3>Send Us An Email</h3>
-            <form>
-                <div class="form-group">
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Your Message" rows="3"></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-        </div>
     </footer>
     <!-- Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

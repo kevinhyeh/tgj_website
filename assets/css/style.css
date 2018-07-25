@@ -1,4 +1,4 @@
-html,
+html, 
 body {
     height: 100%!important;
     margin: 0;
@@ -6,11 +6,11 @@ body {
 }
 
 body {
-    background-image: url('../images/ggbridge.jpg');
-    /*background-size: cover;*/
-    border-radius: 0;
-    color: #fff;
-    z-index: -1;
+    /*background-image: url('../images/ggbridge.jpg');*/
+    }
+
+h2, h3 {
+	text-align: center;
 }
 
 /*start design button*/
@@ -24,7 +24,7 @@ body {
 			padding: 3px;
 			width: 150px;
 			height: 50px;
-			transition: all 0.5s;
+			transition: all .5s;
 			cursor: pointer;
 			margin: auto;
 			font-family: 'Source Sans Pro', sans-serif;
@@ -73,6 +73,7 @@ body {
 		margin: auto;
 		display: block;	
 		padding: 12px 0 0;
+		transition: all .5s ease;
 	}
 
 	nav ul {
@@ -98,12 +99,12 @@ body {
 	}
 
 	nav ul li a:hover {
-		color: #19c7cd;
+		color: #000;
 		text-decoration: none;
 	}
 
 	nav ul li a.tgjactive {
-	    color: #19c7cd;
+	    color: #000;
 	}
 
 	.color {
@@ -123,41 +124,59 @@ body {
 	    color: #19c7cd;
 	}
 
-/*introduction*/
+/*welcome section*/
 	#sec1 {
 	    height: 90vh;
+	    background-color: #64D1FF;
+	}
+
+	#sec1 .row {
+		padding: 90px 0 0;
+		width: 100%!important;
 	}
 
 	#sec1 h1 {
-		/*height: 90%;*/
-	    text-align: center;
+		text-align: center;
 	    font-size: 60px;
 	    color: #fff;
 	    font-family: 'Montserrat', sans-serif;
-	    padding: 15% 0 0;
+	    padding: 14% 0 0;
 	}
 
 	#sec1 p {
-	    text-align: center;
-	}
-
-/*our service*/
-	h5 {
-		color: #000;
 		text-align: center;
+	    color: #fff;
 	}
 
-	#sec5 {
+	#sec1 .col-lg-5 {
+		padding: 0!important;
+	}
+
+	#sec1 img {
+		width: 550px;
+		padding: 15% 0 0;
+	}
+
+/*why we are different*/
+	#sec2 {
 		background-color: #fff;
-		padding: 60px;
+		padding: 40px;
 	}
 
-	#sec5 .container .row p {
+	#sec2 h2 {
+		font-size: 30px;
+	}
+
+	#sec2 h3 {
+		font-size: 22px;
+	}
+
+	#sec2 p {
 		color: #000;
 		text-align: center;
 	}
 
-	#sec5 .container .row img {
+	#sec2 .container .row img {
 		width: 50px;
 		margin: 30px auto 0;
 		display: block;
@@ -165,134 +184,215 @@ body {
 	}
 
 /*3 step process*/
-	h3 {
+	#sec3 h2 {
 	    text-align: center;
 	    font-size: 50px;
 	    padding: 10px;
 	    color: #19c7cd;
 	    font-family: 'Source Sans Pro', sans-serif;
+	    margin: 0 0 50px;
 	}
 
 	#sec3 {
 	    background-color: #eaeaea;
+	    /*height: 110%;*/
 	}
 
-	iframe {
-		margin: 60px;
-		width: 700px;
-		height: 400px;
+	#sec3 #threestepprocess {
+		box-shadow: 8px 12px #2E78DE;
+		border-radius: 10px;
 	}
 
-	#steptext {
-		margin: 140px 0 0;
-		height: 200px;
+	#sec3 .row {
+		width: 100%;
+		margin: 0!important;
+		margin: 20px 0 0;
 	}
 
-	#sec3 .row #steptext p {
-		color: #000;
+	#sec3 #steponebutton {
+		border-radius: 10px 0 0 0;
 	}
 
-	#stepone, #steptwo, #stepthree {
+	#sec3 #stepthreebutton {
+		border-radius: 0 10px 0 0;
+	}
+
+	#sec3 .process {
+		width: 100%;
+		height: 50px;
+		border: none;
+		text-align: left;
+		font-size: 22px;
+		cursor: pointer;
+		background-color: #B0E8FF; 
+		text-align: center;
+		transition: .3s;
+		color: #fff;
+	}
+
+	#sec3 .process:hover {
+		background-color: #64D1FF;
+	}
+
+	#sec3 .processactive {
+		background-color: #64D1FF;
+	}
+
+	#sec3 #fullprocess {
+		width: 100%;
+		height: 450px;
+		background-color: #64D1FF;
+		border-radius: 0 0 10px 10px;
+		/*box-shadow: 10px 10px #3C55CC;*/
+	}
+
+	#sec3 #fullprocess p {
+		font-size: 24px;
+		/*text-align: center;*/
+		padding: 70px 0 0;
+		color: #fff;
+	}
+
+	#sec3 .col-lg-4,
+	#sec3 .col-lg-7,
+	#sec3 #threestepprocess,
+	#sec3 .process {
+		padding: 0!important;
+	}
+
+	#sec3 .process:focus {
+		outline: 0;
+	}
+
+	#sec3 .active {
 		visibility: hidden;
 		position: absolute;
 	}
 
-	.active {
-		visibility: visible!important;
-	}
-
 /*FAQ*/
-	#sec4 {
-		background-color: #fff;
-		padding: 50px;
+	#sec3 #faq {
+		margin: auto;
+		width: 70%!important;
 	}
 
-	.card-body {
+	#sec3 .accordion {
+		margin: 100px 0 100px;
+	}
+
+	#sec3 .card-body {
 		color: #000!important;
 	}
 
-	.card-header {
+	#sec3 .card-header {
 		width: 100%!important;
 		height: 50px!important;
 		text-decoration: none!important;
 	}
 
-	.card {
+	#sec3 .card {
 		margin: 20px!important;
 	}
 
-/*client slideshow*/
-	#sec2 {
-	    background-color: #fff;
+/*empty*/
+	#sec3 #empty {
+		height: 1px;
 	}
 
-	img.d-block {
-		width: 200px!important; 
+/*client slideshow*/
+	#sec5 {
+	    background-color: #fff;
+	    padding: 80px 0;
+	}
+
+	#sec5 .row {
+		padding: 0 0 0 70px;
+	}
+
+	#sec5 img.d-block {
+		width: 250px!important; 
 		margin: 30px 60px 0!important;
 	}
 
-	p.clients,
-	p.comment {
+	#sec5 p.clients,
+	#sec5 p.comment {
 	    color: #000;
+	    text-align: center;
 	}
 
-	.carousel-control-prev-icon,
-	.carousel-control-next-icon {
+	#sec5 .carousel-control-prev-icon,
+	#sec5 .carousel-control-next-icon {
 	    width: 40px!important;
 	    height: 40px!important;
 	}
 
-	.carousel-control-prev-icon {
+	#sec5 .carousel-control-prev-icon {
 	    background-image: url('../svg/prev_arrow.svg')!important;
 	}
 
-	.carousel-control-next-icon {
+	#sec5 .carousel-control-next-icon {
 	    background-image: url('../svg/next_arrow.svg')!important;
 	}
 
-	.carousel-indicators .active {
+	#sec5 .carousel-indicators .active {
 	    background-color: #000!important;
 	}
 
-	.carousel-indicators li {
+	#sec5 .carousel-indicators li {
 	    background-color: rgba(0, 0, 0, 0.5)!important;
 	}
-
-	.carousel-item {
+/*
+	#sec5 .carousel-item {
 	    transition: 1s!important;
-	}
+	}*/
 
 /*form*/
 	#form {
 		height: 100%;
 	}
 
+	#designstartbutton h4 {
+		color: #fff;
+		text-align: center;
+	}
+
 	/*start button*/
-	#designstartbutton {
+	#form .container #box {
 		padding: 200px 0 0;
 	}
 
 	#form .container #designstartbutton button {
 		margin: auto;
 		display: block;
-	}
-
-	/*choose project*/
-	#designstartbutton, #chooseproject {
-		visibility: hidden;
+		cursor: pointer;
 	}
 
 	#chooseproject img {
-		width: 150px;
+		width: 150px;;
 	}
 
 	#chooseproject .card-body button {
 		margin-left: 20px;
 	}
 
+/*contact form*/
+	#seccontact {
+		height: 100%;
+	}
+	
+	.headertitle {
+		padding: 200px 0 0;
+		transition: all 5s ease-in-out;
+	}
+
+	#seccontact form {
+		text-align: center;
+		height: 100%;
+		transition: all 4s ease-in-out;
+	}
+
 /*footer*/
 	.footer {
-	    height: 300px;
+	    height: 200px;
 	    width: 100%;
 	    padding: 0px 30px;
 	    background-color: #292929;
