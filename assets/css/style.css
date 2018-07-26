@@ -188,13 +188,14 @@ h2, h3 {
 	    text-align: center;
 	    font-size: 50px;
 	    padding: 10px;
-	    color: #19c7cd;
+	    color: #000;
 	    font-family: 'Source Sans Pro', sans-serif;
-	    margin: 0 0 50px;
+	    margin: 0 0 20px;
+	    padding: 20px 0 0;
 	}
 
 	#sec3 {
-	    background-color: #eaeaea;
+	    background-color: #D1D1D1;
 	    /*height: 110%;*/
 	}
 
@@ -227,7 +228,7 @@ h2, h3 {
 		background-color: #B0E8FF; 
 		text-align: center;
 		transition: .3s;
-		color: #fff;
+		color: #000;
 	}
 
 	#sec3 .process:hover {
@@ -236,6 +237,18 @@ h2, h3 {
 
 	#sec3 .processactive {
 		background-color: #64D1FF;
+	}
+
+	#sec3 .steponepic {
+		height: 170px;
+		width: 220px;
+		border-radius: 5px;
+		background-color: #fafafa;
+		margin: 40px auto 0;
+		text-align: center;
+		font-size: 20px;
+		line-height: 300px;
+		box-shadow: 5px 5px #7A7A7A;
 	}
 
 	#sec3 #fullprocess {
