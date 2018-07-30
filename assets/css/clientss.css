@@ -1,10 +1,10 @@
 /*client slideshow*/
 	#sec5 {
-	    background-color: rgba(0, 0, 0, 0.1);
+	    background-color: rgba(0, 0, 0, 0.05);
 	    height: 60%;
 	    border-top: 1px rgba(0, 0, 0, 0.2) solid;
 	    border-bottom: 1px rgba(0, 0, 0, 0.2) solid;
-	    padding: 40px 0;
+	    padding: 30px 0;
 	}
 
 	#sec5 .row {
@@ -12,14 +12,51 @@
 	}
 
 	#sec5 img.d-block {
-		width: 250px!important; 
-		margin: 30px 60px 0!important;
+		width: 300px!important; 
+		margin: 30px 0 0!important;
 	}
 
-	#sec5 p.clients,
-	#sec5 p.comment {
-	    color: #000;
-	    text-align: center;
+	#sec5 p {
+	    color: #fff;
+	    /*text-align: center;*/
+	}
+
+	#sec5 p.clients {
+		font-size: 40px;
+		font-weight: bold;
+		border-bottom: 2px #fff solid;
+		width: 65%;
+	}
+
+	#sec5 .col-lg-7 {
+		background-color: rgba(0, 0, 0, 0.4);
+		border: 2px #000 solid;
+	}
+
+	#sec5 a {
+		text-align: center;
+		color: #000;
+	}
+
+	#sec5 button {
+		border-radius: 5px;
+		background-color: #fff;
+		border: none;
+		margin: 0 0 0 10px;
+		transition: .3s;
+		border-bottom: none;
+	}
+
+	#sec5 button a {
+		text-decoration: none;
+	}
+
+	#sec5 .container:nth-child(1) button:hover {
+		background-color: #FF8E3A;
+	}
+
+	#sec5 .container:nth-child(1) button:hover > a {
+		color: #fff;
 	}
 
 	#sec5 .carousel-control-prev-icon,
