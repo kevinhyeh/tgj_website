@@ -1,0 +1,28 @@
+/*form*/
+	#form {
+		height: 100%;
+	}
+
+	#designstartbutton h4 {
+		color: #fff;
+		text-align: center;
+	}
+
+	/*start button*/
+	#form .container #box {
+		padding: 200px 0 0;
+	}
+
+	#form .container #designstartbutton button {
+		margin: auto;
+		display: block;
+		cursor: pointer;
+	}
+
+	#chooseproject img {
+		width: 150px;;
+	}
+
+	#chooseproject .card-body button {
+		margin-left: 20px;
+	}

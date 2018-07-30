@@ -1,0 +1,23 @@
+/*FAQ*/
+	#sec4 #faq {
+		margin: auto;
+		width: 70%!important;
+	}
+
+	#sec4 .accordion {
+		margin: 100px 0 100px;
+	}
+
+	#sec4 .card-body {
+		color: #000!important;
+	}
+
+	#sec4 .card-header {
+		width: 100%!important;
+		height: 50px!important;
+		text-decoration: none!important;
+	}
+
+	#sec4 .card {
+		margin: 20px!important;
+	}

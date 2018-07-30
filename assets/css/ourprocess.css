@@ -1,0 +1,252 @@
+/*3 step process*/
+	#sec3 h2 {
+	    font-size: 30px;
+	    padding: 10px;
+	    color: #000;
+	    margin: 0 0 20px;
+	    padding: 20px 0 0;
+	}
+
+	#sec3 h3 {
+		font-size: 22px;
+	}
+
+	#sec3 {
+	    background-color: rgba(0, 0, 0, 0.2);
+	    height: 600px;
+	    border-top: 1px rgba(0, 0, 0, 0.2) solid;
+	    border-bottom: 1px rgba(0, 0, 0, 0.3) solid;
+	}
+
+	#sec3 #vbtop {
+		width: 700px;
+		height: 70px;
+		background-color: var(--introblue);
+		border-radius: 5px 5px 0 0;
+	}
+
+	#sec3 #vbtop .row:nth-child(1) {
+		width: 100%!important;
+		padding: 6px 6px 0;
+	}
+
+	#sec3 .vbcircles {
+		width: 15px;
+		height: 15px;
+		border-radius: 50%;
+		margin: 4px;
+	}
+
+	#sec3 #red {
+		background-color: red;
+	}
+
+	#sec3 #yellow {
+		background-color: yellow;
+	}
+
+	#sec3 #green {
+		background-color: green;
+	}
+
+	#sec3 #vbarrows {
+		width: 3vw;
+		height: 25px;
+		background-color: #fff;
+		margin: 0 0 0 5px;
+		padding: 3px 0 0 4px;
+	}
+
+	#sec3 #leftarrow,
+	#sec3 #rightarrow {
+		width: 0;
+		height: 0;
+		display: inline-block;
+		border-top: .5vw solid transparent;
+		border-bottom: .5vw solid transparent; 
+		margin: 0 3px 0;
+	}
+
+	#sec3 #leftarrow {
+		border-right: 1vh solid #000;
+		cursor: pointer;
+	}
+
+	#sec3 #rightarrow {
+		border-left: 1vh solid #000;
+		cursor: pointer;
+	}
+
+	#sec3 #vbsearchbar {
+		width: 38vw;
+		height: 25px;
+		background-color: #fff;
+	}
+
+	#magglass {
+ 		font-size: 2em;
+		display: inline-block;
+		width: 0.4em;
+		height: 0.4em;
+		border: 0.1em solid var(--introblue);
+		position: relative;
+		border-radius: 0.35em;
+		margin: 0 5px;
+	}
+	#magglass::before {
+	 	content: "";
+	 	display: inline-block;
+	 	position: absolute;
+	 	right: -0.30em;
+	 	bottom: -0.12em;
+	 	border-width: 0;
+	 	background: var(--introblue);
+	 	width: 0.35em;
+	 	height: 0.08em;
+	 	transform: rotate(45deg);
+	}
+
+	#sec3 #vbbottom {
+		width: 700px;
+		height: 400px;
+		background-color: #fff;
+		border-radius: 0 0 5px 5px;
+	}
+
+	#sec3 .showprocess {
+		visibility: hidden;
+	}
+
+	#sec3 #contentone {
+		padding: 80px 0 0;
+		width: 700px;
+		position: absolute;
+	}
+
+	#sec3 #contentone .col-lg {
+		padding: 0!important;
+	}
+
+	#sec3 #contentone .row .col-lg:nth-child(1) div {
+		margin-right: 0;
+		padding: 50px 0 0;
+	}
+
+	#sec3 #contentone .row .col-lg:nth-child(2) img {
+		padding: 35px 0 0;
+	}
+
+	#sec3 #contentone .row .col-lg:nth-child(3) div {
+		margin-left: 0;
+		padding: 50px 0 0;
+	}
+
+	#sec3 #contentone .projects {
+		width: 180px;
+		height: 180px;
+		background-color: var(--introblue);
+		color: #fff;
+		font-size: 20px;
+		border-radius: 5px;
+		text-align: center;
+		margin: auto;
+	}
+
+	#sec3 #contentone .row .col-lg:nth-child(1) .projects div {
+		font-size: 35px;
+		width: 130px;
+		border: solid #fff 4px;
+		margin: auto;
+		padding: 0!important;
+		border-radius: 5px;
+		margin-bottom: 20px;
+	}
+
+	#sec3 #contentone .row .col-lg:nth-child(2) .projects img {
+		width: 50px;
+		margin-bottom: 5px;
+	}
+
+	#sec3 #contentone .row .col-lg:nth-child(3) .projects div {
+		width: 110px;
+		height: 60px;
+		background-color: #fff;
+		margin: auto;
+		margin-bottom: 20px;
+	}
+
+	#sec3 #contenttwo {
+		width: 380px;
+		height: 340px;
+		background-color: var(--introblue);
+		border-radius: 5px 5px 0 0;
+		margin: 60px 0 0 160px;
+		position: absolute;
+	}
+
+	#sec3 .shortbar {
+		width: 18px;
+		height: 18px;
+		background-color: #fff;
+		display: inline-block;
+		margin: 50px 10px 0 20px;
+		border-radius: 50px;
+	}
+
+	#sec3 .longbar {
+		width: 300px;
+		height: 18px;
+		background-color: #fff;
+		display: inline-block;
+		border-radius: 50px;
+	}
+
+	#sec3 #vbbrowserbg {
+		width: 700px;
+		height: 470px;
+		border-radius: 5px;
+		margin: 60px 0 0;
+	}
+
+	#sec3 #diffsteps{
+		padding: 150px 15px 0;
+	}
+
+	#sec3 .row {
+		margin: 0!important;
+	}
+
+	#sec3 .circles {
+		width: 15px;
+		height: 15px;
+		background-color: #bbb;
+		display: inline-block;
+		border-radius: 50px;
+		cursor: pointer;
+	}
+
+	#sec3 .activestep {
+		background-color: #000;
+	}
+
+	#sec3 #prev,
+	#sec3 #next {
+		border: none;
+		background-color: rgba(0, 0, 0, 0);
+		color: #292929;
+		width: 40px;
+		text-align: center;
+	}
+
+	#sec3 #prev {
+		margin: 0 0 0 15px;
+	}
+
+	#sec3 #prev,
+	#sec3 #next:focus {
+		outline: 0;
+	}
+
+	#sec3 img {
+		cursor: pointer;
+	}

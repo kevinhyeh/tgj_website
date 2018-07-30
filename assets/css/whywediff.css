@@ -1,0 +1,27 @@
+/*why we are different*/
+	#sec2 {
+		background-color: #fff;
+		padding: 40px;
+	}
+
+	#sec2 h2 {
+		font-size: 30px;
+		text-align: center;
+	}
+
+	#sec2 h3 {
+		font-size: 22px;
+		text-align: center;
+	}
+
+	#sec2 p {
+		color: #000;
+		text-align: center;
+	}
+
+	#sec2 .container .row img {
+		height: 70px;
+		margin: auto;
+		display: block;
+
+	}

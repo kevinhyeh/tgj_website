@@ -1,0 +1,45 @@
+/*client slideshow*/
+	#sec5 {
+	    background-color: rgba(0, 0, 0, 0.1);
+	    height: 60%;
+	    border-top: 1px rgba(0, 0, 0, 0.2) solid;
+	    border-bottom: 1px rgba(0, 0, 0, 0.2) solid;
+	    padding: 40px 0;
+	}
+
+	#sec5 .row {
+		padding: 0 0 0 70px;
+	}
+
+	#sec5 img.d-block {
+		width: 250px!important; 
+		margin: 30px 60px 0!important;
+	}
+
+	#sec5 p.clients,
+	#sec5 p.comment {
+	    color: #000;
+	    text-align: center;
+	}
+
+	#sec5 .carousel-control-prev-icon,
+	#sec5 .carousel-control-next-icon {
+	    width: 40px!important;
+	    height: 40px!important;
+	}
+
+	#sec5 .carousel-control-prev-icon {
+	    background-image: url('../svg/prev_arrow.svg')!important;
+	}
+
+	#sec5 .carousel-control-next-icon {
+	    background-image: url('../svg/next_arrow.svg')!important;
+	}
+
+	#sec5 .carousel-indicators .active {
+	    background-color: #000!important;
+	}
+
+	#sec5 .carousel-indicators li {
+	    background-color: rgba(0, 0, 0, 0.5)!important;
+	}
