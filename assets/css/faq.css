@@ -10,13 +10,13 @@
 		border: 2px #000 solid;
 		width: 150px;
 		height: 55px;
+		border-radius: 5px;
 		padding: 8px 0 0;
 	}
 
 	#sec4 #faq {
 		margin: auto;
 		width: 70%!important;
-		/*padding: 20px 0 0;*/
 	}
 
 	#sec4 button {
@@ -41,18 +41,26 @@
 		width: 100%!important;
 		height: 60px!important;
 		text-decoration: none!important;
-		background-color: #292929!important;
-		border-radius: 20px!important;
+		border-radius: 50px!important;
 		transition: .3s;
+		border: 6px var(--introblue) solid;
+		padding: 0!important;
+		color: #000;
 	}
 
 	#sec4 .changeborder {
 		border-radius: 20px 20px 0 0!important;
+		background-color: var(--introblue)!important;
+		border: none;
 	}
 
 	#sec4 .card {
-		border-radius: 20px!important;
-		background-color: rgba(0, 0, 0, 0.1)!important;
+		border-radius: 50px!important;
+		background-color: #fff;
+	}
+
+	#sec .cardchange {
+		border-radius: 50px 50px 20px 20px!important;
 	}
 
 	#sec4 p {

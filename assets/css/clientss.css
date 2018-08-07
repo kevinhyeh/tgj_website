@@ -17,21 +17,21 @@
 	}
 
 	#sec5 p {
-	    color: #fff;
+	    color: #000;
 	    /*text-align: center;*/
 	}
 
 	#sec5 p.clients {
 		font-size: 40px;
 		font-weight: bold;
-		border-bottom: 2px #fff solid;
+		border-bottom: 2px #000 solid;
 		width: 65%;
 	}
 
-	#sec5 .col-lg-7 {
+/*	#sec5 .col-lg-7 {
 		background-color: rgba(0, 0, 0, 0.4);
 		border: 2px #000 solid;
-	}
+	}*/
 
 	#sec5 a {
 		text-align: center;

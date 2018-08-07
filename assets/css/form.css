@@ -1,28 +1,42 @@
-/*form*/
-	#form {
-		height: 100%;
-	}
+#form {
+	height: 100vh;
+}
 
-	#designstartbutton h4 {
-		color: #fff;
-		text-align: center;
-	}
+#form .container {
+	padding: 100px 0 0;
+}
 
-	/*start button*/
-	#form .container #box {
-		padding: 200px 0 0;
-	}
+#form .container .row .projects {
+	width: 200px;
+	height: 200px;
+	display: block;
+	border: 10px #000 solid;
+	border-radius: 10px;
+	position: absolute;
+	text-align: center;
+	margin: ;
+}
 
-	#form .container #designstartbutton button {
-		margin: auto;
-		display: block;
-		cursor: pointer;
-	}
+#form #webdesigndesc,
+#form #logodesc,
+#form #carddesc {
+	width: 200px;
+	height: 200px;
+	transition: .3s;
+	border-radius: 10px;
+	opacity: 0;
+	z-index: 1;
+	background-color: #000;
+	color: #fff;
+	text-align: center;
+}
 
-	#chooseproject img {
-		width: 150px;;
-	}
+#form button {
+	cursor: pointer;
+}
 
-	#chooseproject .card-body button {
-		margin-left: 20px;
-	}
+#form #webdesigndesc:hover,
+#form #logodesc:hover,
+#form #carddesc:hover {
+	opacity: 1!important;
+}

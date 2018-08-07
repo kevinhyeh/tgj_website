@@ -36,29 +36,29 @@ function differentSteps() {
         $('#stepstitle').html("1. Choose Your Project");
         $('#stepsdesc').html("First things first, we need to know what project you would like to start with.<br><br> From logos to flyers to web design, we can do anything branding!");
         $('#boxone').addClass('activestep');
-        $('#contentone').removeClass('showprocess').fadeIn();
-        $('#contentone div').removeClass('showprocess');
+        $('#contentone').addClass('showprocess');
+        $('#contentone div').addClass('showprocess');
     }
     if (steps == 2) {
         $('#stepstitle').empty();
         $('#stepstitle').html("2. Take Our Survey");
         $('#stepsdesc').html("Always have communication problems with freelancers?<br><br> Fill out our user friendly survey which takes less than 10 minutes!");
         $('#boxtwo').addClass('activestep');
-        $('#contenttwo').removeClass('showprocess');
-        $('#contenttwo div').removeClass('showprocess');
+        $('#contenttwo').addClass('showprocess');
+        $('#contenttwo div').addClass('showprocess');
     }
     if (steps == 3) {
         $('#stepstitle').html("3. Submit And Wait");
         $('#stepsdesc').html("That's it! We have all the information we need to start your sweet project.<br><br> Give us 24 hrs and we'll reach out to set up a free consultation meeting with you!");
         $('#boxthree').addClass('activestep');
-        $('#contentthree').removeClass('showprocess');
+        $('#contentthree').addClass('showprocess');
     }
 }
 
 differentSteps();
 
 $('#prev, #next, #boxone, #boxtwo, #boxthree, #rightarrow, #leftarrow').on('click', function() {
-    $('#vbcontent div').addClass('showprocess');
+    $('#vbcontent div').removeClass('showprocess');
     $('#diffsteps .circles').removeClass('activestep');
     if ($(this).attr("id") == "prev" || $(this).attr("id") == "leftarrow") {
         steps--;
@@ -89,17 +89,11 @@ $('#sec4 button').on('click', function() {
     $('#sec4 button').removeClass('changeborder');
     if ($(this).attr("aria-expanded") == "false") {
         $(this).addClass('changeborder');
+        // $(this ".card-body").addClass('cardchange');
     }
 });
 
 
-
-$('#chooseproject').hide();
-// form page start button
-$(document).on('click', '#startdesign', function() {
-    $('#designstartbutton').hide();
-    $('#chooseproject').show();
-});
 
 
 

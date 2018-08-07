@@ -1,12 +1,30 @@
 /*footer*/
-	.footer {
+	footer {
 	    height: 300px;
 	    width: 100%;
-	    padding: 0px 30px;
+	    padding: 80px 0 0;
 	    background-color: #292929;
 	}
 
-	#contact {
-	    width: 50%;
-	    float: right;
+	footer #links {
+		margin: auto;
+		width: 275px;
+	}
+
+	footer div img {
+		float: left;
+		width: 80px;
+		padding: 6px 10px 0 0;
+	}
+
+	footer #links a {
+		color: #bbb;
+		text-decoration: underline;
+		font-size: 16px;
+		font-weight: bold;
+	}
+
+	footer #links div {
+		margin: 0 0 10px;
+		padding: 0!important;
 	}

@@ -6,6 +6,7 @@
 	    margin: 0 0 20px;
 	    padding: 8px;
 	    border: 2px #000 solid;
+	    border-radius: 5px;
 	    text-align: center;
 	    background-color: #fff;
 	}
@@ -16,16 +17,14 @@
 
 	#sec3 {
 	    background-color: rgba(0, 0, 0, 0.05);
-	    /*background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1));*/
 	    height: 600px;
-	    /*border-top: 1px rgba(0, 0, 0, 0.2) solid;*/
 	    border-bottom: 1px rgba(0, 0, 0, 0.2) solid;	
 	}
 
 	#sec3 #vbtop {
 		width: 700px;
 		height: 70px;
-		background-color: var(--introblue);
+		background-color: var(--tgjblue);
 		border-radius: 5px 5px 0 0;
 	}
 
@@ -92,7 +91,7 @@
 		display: inline-block;
 		width: 0.4em;
 		height: 0.4em;
-		border: 0.1em solid var(--introblue);
+		border: 0.1em solid var(--tgjblue);
 		position: relative;
 		border-radius: 0.35em;
 		margin: 0 5px;
@@ -104,7 +103,7 @@
 	 	right: -0.30em;
 	 	bottom: -0.12em;
 	 	border-width: 0;
-	 	background: var(--introblue);
+	 	background: var(--tgjblue);
 	 	width: 0.35em;
 	 	height: 0.08em;
 	 	transform: rotate(45deg);
@@ -118,13 +117,15 @@
 	}
 
 	#sec3 .showprocess {
-		visibility: hidden;
+		opacity: 1!important;
 	}
 
 	#sec3 #contentone {
 		padding: 70px 0 0;
 		width: 700px;
 		position: absolute;
+		opacity: 0;
+		transition: .3s;
 	}
 
 	#sec3 #contentone .col-lg {
@@ -148,7 +149,7 @@
 	#sec3 #contentone .projects {
 		width: 180px;
 		height: 180px;
-		background-color: var(--introblue);
+		background-color: var(--tgjblue);
 		color: #fff;
 		font-size: 20px;
 		border-radius: 5px;
@@ -181,38 +182,45 @@
 
 	#sec3 #contentone #vbstart {
 		text-align: center;
-		width: 200px;
-		height: 50px;
+		width: 160px;
+		height: 40px;
 		border-radius: 50px;
 		color: #fff;
 		background-color: #FF8E3A;
 		margin: 40px auto;
-		font-size: 26px;
+		font-size: 20px;
 		padding: 5px;
 	}
 
 	#sec3 #contenttwo {
-		width: 380px;
+		width: 340px;
 		height: 340px;
-		background-color: var(--introblue);
-		border-radius: 5px 5px 0 0;
-		margin: 60px 0 0 160px;
+		border-radius: 5px;
+		margin: 30px 0 0 25%;
 		position: absolute;
+		border: 8px solid var(--tgjblue);
+		opacity: 0;
+		transition: .3s;
+	}
+
+	#sec3 #contentthree {
+		opacity: 0;
+		transition: .3s;
 	}
 
 	#sec3 .shortbar {
-		width: 18px;
-		height: 18px;
-		background-color: #fff;
+		width: 10px;
+		height: 10px;
+		background-color: var(--tgjblue);
 		display: inline-block;
 		margin: 50px 10px 0 20px;
 		border-radius: 50px;
 	}
 
 	#sec3 .longbar {
-		width: 300px;
-		height: 18px;
-		background-color: #fff;
+		width: 240px;
+		height: 12px;
+		background-color: var(--tgjblue);
 		display: inline-block;
 		border-radius: 50px;
 	}
@@ -235,14 +243,14 @@
 	#sec3 .circles {
 		width: 15px;
 		height: 15px;
-		background-color: #bbb;
+		background-color: var(--tgjblue);
 		display: inline-block;
 		border-radius: 50px;
 		cursor: pointer;
 	}
 
 	#sec3 .activestep {
-		background-color: #000;
+		background-color: #292929;
 	}
 
 	#sec3 #prev,
