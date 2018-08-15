@@ -6,27 +6,30 @@ button.html(span);
 button.addClass('startbutton');
 
 $('#sec1But').html(newBut);
+$('#contactstartbutton').html(newBut);
 
 // header scroll function
-$(document).on('scroll', function() {
-    newBut = $('<a>').attr('href', 'form.html');
-    button = $('<button>');
-    span = $('<span>').html('Start Design');
-    newBut.html(button);
-    button.html(span);
-    button.addClass('startbutton');
-    if ($(document).scrollTop()) {
-        $('header').addClass('color');
-        $('#headerBut').html(newBut);
-        $('#sec1But').empty();
-        $('#logo').attr('src', 'assets/svg/tgjlogoheader2.svg');
-    } else {
-        $('header').removeClass('color');
-        $('#headerBut').empty();
-        $('#sec1But').html(newBut);
-        $('#logo').attr('src', 'assets/svg/tgjlogoheader(white)2.svg');
-    }
-});
+if (window.location.href == "file:///Users/kevinyeh/Desktop/the_graphic_jar/tgj_website/index.html") {
+    $(document).on('scroll', function() {
+        newBut = $('<a>').attr('href', 'form.html');
+        button = $('<button>');
+        span = $('<span>').html('Start Design');
+        newBut.html(button);
+        button.html(span);
+        button.addClass('startbutton');
+        if ($(document).scrollTop()) {
+            $('header').addClass('color');
+            $('#headerBut').html(newBut);
+            $('#sec1But').empty();
+            $('#logo').attr('src', 'assets/svg/tgjlogoheader2.svg');
+        } else {
+            $('header').removeClass('color');
+            $('#headerBut').empty();
+            $('#sec1But').html(newBut);
+            $('#logo').attr('src', 'assets/svg/tgjlogoheader(white)2.svg');
+        }
+    });
+}
 
 // process slideshow
 var steps = 1;
@@ -93,6 +96,74 @@ $('#sec4 button').on('click', function() {
     }
 });
 
+// form
+$('#projectform').addClass('hide');
+$('#thankyou').addClass('hide');
+
+$('.projectsBut').on('click', function() {
+    $('#projects').addClass('hide');
+    $('#chosenproject').html($(this).html());
+    $('#projectform').removeClass('hide');
+});
+
+$('#backBut').on('click', function() {
+    event.preventDefault();
+    $('#projectform').addClass('hide');
+    $('#projects').removeClass('hide');
+});
+
+// Initialize Firebase
+var config = {
+    apiKey: "AIzaSyAw02WPgWaGk7EV1kK1CLJOk_08Tb2eFTM",
+    authDomain: "tgj-client-database.firebaseapp.com",
+    databaseURL: "https://tgj-client-database.firebaseio.com",
+    projectId: "tgj-client-database",
+    storageBucket: "tgj-client-database.appspot.com",
+    messagingSenderId: "900153673961"
+};
+firebase.initializeApp(config);
+var database = firebase.database();
+
+$('#contactsub').on('click', function() {
+    event.preventDefault();
+    var newId = $('#contactname').val();
+    database.ref('Contact_form').child(newId).set({
+        a_name: $('#contactname').val(),
+        b_email: $('#contactemail').val(),
+        c_message: $('#contactmessage').val()
+    });
+});
+
+$('#designsub').on('click', function() {
+    event.preventDefault();
+    var newId = $('#userFirstName').val() + " " + $('#userLastName').val();
+    if ($('#userFirstName').val().length > 1 && $('#userLastName').val().length > 1) {
+        database.ref('Design_form').child(newId + " " + new Date()).set({
+            a_name: newId,
+            b_project: $('#chosenproject').html(),
+            c_number: $('#userNumber').val(),
+            d_company: $('#userCompany').val(),
+            e_email: $('#userEmail').val(),
+            f_timeline: $('#userTimeline').val(),
+            g_budget: $('#userBudget').val(),
+            h_description: $('#userDesc').val()
+        });
+        $('#projectform').addClass('hide');
+        $('#thankyou').removeClass('hide');
+        $('.fbname').html($('#userFirstName').val() + " " + $('#userLastName').val());
+        $('#fbproj').html($('#chosenproject').html());
+        $('#fbnumber').html($('#userNumber').val());
+        $('#fbcompany').html($('#userCompany').val());
+        $('#fbemail').html($('#userEmail').val());
+        $('#fbtimeline').html($('#userTimeline').val());
+        $('#fbbudget').html($('#userBudget').val());
+        $('#fbdesc').html($('#userDesc').val());
+    } else {
+        var warning = $('<p>').html('Make sure you fill out everything below.');
+        warning.addClass('warning');
+        $('#projectform').prepend(warning);
+    }
+});
 
 
 

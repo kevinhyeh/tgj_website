@@ -22,7 +22,7 @@
 	}
 
 	#sec3 #vbtop {
-		width: 700px;
+		width: 48vw;
 		height: 70px;
 		background-color: var(--tgjblue);
 		border-radius: 5px 5px 0 0;
@@ -84,6 +84,7 @@
 		width: 38vw;
 		height: 25px;
 		background-color: #fff;
+		margin: 0 0 0 10px;
 	}
 
 	#magglass {
@@ -110,7 +111,7 @@
 	}
 
 	#sec3 #vbbottom {
-		width: 700px;
+		width: 48vw;
 		height: 400px;
 		background-color: #fff;
 		border-radius: 0 0 5px 5px;

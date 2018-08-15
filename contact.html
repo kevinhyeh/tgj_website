@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html>
 
-<head> 
+<head>
     <title>The Graphic Jar</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <!-- External CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/startdesignbut.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/contact.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/footer.css">
     <!-- Riteous Font -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Source+Sans+Pro" rel="stylesheet">
 </head>
@@ -17,11 +20,9 @@
     <header>
         <div class="row">
             <div class="col-lg-4">
-                <a href="index.html"><img id="logo" src="assets/svg/tgjlogoheader(white)2.svg"></a>
+                <a href="index.html"><img id="logo" src="assets/svg/tgjlogoheader2.svg"></a>
             </div>
             <div class="col-lg-4">
-                <div id="headerBut">
-                </div>
             </div>
             <div class="col-lg-4">
                 <nav>
@@ -29,43 +30,63 @@
                         <li><a href="index.html">Home</a></li>
                         <li><a href="form.html">Form</a></li>
                         <li><a class="tgjactive" href="contact.html">Contact</a></li>
-                        <div></div>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
     <!-- tgj design form -->
-    <section id="seccontact">
-        <div class="headertitle">
-            <h4>Hello</h4>
-            <h4>World</h4>
+    <section id="contact">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-4">
+                    <div id="contactform">
+                        <form>
+                            <div class="input">
+                                <div>First Name:</div>
+                                <input type="text" id="userFirstName" placeholder="e.g. John" required>
+                            </div>
+                            <div class="input">
+                                <div>Last Name:</div>
+                                <input type="text" id="userLastName" placeholder="e.g. Smith" required>
+                            </div>
+                            <div class="input">
+                                <div>Phone Number:</div>
+                                <input type="text" id="userNumber" placeholder="e.g. 000-000-0000" required>
+                            </div>
+                            <div class="input">
+                                <div>Email:</div>
+                                <input type="text" id="userEmail" placeholder="e.g. thegraphicjar@gmail.com" required>
+                                <div class="input">
+                                    <div>Your Message:</div>
+                                    <textarea id="userDesc" required rows="4"></textarea>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <h5>Have a project in mind?</h5>
+                    <p>
+                        We have a super easy form that you can fill out that will easily tell us what you are looking for in your project.
+                    </p>
+                    <div id="contactstartbutton"></div>
+                </div>
+            </div>
         </div>
-        <form id="contactform" method="post" encytype="multipart/form-data" action="form.php">
-            <input class="contact-control" type="text" name="name" placeholder="Your Name" required>
-            <br>
-            <input class="contact-control" type="text" name="email" placeholder="Your Email" required>
-            <br>
-            <textarea class="contact-control" type="text" name="message" placeholder="Message" row="4" required>
-            </textarea>
-            <br>
-            <input class="contact-control submit" type="submit">
-        </form>
     </section>
     <!-- footer -->
     <footer class="footer">
-        <div id="contact">
-            <h3>Send Us An Email</h3>
-            <form>
-                <div class="form-group">
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Your Message" rows="3"></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
+        <div id="links">
+            <img src="assets/svg/tgj_logo.svg">
+            <div><a href="about.html">About Us</a></div>
+            <div><a href="terms.html">Terms and Agreement</a></div>
+            <div><a href="faq2.html">More FAQ</a></div>
+            <div><a href="contact.html">Contact Us</a></div>
         </div>
     </footer>
+    <!-- Firebase JS -->
+    <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
     <!-- Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>

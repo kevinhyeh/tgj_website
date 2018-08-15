@@ -7,8 +7,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <!-- External CSS -->
-    <link rel="stylesheet" type="text/css" href="assets/css/startdesignbut.css.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/navbar.css">
+    <!-- <link rel="stylesheet" type="text/css" href="assets/css/startdesignbut.css.css"> -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="assets/css/form.css">
     <link rel="stylesheet" type="text/css" href="assets/css/footer.css">
@@ -21,7 +20,7 @@
     <header>
         <div class="row">
             <div class="col-lg-4">
-                <a href="index.html"><img id="logo" src="assets/svg/tgjlogoheader(white)2.svg"></a>
+                <a href="index.html"><img id="logo" src="assets/svg/tgjlogoheader2.svg"></a>
             </div>
             <div class="col-lg-4">
             </div>
@@ -38,42 +37,86 @@
     </header>
     <!-- tgj design form -->
     <section id="form">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg">
-                    <div>
-                        <div id="webdesign" class="projects">Web Design</div>
-                        <div id="webdesigndesc">
-                            Start your next web project with us!
-                            <div>
-                                <button>Choose Project</button>
-                            </div>
-                        </div>
-                    </div>
+        <div id="projects">
+            <div class="row justify-content-center">
+                <div class="col-4">
+                    <button class="projectsBut">Web Design</button>
                 </div>
-                <div class="col-lg">
-                    <div>
-                        <div id="logo" class="projects">Logo Design</div>
-                        <div id="logodesc">
-                            Start your next web project with us!
-                            <div>
-                                <button>Choose Project</button>
-                            </div>
-                        </div>
-                    </div>
+                <div class="col-4">
+                    <button class="projectsBut">Logo Design</button>
                 </div>
-                <div class="col-lg mx-auto">
-                    <div>
-                        <div id="businesscard" class="projects">Business Cards</div>
-                        <div id="carddesc">
-                            Start your next web project with us!
-                            <div>
-                                <button>Choose Project</button>
-                            </div>
-                        </div>
-                    </div>
+                <div class="col-4">
+                    <button class="projectsBut">Business Cards</button>
                 </div>
             </div>
+        </div>
+        <div id="projectform">
+            <form>
+                <div>Chosen project: <span id="chosenproject"></span></div>
+                <div class="row justify-content-center">
+                    <div class="col-6">
+                        <div>First Name:</div>
+                        <input type="text" id="userFirstName" placeholder="e.g. John" required>
+                    </div>
+                    <div class="col-6">
+                        <div>Last Name:</div>
+                        <input type="text" id="userLastName" placeholder="e.g. Smith" required>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-6">
+                        <div>Phone Number:</div>
+                        <input type="text" id="userNumber" placeholder="e.g. 000-000-0000" required>
+                    </div>
+                    <div class="col-6">
+                        <div>Company Name:</div>
+                        <input type="text" id="userCompany" placeholder="e.g. The Graphic Jar" required>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-12">
+                        <div>Email:</div>
+                        <input type="text" id="userEmail" placeholder="e.g. thegraphicjar@gmail.com" required>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-6">
+                        <div>Estimated Timeline:</div>
+                        <input type="text" id="userTimeline" placeholder="e.g. 2 weeks" required>
+                    </div>
+                    <div class="col-6">
+                        <div>Available Budget:</div>
+                        <input type="text" id="userBudget" placeholder="e.g. $500" required>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-12">
+                        <div>Short description of you/company:</div>
+                        <textarea id="userDesc" required rows="4"></textarea>
+                    </div>
+                </div>
+                <button class="btn btn-outline-secondary" id="backBut">Back</button>
+                <button id="designsub" class="btn btn-outline-secondary" type="submit">Submit</button>
+            </form>
+        </div>
+        <div id="thankyou">
+            <h5>Hello <span class="fbname"></span>!</h5>
+            <p>Thank you for taking the time and filling out our form.</p>
+            <p>Below is a recap of your project details.</p>
+            <div>
+                <p>Name:
+                    <span class="fbname clear"></span>
+                </p>
+                <p>Project: <span id="fbproj"></span></p>
+                <p>Number: <span id="fbnumber"></span></p>
+                <p>Company: <span id="fbcompany"></span></p>
+                <p>Email: <span id="fbemail"></span></p>
+                <p>Timeline: <span id="fbtimeline"></span></p>
+                <p>Budget: <span id="fbbudget"></span></p>
+                <p>Description: <span id="fbdesc"></span></p>
+            </div>
+            <p>We'll contact you within 24 hours and set up a free consultation.</p>
+            <p>If you have any questions, you can reach us at <a href="mailto:thegraphicjar@gmail.com">thegraphicjar@gmail.com.</a></p>
         </div>
     </section>
     <!-- footer -->
@@ -86,6 +129,8 @@
             <div><a href="contact.html">Contact Us</a></div>
         </div>
     </footer>
+    <!-- Firebase JS -->
+    <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
     <!-- Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>

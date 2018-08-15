@@ -1,5 +1,5 @@
 <?php
-	if (isset('submit')) {
+	// if (isset('su?bmit')) {
 	$name = $_POST['name'];
 	$visitor_email = $_POST['email'];
 	$message = $_POST['message'];
@@ -13,7 +13,7 @@
 
 	mail($to,$email_subject,$email_body,$headers);
 
-	header("Location: contact.html");
+	header("Location: contact.php");
 
-}
-?>
+// }
+?>hi
