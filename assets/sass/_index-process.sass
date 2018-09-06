@@ -1,0 +1,37 @@
+#three-step-process
+    background: $primary-off-white
+    padding: 4rem 3% 0
+    text-align: center
+    &:after
+        @extend %clearfix
+    div
+        // display: inline-block
+
+    #process-display
+        width: 95rem
+        height: 70rem
+        background-image: url('../images/ipad-mock-up.png')
+        background-size: cover
+        float: left
+        padding: 34rem 2.5rem 0 0
+        @media screen and (max-width: 1440px)
+                width: 68rem
+                height: 50rem
+                padding-top: 24rem
+
+    #process-text
+        margin-top: 25rem
+        @media screen and (max-width: 1440px)
+                margin-top: 15rem
+        h3
+            @extend %header-three
+
+        .process-text-all
+            h4
+                font-size: $header-four
+
+            p
+                font-size: $regular-size
+
+
+

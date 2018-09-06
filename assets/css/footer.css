@@ -29,3 +29,11 @@
 		margin: 0 0 10px;
 		padding: 0!important;
 	}
+
+	footer #links div a {
+		cursor: not-allowed;
+	}
+
+	footer #links div:nth-child(5) a {
+		cursor: pointer!important;
+	}

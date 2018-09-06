@@ -84,3 +84,13 @@
 	#contact p {
 		font-size: 18px;
 	}
+
+	#contactform .btn-outline-secondary {
+	color: #19c7cd!important;
+	border: 1px solid #19c7cd!important;
+	}
+
+	#contactform .btn-outline-secondary:hover {
+	background-color: #19c7cd!important;
+	color: #fff!important;
+}

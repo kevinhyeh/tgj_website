@@ -1,32 +1,24 @@
-var newBut = $('<a>').attr('href', 'form.html');
 var button = $('<button>');
 var span = $('<span>').html('Start Design');
-newBut.html(button);
+button.addClass('start-design');
+button.attr('onclick', 'location.href="form.html"')
 button.html(span);
-button.addClass('startbutton');
 
-$('#sec1But').html(newBut);
-$('#contactstartbutton').html(newBut);
+$('#intro-button').html(button);
 
 // header scroll function
 if (window.location.href == "file:///Users/kevinyeh/Desktop/the_graphic_jar/tgj_website/index.html") {
     $(document).on('scroll', function() {
-        newBut = $('<a>').attr('href', 'form.html');
-        button = $('<button>');
-        span = $('<span>').html('Start Design');
-        newBut.html(button);
-        button.html(span);
-        button.addClass('startbutton');
         if ($(document).scrollTop()) {
-            $('header').addClass('color');
-            $('#headerBut').html(newBut);
-            $('#sec1But').empty();
-            $('#logo').attr('src', 'assets/svg/tgjlogoheader2.svg');
+            $('nav').addClass('scroll-change');
+            $('#intro-button').empty();
+            $('#nav-button').html(button);
+            $('#tgj-logo').attr('src', 'assets/svg/tgj_logo(scroll).svg');
         } else {
-            $('header').removeClass('color');
-            $('#headerBut').empty();
-            $('#sec1But').html(newBut);
-            $('#logo').attr('src', 'assets/svg/tgjlogoheader(white)2.svg');
+            $('nav').removeClass('scroll-change');
+            $('#nav-button').empty();
+            $('#intro-button').html(button);
+            $('#tgj-logo').attr('src', 'assets/svg/tgj_logo.svg');
         }
     });
 }
@@ -39,30 +31,30 @@ function differentSteps() {
         $('#stepstitle').html("1. Choose Your Project");
         $('#stepsdesc').html("First things first, we need to know what project you would like to start with.<br><br> From logos to flyers to web design, we can do anything branding!");
         $('#boxone').addClass('activestep');
-        $('#contentone').addClass('showprocess');
-        $('#contentone div').addClass('showprocess');
+        $('#contentone').removeClass('showprocess');
+        $('#contentone div').removeClass('showprocess');
     }
     if (steps == 2) {
         $('#stepstitle').empty();
         $('#stepstitle').html("2. Take Our Survey");
         $('#stepsdesc').html("Always have communication problems with freelancers?<br><br> Fill out our user friendly survey which takes less than 10 minutes!");
-        $('#boxtwo').addClass('activestep');
-        $('#contenttwo').addClass('showprocess');
-        $('#contenttwo div').addClass('showprocess');
+        $('#boxtwo').removeClass('activestep');
+        $('#contenttwo').removeClass('showprocess');
+        $('#contenttwo div').removeClass('showprocess');
     }
     if (steps == 3) {
         $('#stepstitle').html("3. Submit And Wait");
         $('#stepsdesc').html("That's it! We have all the information we need to start your sweet project.<br><br> Give us 24 hrs and we'll reach out to set up a free consultation meeting with you!");
-        $('#boxthree').addClass('activestep');
-        $('#contentthree').addClass('showprocess');
+        $('#boxthree').removeClass('activestep');
+        $('#contentthree').removeClass('showprocess');
     }
 }
 
 differentSteps();
 
 $('#prev, #next, #boxone, #boxtwo, #boxthree, #rightarrow, #leftarrow').on('click', function() {
-    $('#vbcontent div').removeClass('showprocess');
-    $('#diffsteps .circles').removeClass('activestep');
+    $('#vbcontent div').addClass('showprocess');
+    $('#diffsteps .circles').addClass('activestep');
     if ($(this).attr("id") == "prev" || $(this).attr("id") == "leftarrow") {
         steps--;
         if (steps == 0) {
@@ -126,11 +118,12 @@ var database = firebase.database();
 
 $('#contactsub').on('click', function() {
     event.preventDefault();
-    var newId = $('#contactname').val();
-    database.ref('Contact_form').child(newId).set({
-        a_name: $('#contactname').val(),
-        b_email: $('#contactemail').val(),
-        c_message: $('#contactmessage').val()
+    var newId = $('#contactFirstName').val() + " " + $('#contactLastName').val();
+    database.ref('Contact_form').child(newId + " " + new Date()).set({
+        a_name: newId,
+        b_email: $('#contactEmail').val(),
+        c_number: $('#contactNumber').val(),
+        d_message: $('#contactDesc').val()
     });
 });
 

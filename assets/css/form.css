@@ -68,10 +68,11 @@
 	width: 25vw;
 	height: 25vw;
 	margin: 100px 10px;
-	background-color: #fff;
+	background-color: rgba(0,0,0,0);
 	transition: 0.3s;
-	border: 2px rgba(0, 0, 0, 0.2) solid;
-	font-size: 20px;
+	border: 8px #19c7cd solid;
+	font-size: 50px;
+	font-family: 'Lobster', cursive;
 }
 
 #form #projects .col-4:nth-child(1) button:hover {
@@ -96,7 +97,7 @@
 	outline: 0;
 }
 
-#form #projects button:hover {	background-color: #bbb;
+#form #projects button:hover {	background-color: #19c7cd;
 	box-shadow: 0 0 10px 2px rgba(0, 0, 0, 1);
 	border: none!important;
 	color: rgba(0, 0, 0, 0);
@@ -154,6 +155,16 @@
 
 #projectform form button:focus {
 	outline: 0;
+}
+
+#projectform form .btn-outline-secondary {
+	color: #19c7cd!important;
+	border: 1px solid #19c7cd!important;
+}
+
+#projectform form .btn-outline-secondary:hover {
+	background-color: #19c7cd!important;
+	color: #fff!important;
 }
 
 .hide {

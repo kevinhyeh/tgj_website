@@ -1,0 +1,46 @@
+#main-intro
+    background: $primary-blue
+    padding: 8rem 0 6rem
+    &:after
+        @extend %clearfix
+        
+    #text-button
+        margin: auto
+        height: 70.1rem
+        width: 102.5rem
+        padding-top: 10rem 
+        padding-left: 1rem
+        background-image: url('../images/intro-pic.png')
+        background-size: cover
+        background-repeat: no-repeat
+        background-position: top
+        @media screen and (max-width: 1440px)
+            height: 57.2rem
+            width: 83.6rem
+            padding-top: 6.5rem
+         
+        @media screen and (max-width: 1180px)
+            width: 70rem
+            height: 50rem
+            padding-top: 7rem
+
+        h2, p
+            color: $primary-white
+            font-family: $primary-font
+            text-align: center
+        h2
+            font-size: 6rem
+            @media screen and (max-width: 1440px)
+                font-size: 5.3rem
+            @media screen and (max-width: 1180px)
+                font-size: 4.2rem
+        p
+            font-size: 1.8rem
+            @media screen and (max-width: 1440px)
+                font-size: 1.6rem
+            @media screen and (max-width: 1180px)
+                font-size: 1.3rem
+
+
+        .design-button
+            @include design-button

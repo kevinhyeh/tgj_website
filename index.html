@@ -9,85 +9,69 @@
     <!-- External CSS -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="assets/css/clientss.css">
-    <!-- <link rel="stylesheet" type="text/css" href="assets/css/contact.css"> -->
     <link rel="stylesheet" type="text/css" href="assets/css/faq.css">
     <link rel="stylesheet" type="text/css" href="assets/css/footer.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/intro.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/navbar.css">
     <link rel="stylesheet" type="text/css" href="assets/css/ourprocess.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/startdesignbut.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/whywediff.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <!-- Riteous Font -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat|Source+Sans+Pro" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,500|Source+Sans+Pro" rel="stylesheet">
 </head>
 
 <body>
     <!-- navigation bar -->
     <header>
-        <div class="row">
-            <div class="col-lg-4">
-                <a href="index.html"><img id="logo" src="assets/svg/tgjlogoheader(white)2.svg"></a>
+        <nav>
+            <div id="nav-main-name">
+                <img src="assets/svg/tgj_logo.svg" id="tgj-logo">
+                <h1>the <span>graphic</span> jar</h1>
             </div>
-            <div class="col-lg-4">
-                <div id="headerBut">
-                </div>
+            <div class="design-button" id="nav-button">
             </div>
-            <div class="col-lg-4">
-                <nav>
-                    <ul>
-                        <li><a class="tgjactive" href="index.html">Home</a></li>
-                        <li><a href="form.html">Form</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <div></div>
-                    </ul>
-                </nav>
+            <div id="nav-links">
+                <ul>
+                    <li><a class="active" href="index.html">Home</a></li>
+                    <li><a href="form.html">Form</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
             </div>
-        </div>
+        </nav>
     </header>
     <!-- welcome section -->
-    <section id="sec1">
-        <div class="row">
-            <div class="col-lg-7">
-                <h1>Create designs easy<br> and effortlessly.</h1>
-                <p>The Graphic Jar is here to create your one of kind design project.</p>
-                <div id="sec1But">
-                </div>
-            </div>
-            <div class="col-lg-5">
-                <img src="assets/svg/sec1_picture.svg">
+    <main id="main-intro">
+        <div id="text-button">
+            <h2>Create designs easy<br> and effortlessly.</h2>
+            <p>The Graphic Jar is here to create your one of kind design project.</p>
+            <div class="design-button" id="intro-button">
             </div>
         </div>
-    </section>
+    </main>
     <!-- why we are different -->
-    <section id="sec2">
-        <div class="container">
-            <h2>Why Are We Different?</h2>
-            <div class="row">
-                <div class="col-lg-4">
-                    <h3>Branding Is Our Niche</h3>
-                    <p>Want to make your company stand out?
-                        <br> We are filled with new ideas and are itching to create something special for you.</p>
-                    <img src="assets/svg/lightbulb.svg">
-                </div>
-                <div class="col-lg-4">
-                    <h3>Custom Design Survey</h3>
-                    <p>We have created a one of kind survey
-                        <br> that is effortless for you and detailed for us.
-                        <br>Why make simple complicated?</p>
-                    <img src="assets/svg/form.svg">
-                </div>
-                <div class="col-lg-4">
-                    <h3>Around The Clock Service</h3>
-                    <p>Customer first is our motto.
-                        <br> We pride ourselves on our turn around
-                        <br>time as well as our quality of work.</p>
-                    <img src="assets/svg/clock.svg">
-                </div>
+    <section id="why-we-diff">
+        <h3>Why Are We Different?</h3>
+        <div class="group">
+            <div class="reason">
+                <h4>Branding Is Our Niche</h4>
+                <p>Want to make your company stand out? <br> We are filled with new ideas and are itching <br> to create something special for you.</p>
+                <img src="assets/svg/lightbulb.svg">
+            </div>
+            <div class="reason">
+                <h4>Custom Design Survey</h4>
+                <p>We have created a one of kind survey
+                    <br> that is effortless for you and detailed for us.
+                    <br>Why make simple complicated?</p>
+                <img src="assets/svg/form.svg">
+            </div>
+            <div class="reason">
+                <h4>Around The Clock Service</h4>
+                <p>Customer first is our motto.
+                    <br> We pride ourselves on our turn around
+                    <br>time as well as our quality of work.</p>
+                <img src="assets/svg/clock.svg">
             </div>
         </div>
     </section>
     <!-- 3 step process -->
-    <section id="sec3">
+<!--     <section id="sec3">
         <div class="row">
             <div class="col-lg-1"></div>
             <div class="col-lg-6">
@@ -111,7 +95,7 @@
                     </div>
                     <div class="row" id="vbbottom">
                         <div id="vbcontent">
-                            <div id="contentone" class="showprocess">
+                            <div id="contentone">
                                 <div class="row">
                                     <div class="col-lg">
                                         <div class="projects">
@@ -134,7 +118,7 @@
                                 </div>
                                 <div id="vbstart">Start Project</div>
                             </div>
-                            <div id="contenttwo">
+                            <div id="contenttwo" class="showprocess">
                                 <div class="shortbar"></div>
                                 <div class="longbar"></div>
                                 <div class="shortbar"></div>
@@ -144,7 +128,7 @@
                                 <div class="shortbar"></div>
                                 <div class="longbar"></div>
                             </div>
-                            <div id="contentthree">
+                            <div id="contentthree" class="showprocess">
                                 <p>Thank you</p>
                                 <p>for choosing the graphic jar</p>
                             </div>
@@ -165,6 +149,37 @@
                 </div>
             </div>
             <button id="next"><img src="assets/svg/next_arrow.svg"></button>
+        </div>
+    </section> -->
+    <section id="three-step-process">
+        <div id="process-display">
+            <div class="process-all">
+                process one
+            </div>
+            <div class="process-all">
+                process two
+            </div>
+            <div class="process-all">
+                process three
+            </div>
+        </div>
+        <div id="process-text">
+            <h3>Designs Made Easy!</h3>
+            <div class="process-text-all">
+                <h4>1. Choose Your Project</h4>
+                <p>First things first, we need to know what project you would like to start with.</p>
+                <p>From logos to flyers to web design, we do everything to help brand you!</p>
+            </div>
+<!--             <div class="process-text-all">
+                <h4>2. Take Our Quick Survey</h4>
+                <p>Always have communication problems with freelancers?</p>
+                <p>Fill out our user friendly survey which takes less than 10 minutes!</p>
+            </div>
+            <div class="process-text-all">
+                <h4>3. Submit And Wait</h4>
+                <p>And that's it! We have all the information we need to start your sweet project.</p>
+                <p>Give us 24 hrs and we'll reach out to set up a free consultation meeting with you!</p>
+            </div> -->
         </div>
     </section>
     <!-- FAQ -->
@@ -200,9 +215,12 @@
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                         <div class="card-body">
                             <div class="row">
-                                <div>Initial Deposit<br>25%</div>
-                                <div>Initial Deposit<br>25%</div>
-                                <div>Initial Deposit<br>25%</div>
+                                <div>Initial Deposit
+                                    <br>25%</div>
+                                <div>Initial Deposit
+                                    <br>25%</div>
+                                <div>Initial Deposit
+                                    <br>25%</div>
                             </div>
                         </div>
                     </div>
@@ -210,12 +228,12 @@
                 <div class="card">
                     <h5 class="mb-0">
         <button class="btn btn-link card-header collapsed" id="headingThree" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          Collapsible Group Item #3
+          Why did we start The Graphic Jar?
         </button>
       </h5>
                     <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                         <div class="card-body">
-                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            We love to be creative. It's harder than ever to
                         </div>
                     </div>
                 </div>
@@ -288,9 +306,9 @@
     <footer class="footer">
         <div id="links">
             <img src="assets/svg/tgj_logo.svg">
-            <div><a href="about.html">About Us</a></div>
-            <div><a href="terms.html">Terms and Agreement</a></div>
-            <div><a href="faq2.html">More FAQ</a></div>
+            <div><a href="##">About Us</a></div>
+            <div><a href="##">Terms and Agreement</a></div>
+            <div><a href="##">More FAQ</a></div>
             <div><a href="contact.html">Contact Us</a></div>
         </div>
     </footer>

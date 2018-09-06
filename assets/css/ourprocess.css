@@ -17,7 +17,7 @@
 
 	#sec3 {
 	    background-color: rgba(0, 0, 0, 0.05);
-	    height: 600px;
+	    /*height: 600px;*/
 	    border-bottom: 1px rgba(0, 0, 0, 0.2) solid;	
 	}
 
@@ -112,20 +112,24 @@
 
 	#sec3 #vbbottom {
 		width: 48vw;
-		height: 400px;
+		height: 28vw;
 		background-color: #fff;
 		border-radius: 0 0 5px 5px;
+		/*margin-bottom: 30px;*/
+	}
+
+	#sec3 #vbbottom #contentone .row {
+		width: 48vw!important;
 	}
 
 	#sec3 .showprocess {
-		opacity: 1!important;
+		display: none;
 	}
 
 	#sec3 #contentone {
 		padding: 70px 0 0;
 		width: 700px;
 		position: absolute;
-		opacity: 0;
 		transition: .3s;
 	}
 
@@ -148,14 +152,14 @@
 	}
 
 	#sec3 #contentone .projects {
-		width: 180px;
-		height: 180px;
+		width: 14vw;
+		height: 14vw;
 		background-color: var(--tgjblue);
 		color: #fff;
 		font-size: 20px;
 		border-radius: 5px;
 		text-align: center;
-		margin: auto;
+		/*margin: auto;*/
 	}
 
 	#sec3 #contentone .row .col-lg:nth-child(1) .projects div {
@@ -200,12 +204,10 @@
 		margin: 30px 0 0 25%;
 		position: absolute;
 		border: 8px solid var(--tgjblue);
-		opacity: 0;
 		transition: .3s;
 	}
 
 	#sec3 #contentthree {
-		opacity: 0;
 		transition: .3s;
 	}
 
@@ -230,7 +232,7 @@
 		width: 700px;
 		height: 470px;
 		border-radius: 5px;
-		margin: 60px 0 0;
+		margin: 60px 0;
 	}
 
 	#sec3 #diffsteps{
