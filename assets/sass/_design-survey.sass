@@ -1,0 +1,117 @@
+.projects
+    &-card
+        display: inline-block
+        width: 22rem
+        height: 32rem
+        border-radius: .5rem
+        background-color: $primary-white
+        position: relative
+
+        @media screen and (max-width: 1440px)
+            width: 15rem
+            height: 21rem
+
+        &:not(:last-child) 
+            margin-right: 1rem
+
+        &_1
+            background-color: $bg-blue
+
+        &_2
+            background-color: $primary-blue
+
+        &_3
+            background-color: $primary-orange
+
+    [class^='process-image']
+        clip-path: circle(50%)
+        width: 15rem
+        height: 15rem
+        background-color: $primary-white
+        background-size: 10rem
+        background-repeat: no-repeat
+        background-position: center
+        z-index: 100
+        position: absolute
+        top: 12rem
+        left: 11rem
+        transform: translate(-50%, -50%)
+
+        @media screen and (max-width: 1440px)
+            width: 10rem
+            height: 10rem
+            background-size: 7rem
+            top: 8rem
+            left: 7.5rem
+
+    &-image_1
+        background-image: url('../svg/web_design.svg')
+
+    &-image_2
+        background-image: url('../svg/tgj_logo_form.svg')
+        background-size: 6rem!important
+        @media screen and (max-width: 1440px)
+            background-size: 4rem!important
+
+    &-image_3
+        background-image: url('../svg/business_cards.svg')
+
+    [class^='process-border']
+        clip-path: circle(50%)
+        width: 16rem
+        height: 16rem
+        position: absolute
+        top: 12rem
+        left: 11rem
+        z-index: 50
+        transform: translate(-50%, -50%)
+
+        @media screen and (max-width: 1440px)
+            width: 11rem
+            height: 11rem
+            top: 8rem
+            left: 7.5rem
+
+    &-border_1
+        background-color: $bg-blue
+
+    &-border_2
+        background-color: $primary-blue
+
+    &-border_3
+        background-color: $primary-orange
+
+    [class^='process-title']
+        background-color: $primary-white
+        width: 12rem
+        height: 4rem
+        font-size: 2rem
+        position: absolute
+        top: 21.5rem
+        left: 11rem
+        z-index: 10
+        transform: translate(-50%, -50%)
+        text-transform: uppercase
+        padding-top: .5rem
+        border-radius: .5rem
+
+        @media screen and (max-width: 1440px)
+            font-size: $regular-size
+            top: 15rem
+            left: 7.5rem
+            padding-top: .8rem
+
+    &-title_1
+        color: $bg-blue
+
+    &-title_2
+        color: $primary-blue
+
+    &-title_3
+        color: $primary-orange
+        font-size: 1.8rem!important
+        @media screen and (max-width: 1440px)
+            font-size: 1.3rem!important
+            padding-top: 1rem!important
+
+

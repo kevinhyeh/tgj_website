@@ -1,37 +1,50 @@
-#three-step-process
-    background: $primary-off-white
-    padding: 4rem 3% 0
-    text-align: center
-    &:after
-        @extend %clearfix
-    div
-        // display: inline-block
+.process
+    padding: 5rem
+    width: 100%
+    height: auto
+    position: relative
+    
+    @include clearfix
 
-    #process-display
-        width: 95rem
-        height: 70rem
-        background-image: url('../images/ipad-mock-up.png')
-        background-size: cover
-        float: left
-        padding: 34rem 2.5rem 0 0
+    &-step
+        width: 60%
+        margin: 2rem auto
+        padding: 2rem
+        border-radius: .5rem
+        background: linear-gradient(120deg, rgba($bg-blue, 0.8), rgba($bg-blue, 0.8) 20%, rgba($primary-white, 0.8) 20%)
+        transform: skewX(-15deg)
+        box-shadow: 0 1rem 2rem #777
+
         @media screen and (max-width: 1440px)
-                width: 68rem
-                height: 50rem
-                padding-top: 24rem
+                // margin-top: 8rem
 
-    #process-text
-        margin-top: 25rem
-        @media screen and (max-width: 1440px)
-                margin-top: 15rem
-        h3
-            @extend %header-three
+    &-header
+        display: inline-block
+        width: 20%
+        color: $primary-white
+        padding-left: 3rem
+        font-size: 6rem
+        font-weight: bold
 
-        .process-text-all
-            h4
-                font-size: $header-four
 
-            p
-                font-size: $regular-size
+    &-text
+        transform: skewX(15deg)
+        display: inline-block
+
+        h4
+            font-size: $header-four
+            padding-left: 2rem
+            text-decoration: underline
+
+        p
+            font-size: $regular-size
+
+    &-bgimage
+        background-image: url('../images/Muir Woods-11.jpg')
+        opacity: 0.2
+        @extend %background-image
+
+            
 
 
 

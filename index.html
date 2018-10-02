@@ -7,11 +7,8 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <!-- External CSS -->
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="assets/css/clientss.css">
     <link rel="stylesheet" type="text/css" href="assets/css/faq.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/footer.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/ourprocess.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <!-- Riteous Font -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,500|Source+Sans+Pro" rel="stylesheet">
@@ -21,13 +18,13 @@
     <!-- navigation bar -->
     <header>
         <nav>
-            <div id="nav-main-name">
-                <img src="assets/svg/tgj_logo.svg" id="tgj-logo">
+            <div class="nav-main-name">
+                <img src="assets/svg/tgj_logo.svg" class="tgj-logo">
                 <h1>the <span>graphic</span> jar</h1>
             </div>
             <div class="design-button" id="nav-button">
             </div>
-            <div id="nav-links">
+            <div class="nav-links">
                 <ul>
                     <li><a class="active" href="index.html">Home</a></li>
                     <li><a href="form.html">Form</a></li>
@@ -37,42 +34,47 @@
         </nav>
     </header>
     <!-- welcome section -->
-    <main id="main-intro">
-        <div id="text-button">
+    <main class="main-intro">
+        <div class="text-button">
             <h2>Create designs easy<br> and effortlessly.</h2>
             <p>The Graphic Jar is here to create your one of kind design project.</p>
             <div class="design-button" id="intro-button">
             </div>
         </div>
-        <div class="chick">
-        </div>
     </main>
     <!-- who are we -->
-<!--     <section class="who">
-        <div class="who-title">
-            <h2>Who Are We?</h2>
+    <section class="who">
+        <h3 class="h3-white">Who Are We?</h3>
+        <div class="group">
+            <div class="who-image">
+                
+            </div>
+            <div class="who-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium perspiciatis vel consequuntur accusamus dolorem maiores, sequi asperiores facere unde, rerum quam, quidem ullam suscipit sapiente? Excepturi velit aut omnis sequi!
+            </div>
         </div>
-        <div class="who-desc">
-            
-        </div>
-    </section> -->
+        <div class="who-bggradient"></div>
+        <div class="who-bgimage"></div>
+    </section>
     <!-- why we are different -->
-    <section id="why-we-diff">
+    <section class="why">
         <h3>Why Are We Different?</h3>
         <div class="group">
-            <div class="reason">
+            <div class="why-reason">
                 <h4>Branding Is Our Niche</h4>
-                <p>Want to make your company stand out? <br> We are filled with new ideas and are itching <br> to create something special for you.</p>
+                <p>Want to make your company stand out?
+                    <br> We are filled with new ideas and are itching
+                    <br> to create something special for you.</p>
                 <img src="assets/svg/lightbulb.svg">
             </div>
-            <div class="reason">
+            <div class="why-reason">
                 <h4>Custom Design Survey</h4>
                 <p>We have created a one of kind survey
                     <br> that is effortless for you and detailed for us.
                     <br>Why make simple complicated?</p>
                 <img src="assets/svg/form.svg">
             </div>
-            <div class="reason">
+            <div class="why-reason">
                 <h4>Around The Clock Service</h4>
                 <p>Customer first is our motto.
                     <br> We pride ourselves on our turn around
@@ -82,36 +84,38 @@
         </div>
     </section>
     <!-- 3 step process -->
-    <section id="three-step-process">
-        <div id="process-display">
-            <div class="process-all">
-                process one
+    <section class="process">
+        <h3>What Is Our Process?</h3>
+        <div class="process-step">
+            <div class="process-header">
+                1
             </div>
-            <div class="process-all">
-                process two
-            </div>
-            <div class="process-all">
-                process three
+            <div class="process-text">
+                <h4>Choose Your Project</h4>
+                <p>First things first, we need to know what project you would like to start with.</p>
             </div>
         </div>
-        <div id="process-text">
-            <h3>Designs Made Easy!</h3>
-            <div class="process-text-all">
-                <h4>1. Choose Your Project</h4>
-                <p>First things first, we need to know what project you would like to start with.</p>
-                <p>From logos to flyers to web design, we do everything to help brand you!</p>
+        <div class="process-step">
+            <div class="process-header">
+                2
             </div>
-<!--             <div class="process-text-all">
-                <h4>2. Take Our Quick Survey</h4>
-                <p>Always have communication problems with freelancers?</p>
+            <div class="process-text">
+                <h4>Take Our Quick Survey</h4>
                 <p>Fill out our user friendly survey which takes less than 10 minutes!</p>
             </div>
-            <div class="process-text-all">
-                <h4>3. Submit And Wait</h4>
-                <p>And that's it! We have all the information we need to start your sweet project.</p>
-                <p>Give us 24 hrs and we'll reach out to set up a free consultation meeting with you!</p>
-            </div> -->
         </div>
+        <div class="process-step">
+            <div class="process-header">
+                3
+            </div>
+            <div class="process-text">
+                <h4>Submit And Wait</h4>
+                <p>And that's it! We have all the information we need to start your sweet project.</p>
+            </div>
+        </div>
+        <div class="process-bgimage">
+        </div>
+        <!-- </div> -->
     </section>
     <!-- FAQ -->
     <section id="sec4">
@@ -234,13 +238,75 @@
             </a>
         </div>
     </section>
+    <!--     <section class="grid-test">
+        <div class="row">
+            <div class="col-1-of-2">
+                Col 1 of 2
+            </div>
+            <div class="col-1-of-2">
+                Col 1 of 2
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-1-of-3">
+                Col 1 of 3
+            </div>
+            <div class="col-1-of-3">
+                Col 1 of 3
+            </div>
+            <div class="col-1-of-3">
+                Col 1 of 3
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-1-of-3">
+                Col 1 of 3
+            </div>
+            <div class="col-2-of-3">
+                Col 2 of 3
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-1-of-4">
+                Col 1 of 4
+            </div>
+            <div class="col-1-of-4">
+                Col 1 of 4
+            </div>
+            <div class="col-1-of-4">
+                Col 1 of 4
+            </div>
+            <div class="col-1-of-4">
+                Col 1 of 4
+            </div>
+        </div>
+         <div class="row">
+            <div class="col-1-of-4">
+                Col 1 of 4
+            </div>
+            <div class="col-1-of-4">
+                Col 1 of 4
+            </div>
+            <div class="col-2-of-4">
+                Col 2 of 4
+            </div>
+        </div>
+         <div class="row">
+            <div class="col-1-of-4">
+                Col 1 of 4
+            </div>
+            <div class="col-3-of-4">
+                Col 3 of 4
+            </div>
+        </div>
+    </section> -->
     <footer class="footer">
-        <div id="links">
-            <img src="assets/svg/tgj_logo.svg">
-            <div><a href="##">About Us</a></div>
-            <div><a href="##">Terms and Agreement</a></div>
-            <div><a href="##">More FAQ</a></div>
-            <div><a href="contact.html">Contact Us</a></div>
+        <div class="footer-info">
+            <img class="footer-image" src="assets/svg/tgj_logo.svg">
+            <div class="footer-link"><a href="##">About Us</a></div>
+            <div class="footer-link"><a href="##">Terms and Agreement</a></div>
+            <div class="footer-link"><a href="##">More FAQ</a></div>
+            <div class="footer-link"><a href="contact.html">Contact Us</a></div>
         </div>
     </footer>
     <!-- Bootstrap JS -->

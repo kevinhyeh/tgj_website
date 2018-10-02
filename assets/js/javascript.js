@@ -9,16 +9,18 @@ $('#intro-button').html(button);
 // header scroll function
 if (window.location.href == "file:///Users/kevinyeh/Desktop/the_graphic_jar/tgj_website/index.html") {
     $(document).on('scroll', function() {
+        var span = $('<span>').html("graphic");
+        var h1 = "the" + span + "jar";
         if ($(document).scrollTop()) {
             $('nav').addClass('scroll-change');
             $('#intro-button').empty();
             $('#nav-button').html(button);
-            $('#tgj-logo').attr('src', 'assets/svg/tgj_logo(scroll).svg');
+            $('.tgj-logo').attr('src', 'assets/svg/tgj_logo(scroll).svg');
         } else {
             $('nav').removeClass('scroll-change');
             $('#nav-button').empty();
             $('#intro-button').html(button);
-            $('#tgj-logo').attr('src', 'assets/svg/tgj_logo.svg');
+            $('.tgj-logo').attr('src', 'assets/svg/tgj_logo.svg');
         }
     });
 }

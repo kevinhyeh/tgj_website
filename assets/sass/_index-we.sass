@@ -1,0 +1,38 @@
+.who
+    padding: 5rem
+    @include clearfix
+    .h3-white
+        text-shadow: -.2rem .3rem $primary-white
+
+    position: relative
+    &-image
+        background-color: #000
+        clip-path: circle(50%)
+        width: 35rem
+        height: 35rem
+        float: left
+        shape-outside: circle(50% at 50% 50%)
+
+    &-text
+        font-size: 2.5rem
+        width: 96%
+        transform: translateX(6rem)
+        line-height: 4rem
+        padding-top: 5rem
+        color: #000
+
+    &-bggradient
+        width: 100%
+        height: 100%
+        position: absolute
+        top: 0
+        left: 0
+        z-index: -5
+        background: linear-gradient(to bottom, transparent, $primary-white)
+
+    &-bgimage
+        background-image: url('../images/ggbridge.jpg')
+        opacity: 1
+        @extend %background-image
+
+

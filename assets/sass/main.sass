@@ -17,28 +17,52 @@ html
 // variables
 $primary-grey: #292929
 $primary-blue: #23e2e9
+$primary-orange: #FF8E3A
 $primary-white: #fff
 $primary-off-white: rgba(0,0,0,0.05)
-$bg-blue: #64D1FF
+$bg-blue: #0098ff
 $primary-font: 'Montserrat', sans-serif
-$header-fsour: 2.6rem
-$regular-size: 1.6rem
+$header-four: 2.8rem
+$regular-size: 1.7rem
+
+// GRID variables
+$grid-width: 124rem
+$gutter-vertical: 8rem
+$gutter-horizontal: 6rem
 
 // extends/inheritance
-// clearing floats
-%clearfix
-    content: ""
-    display: table
-    clear: both
 
-%header-three
-    font-size: 3rem
-    font-weight: 500
-    border: .3rem solid #000
-    display: inline-block
-    padding: 1.5rem
-    border-radius: 1rem
+.group
+    width: 90%
+    margin: auto
+
+h3
+    font-size: 5rem
+    font-weight: bold
+    // border: .3rem solid #000
     font-family: $primary-font 
+    text-align: center
+    margin-bottom: 5rem
+    color: $primary-blue
+    text-shadow: -.2rem .3rem #000
+
+%background-image
+    background-size: cover
+    background-position: center
+    filter: grayscale(10%)
+    background-repeat: no-repeat
+    width: 100%
+    height: 100%
+    position: absolute
+    top: 0
+    left: 0
+    z-index: -10
+// clearing floats
+@mixin clearfix
+    &:after
+        content: ""
+        display: table
+        clear: both
 
 @mixin design-button
     .start-design 
@@ -82,11 +106,13 @@ $regular-size: 1.6rem
             right: 0
         
 // import files
+@import _grid
+
 @import _navbar
 
 @import _index-intro
 
-@import index-who
+@import _index-we
 
 @import _index-diff
 
