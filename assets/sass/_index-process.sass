@@ -1,50 +1,67 @@
 .process
-    padding: 5rem
-    width: 100%
-    height: auto
-    position: relative
+
+  .row
+    width: 100%!important
+    margin-bottom: 0!important
+
+  &-column
+    margin: 0!important
+    width: calc(100%/3)!important
+
+  &-box
+    height: 40rem
+    color: $primary-white
+    font-family: $primary-font
+
+    &-1a
+      background-color: #539CC7
     
-    @include clearfix
+    &-1b
+      background-color: #437EA1
+      padding: 8rem
+      font-size: $secondary-size
 
-    &-step
-        width: 60%
-        margin: 2rem auto
-        padding: 2rem
-        border-radius: .5rem
-        background: linear-gradient(120deg, rgba($bg-blue, 0.8), rgba($bg-blue, 0.8) 20%, rgba($primary-white, 0.8) 20%)
-        transform: skewX(-15deg)
-        box-shadow: 0 1rem 2rem #777
+    &-1c
+      background-color: #294C61
+      position: relative
 
-        @media screen and (max-width: 1440px)
-                // margin-top: 8rem
+      img
+        width: 70%
+        @extend %center-img
 
-    &-header
-        display: inline-block
-        width: 20%
-        color: $primary-white
-        padding-left: 3rem
-        font-size: 6rem
-        font-weight: bold
+    &-2a
+      background-color: #26613B
 
+    &-2b
+      background-color: #3FA162
+      padding: 6rem
+      font-size: $secondary-size
 
-    &-text
-        transform: skewX(15deg)
-        display: inline-block
+    &-2c
+      background-color: #50CF7E
 
-        h4
-            font-size: $header-four
-            padding-left: 2rem
-            text-decoration: underline
+    &-3a
+      background-color: #CF7738
 
-        p
-            font-size: $regular-size
+    &-3b
+      background-color: #A15D2B
+      padding: 6rem
+      font-size: $secondary-size
 
-    &-bgimage
-        background-image: url('../images/Muir Woods-11.jpg')
-        opacity: 0.2
-        @extend %background-image
+    &-3c
+      background-color: #7D4822
 
-            
+  &-step
 
+    &-num
+      text-align: right
+      margin: 0
+      font-size: 24rem
+      width: 13vw
+      // text-shadow: .5rem .5rem 1rem #000
 
-
+    &-title
+      font-size: 7rem
+      line-height: 5rem
+      padding-top: 9.5rem
+      // text-shadow: .5rem .5rem 1rem #000

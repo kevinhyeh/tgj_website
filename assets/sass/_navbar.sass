@@ -5,7 +5,8 @@ nav
     position: fixed
     z-index: 100000
     text-align: center
-    padding-top: 1rem
+    padding-top: 2rem
+    padding-bottom: 1rem
 
     &.scroll-change
         background: rgba(255,255,255,0.97)
@@ -17,6 +18,9 @@ nav
                 color: $primary-blue!important
         a
             color: $primary-grey!important
+
+        .active
+            color: $primary-blue!important
 
     @include clearfix
 
@@ -69,4 +73,7 @@ nav
                     font-size: 18px
                     font-family: $primary-font
                     font-weight: 400
+
+    .active 
+        color: #000!important
 

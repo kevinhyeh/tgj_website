@@ -17,13 +17,15 @@ html
 // variables
 $primary-grey: #292929
 $primary-blue: #23e2e9
+$secondary-blue: #3539BF
 $primary-orange: #FF8E3A
 $primary-white: #fff
 $primary-off-white: rgba(0,0,0,0.05)
 $bg-blue: #0098ff
 $primary-font: 'Montserrat', sans-serif
-$header-four: 2.8rem
-$regular-size: 1.7rem
+$header-four: 4rem
+$regular-size: 3rem
+$secondary-size: 2.5rem
 
 // GRID variables
 $grid-width: 124rem
@@ -37,14 +39,20 @@ $gutter-horizontal: 6rem
     margin: auto
 
 h3
-    font-size: 5rem
+    font-size: 10rem
     font-weight: bold
-    // border: .3rem solid #000
     font-family: $primary-font 
     text-align: center
     margin-bottom: 5rem
-    color: $primary-blue
-    text-shadow: -.2rem .3rem #000
+
+.learn-more
+    font-family: $primary-font
+    font-size: 2rem
+    text-decoration: underline
+    color: #000
+
+    &:hover
+        color: #000
 
 %background-image
     background-size: cover
@@ -57,6 +65,12 @@ h3
     top: 0
     left: 0
     z-index: -10
+
+%center-img
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
 // clearing floats
 @mixin clearfix
     &:after
@@ -114,7 +128,7 @@ h3
 
 @import _index-we
 
-@import _index-diff
+@import _index-why
 
 @import _index-process
 
@@ -122,7 +136,7 @@ h3
 
 @import _index-testimonial
 
-@import _design-survey
+@import _form
 
 @import _contact
 

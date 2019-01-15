@@ -7,7 +7,7 @@ button.html(span);
 $('#intro-button').html(button);
 
 // header scroll function
-if (window.location.href == "file:///Users/kevinyeh/Desktop/the_graphic_jar/tgj_website/index.html") {
+if (window.location.href == "file:///Users/kevinyeh/Desktop/Desktop/the_graphic_jar/tgj_website/index.html") {
     $(document).on('scroll', function() {
         var span = $('<span>').html("graphic");
         var h1 = "the" + span + "jar";
@@ -82,11 +82,21 @@ $('#prev, #next, #boxone, #boxtwo, #boxthree, #rightarrow, #leftarrow').on('clic
 });
 
 // faq
-$('#sec4 button').on('click', function() {
-    $('#sec4 button').removeClass('changeborder');
+$('.faq button').on('click', function() {
+    $('.faq button').removeClass('changeborder');
     if ($(this).attr("aria-expanded") == "false") {
         $(this).addClass('changeborder');
         // $(this ".card-body").addClass('cardchange');
+    }
+});
+
+$('.faq2 .symbol').html('&#43;');
+
+$('.faq2 button').on('click', function() {
+    if ($(this).attr("aria-expanded") == "false") {
+        $('.symbol', this).html('&#8722;');
+    } else {
+        $('.symbol', this).html('&#43;');
     }
 });
 
