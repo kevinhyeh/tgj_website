@@ -1,79 +1,70 @@
 nav
-    width: 100%
-    background: rgba(0,0,0,0)
-    transition: .3s
-    position: fixed
-    z-index: 100000
-    text-align: center
-    padding-top: 2rem
-    padding-bottom: 1rem
+  width: 100%
+  background: rgba(0,0,0,0)
+  transition: .3s
+  position: fixed
+  z-index: 100000
+  text-align: center
+  padding-top: 1rem
+  padding-bottom: .5rem
 
-    &.scroll-change
-        background: rgba(255,255,255,0.97)
-        border-bottom: solid #19c7cd 4px
+  &.scroll-change
+    background: rgba(255,255,255,0.97)
+    border-bottom: solid #19c7cd 4px
 
-        h1
-            color: $primary-grey!important
-            span
-                color: $primary-blue!important
-        a
-            color: $primary-grey!important
+  @include clearfix
 
-        .active
-            color: $primary-blue!important
+  div
+    display: inline-block
+    width: calc((100% - 5%)/3)
 
-    @include clearfix
-
+  @media screen and (max-width: 780px)
     div
+      display: block
+      margin: auto
+      width: 100%
+
+  .nav-main-name
+    .tgj-logo
+      width: 4rem
+      transform: translate(0, -.25rem)
+      margin-right: .5rem
+
+    h1
+      margin-bottom: 2rem
+      color: $primary-white
+      font-family: $primary-font
+      font-weight: 500
+      display: inline-block
+
+    span
+      color: $primary-blue
+
+  .design-button
+    @include design-button
+
+  .nav-links
+    ul
+      width: 4rem
+      display: inline
+      padding: 0
+
+      li
         display: inline-block
-        width: calc((100% - 5%)/3)
+        text-decoration: none
+        list-style: none
+        margin: 0 .5rem
 
-    @media screen and (max-width: 780px)
-        div
-            display: block
-            margin: auto
-            width: 100%
+        a
+          text-decoration: none
+          text-transform: uppercase
+          color: $primary-white
+          transition: .3s
+          font-size: 2rem
+          font-family: $primary-font
+          font-weight: 1000
 
-    .nav-main-name
-        .tgj-logo
-            width: 2.5rem
-            transform: translate(0, -.25rem)
-            margin-right: .5rem
-
-        h1
-            margin-bottom: 2rem
-            color: $primary-white
-            font-family: $primary-font
-            font-weight: 300
-            display: inline-block
-            span
-                color: $primary-grey
-
-    .design-button
-        @include design-button
-
-    .nav-links
-
-        ul
-            width: 4rem
-            display: inline
-            padding: 0
-
-            li
-                display: inline-block
-                text-decoration: none
-                list-style: none
-                margin: 0 .5rem
-
-                a
-                    text-decoration: none
-                    text-transform: uppercase
-                    color: $primary-white
-                    transition: .3s
-                    font-size: 18px
-                    font-family: $primary-font
-                    font-weight: 400
-
-    .active 
-        color: #000!important
-
+      .active 
+          color: $primary-blue!important
+  
+  

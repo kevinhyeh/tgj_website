@@ -96,24 +96,12 @@ nav {
   position: fixed;
   z-index: 100000;
   text-align: center;
-  padding-top: 2rem;
-  padding-bottom: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
 }
 nav.scroll-change {
   background: rgba(255, 255, 255, 0.97);
   border-bottom: solid #19c7cd 4px;
-}
-nav.scroll-change h1 {
-  color: #292929 !important;
-}
-nav.scroll-change h1 span {
-  color: #23e2e9 !important;
-}
-nav.scroll-change a {
-  color: #292929 !important;
-}
-nav.scroll-change .active {
-  color: #23e2e9 !important;
 }
 nav:after {
   content: "";
@@ -132,7 +120,7 @@ nav div {
   }
 }
 nav .nav-main-name .tgj-logo {
-  width: 2.5rem;
+  width: 4rem;
   transform: translate(0, -0.25rem);
   margin-right: 0.5rem;
 }
@@ -140,16 +128,16 @@ nav .nav-main-name h1 {
   margin-bottom: 2rem;
   color: #fff;
   font-family: "Montserrat", sans-serif;
-  font-weight: 300;
+  font-weight: 500;
   display: inline-block;
 }
-nav .nav-main-name h1 span {
-  color: #292929;
+nav .nav-main-name span {
+  color: #00AEEF;
 }
 nav .design-button .start-design {
   display: block;
   border-radius: 0.3rem;
-  background-color: #FF8E3A;
+  background-image: linear-gradient(140deg, #FED13A, #FEA83A 70%, #FEA83A);
   border: none;
   color: #fff;
   font-size: 1.8rem;
@@ -198,12 +186,12 @@ nav .nav-links ul li a {
   text-transform: uppercase;
   color: #fff;
   transition: 0.3s;
-  font-size: 18px;
+  font-size: 2rem;
   font-family: "Montserrat", sans-serif;
-  font-weight: 400;
+  font-weight: 1000;
 }
-nav .active {
-  color: #000 !important;
+nav .nav-links ul .active {
+  color: #00AEEF !important;
 }
 
 .main-intro {
@@ -273,7 +261,7 @@ nav .active {
 .main-intro .text-button .design-button .start-design {
   display: block;
   border-radius: 0.3rem;
-  background-color: #FF8E3A;
+  background-image: linear-gradient(140deg, #FED13A, #FEA83A 70%, #FEA83A);
   border: none;
   color: #fff;
   font-size: 1.8rem;
@@ -606,147 +594,6 @@ nav .active {
 }
 .testimonial .carousel-indicators li {
   background-color: rgba(0, 0, 0, 0.5) !important;
-}
-
-.projects {
-  margin: auto;
-  padding: 5rem;
-}
-.projects-card_front {
-  margin: auto;
-  width: 22rem;
-  height: 32rem;
-  border-radius: 0.5rem;
-  background-color: #fff;
-  position: relative;
-  box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.5);
-}
-@media screen and (max-width: 1440px) {
-  .projects-card_front {
-    width: 35rem;
-    height: 44rem;
-  }
-}
-.projects-card_front:hover {
-  transform: rotateY(180deg);
-}
-.projects-card_front:not(:last-child) {
-  margin-right: 1rem;
-}
-.projects-card_front_1 {
-  background-color: #0098ff;
-}
-.projects-card_front_2 {
-  background-color: #23e2e9;
-}
-.projects-card_front_3 {
-  background-color: #FF8E3A;
-}
-.projects [class^=projects-image_front] {
-  clip-path: circle(50%);
-  width: 15rem;
-  height: 15rem;
-  background-color: #fff;
-  background-size: 10rem;
-  background-repeat: no-repeat;
-  background-position: center;
-  z-index: 100;
-  position: absolute;
-  top: 12rem;
-  left: 11rem;
-  transform: translate(-50%, -50%);
-}
-@media screen and (max-width: 1440px) {
-  .projects [class^=projects-image_front] {
-    width: 20rem;
-    height: 20rem;
-    background-size: 15rem;
-    top: 18rem;
-    left: 17rem;
-  }
-}
-.projects-image_front_1 {
-  background-image: url("../svg/web_design.svg");
-}
-.projects-image_front_2 {
-  background-image: url("../svg/tgj_logo_form.svg");
-  background-size: 6rem !important;
-}
-@media screen and (max-width: 1440px) {
-  .projects-image_front_2 {
-    background-size: 8rem !important;
-  }
-}
-.projects-image_front_3 {
-  background-image: url("../svg/business_cards.svg");
-}
-.projects [class^=projects-border_front] {
-  clip-path: circle(50%);
-  width: 16rem;
-  height: 16rem;
-  position: absolute;
-  top: 12rem;
-  left: 11rem;
-  z-index: 50;
-  transform: translate(-50%, -50%);
-}
-@media screen and (max-width: 1440px) {
-  .projects [class^=projects-border_front] {
-    width: 21rem;
-    height: 21rem;
-    top: 18rem;
-    left: 17rem;
-  }
-}
-.projects-border_front_1 {
-  background-color: #0098ff;
-}
-.projects-border_front_2 {
-  background-color: #23e2e9;
-}
-.projects-border_front_3 {
-  background-color: #FF8E3A;
-}
-.projects [class^=projects-title_front] {
-  background-color: #fff;
-  width: 12rem;
-  height: 4rem;
-  font-size: 2rem;
-  position: absolute;
-  top: 21.5rem;
-  left: 11rem;
-  z-index: 10;
-  transform: translate(-50%, -50%);
-  text-transform: uppercase;
-  padding-top: 0.5rem;
-  border-radius: 0.5rem;
-  text-align: center;
-}
-@media screen and (max-width: 1440px) {
-  .projects [class^=projects-title_front] {
-    font-size: 2.4rem;
-    width: 25rem;
-    height: 5rem;
-    top: 30rem;
-    left: 17rem;
-    padding-top: 0.8rem;
-  }
-}
-.projects-title_front_1 {
-  color: #0098ff;
-}
-.projects-title_front_2 {
-  color: #23e2e9;
-}
-.projects-title_front_3 {
-  color: #FF8E3A;
-  font-size: 1.8rem !important;
-}
-@media screen and (max-width: 1440px) {
-  .projects-title_front_3 {
-    font-size: 1.3rem !important;
-    padding-top: 1rem !important;
-  }
 }
 
 /*footer*/
