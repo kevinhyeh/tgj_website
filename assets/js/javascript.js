@@ -9,8 +9,6 @@ $('#intro-button').html(button);
 // header scroll function
 if (window.location.href == "file:///Users/kevinyeh/Desktop/Desktop/the_graphic_jar/tgj_website/index.html") {
     $(document).on('scroll', function() {
-        var graphic = $('<span>').html("graphic");
-        var h1 = `the ${graphic} jar`;
         if ($(document).scrollTop()) {
             $('nav').addClass('scroll-change');
             $('#intro-button').empty();
@@ -27,76 +25,13 @@ if (window.location.href == "file:///Users/kevinyeh/Desktop/Desktop/the_graphic_
             $('.nav-links').find('a').css('color', '#fff');
         }
     });
+        
 }
 
-// process slideshow
-// var steps = 1;
-
-// function differentSteps() {
-//     if (steps == 1) {
-//         $('#stepstitle').html("1. Choose Your Project");
-//         $('#stepsdesc').html("First things first, we need to know what project you would like to start with.<br><br> From logos to flyers to web design, we can do anything branding!");
-//         $('#boxone').addClass('activestep');
-//         $('#contentone').removeClass('showprocess');
-//         $('#contentone div').removeClass('showprocess');
-//     }
-//     if (steps == 2) {
-//         $('#stepstitle').empty();
-//         $('#stepstitle').html("2. Take Our Survey");
-//         $('#stepsdesc').html("Always have communication problems with freelancers?<br><br> Fill out our user friendly survey which takes less than 10 minutes!");
-//         $('#boxtwo').removeClass('activestep');
-//         $('#contenttwo').removeClass('showprocess');
-//         $('#contenttwo div').removeClass('showprocess');
-//     }
-//     if (steps == 3) {
-//         $('#stepstitle').html("3. Submit And Wait");
-//         $('#stepsdesc').html("That's it! We have all the information we need to start your sweet project.<br><br> Give us 24 hrs and we'll reach out to set up a free consultation meeting with you!");
-//         $('#boxthree').removeClass('activestep');
-//         $('#contentthree').removeClass('showprocess');
-//     }
-// }
-
-// differentSteps();
-
-// $('#prev, #next, #boxone, #boxtwo, #boxthree, #rightarrow, #leftarrow').on('click', function() {
-//     $('#vbcontent div').addClass('showprocess');
-//     $('#diffsteps .circles').addClass('activestep');
-//     if ($(this).attr("id") == "prev" || $(this).attr("id") == "leftarrow") {
-//         steps--;
-//         if (steps == 0) {
-//             steps = 3;
-//         }
-//     }
-//     if ($(this).attr("id") == "next" || $(this).attr("id") == "rightarrow") {
-//         steps++;
-//         if (steps == 4) {
-//             steps = 1;
-//         }
-//     }
-//     if ($(this).attr("id") == "boxone") {
-//         steps = 1;
-//     }
-//     if ($(this).attr("id") == "boxtwo") {
-//         steps = 2;
-//     }
-//     if ($(this).attr("id") == "boxthree") {
-//         steps = 3;
-//     }
-//     differentSteps();
-// });
-
 // faq
+$('.faq .symbol').html('&#43;');
+
 $('.faq button').on('click', function() {
-    $('.faq button').removeClass('changeborder');
-    if ($(this).attr("aria-expanded") == "false") {
-        $(this).addClass('changeborder');
-        // $(this ".card-body").addClass('cardchange');
-    }
-});
-
-$('.faq2 .symbol').html('&#43;');
-
-$('.faq2 button').on('click', function() {
     if ($(this).attr("aria-expanded") == "false") {
         $('.symbol', this).html('&#8722;');
     } else {

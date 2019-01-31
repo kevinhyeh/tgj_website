@@ -16,5 +16,11 @@
     "project": "Website",
     "price": 500,
     "description": "Increase the design by adding a second side to your card"
+  },
+  {
+    "_id": 4,
+    "project": "Other",
+    "price": "TBD",
+    "description": "Have another project in mind?"
   }
 ]

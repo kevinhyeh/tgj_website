@@ -132,18 +132,18 @@ nav .nav-main-name h1 {
   display: inline-block;
 }
 nav .nav-main-name span {
-  color: #00AEEF;
+  color: #69e2d3;
 }
 nav .design-button .start-design {
   display: block;
   border-radius: 0.3rem;
-  background-image: linear-gradient(140deg, #FED13A, #FEA83A 70%, #FEA83A);
+  background-color: #f3c953;
   border: none;
   color: #fff;
-  font-size: 1.8rem;
+  font-size: 2rem;
   padding: 0.3rem;
-  width: 14rem;
-  height: 4.5rem;
+  width: 15rem;
+  height: 5.5rem;
   transition: all 0.5s;
   cursor: pointer;
   margin: auto;
@@ -180,6 +180,7 @@ nav .nav-links ul li {
   text-decoration: none;
   list-style: none;
   margin: 0 0.5rem;
+  cursor: pointer;
 }
 nav .nav-links ul li a {
   text-decoration: none;
@@ -191,95 +192,95 @@ nav .nav-links ul li a {
   font-weight: 1000;
 }
 nav .nav-links ul .active {
-  color: #00AEEF !important;
+  color: #69e2d3 !important;
 }
 
 .main-intro {
-  background: #3539BF;
-  padding: 14vh 0 14vh;
+  background-image: url("../images/main-pic.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 14vh 0;
 }
 .main-intro:after {
   content: "";
   display: table;
   clear: both;
 }
-.main-intro .text-button {
+.main-intro-info {
   margin: auto;
   height: 70.1rem;
-  width: 102.5rem;
+  width: 80rem;
   padding-top: 10rem;
   padding-left: 1rem;
-  background-image: url("../images/intro-pic.png");
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 @media screen and (max-width: 1440px) {
-  .main-intro .text-button {
+  .main-intro-info {
     height: 57.2rem;
     width: 83.6rem;
     padding-top: 6.5rem;
   }
 }
 @media screen and (max-width: 1180px) {
-  .main-intro .text-button {
+  .main-intro-info {
     width: 70rem;
     height: 50rem;
     padding-top: 7rem;
   }
 }
-.main-intro .text-button h2, .main-intro .text-button p {
+.main-intro-info h2, .main-intro-info p {
   color: #fff;
   font-family: "Montserrat", sans-serif;
   text-align: center;
 }
-.main-intro .text-button h2 {
-  font-size: 6rem;
+.main-intro-info h2 {
+  font-size: 8rem;
 }
 @media screen and (max-width: 1440px) {
-  .main-intro .text-button h2 {
+  .main-intro-info h2 {
     font-size: 5.3rem;
   }
 }
 @media screen and (max-width: 1180px) {
-  .main-intro .text-button h2 {
+  .main-intro-info h2 {
     font-size: 4.2rem;
   }
 }
-.main-intro .text-button p {
-  font-size: 1.8rem;
+.main-intro-info p {
+  font-size: 2.3rem;
 }
 @media screen and (max-width: 1440px) {
-  .main-intro .text-button p {
+  .main-intro-info p {
     font-size: 1.6rem;
   }
 }
 @media screen and (max-width: 1180px) {
-  .main-intro .text-button p {
+  .main-intro-info p {
     font-size: 1.3rem;
   }
 }
-.main-intro .text-button .design-button .start-design {
+.main-intro-info .design-button .start-design {
   display: block;
   border-radius: 0.3rem;
-  background-image: linear-gradient(140deg, #FED13A, #FEA83A 70%, #FEA83A);
+  background-color: #f3c953;
   border: none;
   color: #fff;
-  font-size: 1.8rem;
+  font-size: 2rem;
   padding: 0.3rem;
-  width: 14rem;
-  height: 4.5rem;
+  width: 15rem;
+  height: 5.5rem;
   transition: all 0.5s;
   cursor: pointer;
   margin: auto;
   font-family: "Montserrat", sans-serif;
 }
-.main-intro .text-button .design-button .start-design span {
+.main-intro-info .design-button .start-design span {
   cursor: pointer;
   display: inline-block;
   position: relative;
   transition: 0.5s;
 }
-.main-intro .text-button .design-button .start-design span:after {
+.main-intro-info .design-button .start-design span:after {
   content: "»";
   position: absolute;
   opacity: 0;
@@ -287,10 +288,10 @@ nav .nav-links ul .active {
   right: -1rem;
   transition: 0.5s;
 }
-.main-intro .text-button .design-button .start-design:hover span {
+.main-intro-info .design-button .start-design:hover span {
   padding-right: 1.3rem;
 }
-.main-intro .text-button .design-button .start-design:hover span:after {
+.main-intro-info .design-button .start-design:hover span:after {
   opacity: 1;
   right: 0;
 }
@@ -310,6 +311,7 @@ nav .nav-links ul .active {
 }
 .who .header {
   display: block;
+  padding-top: 2rem;
 }
 .who .header-are {
   letter-spacing: 2rem;
@@ -318,6 +320,11 @@ nav .nav-links ul .active {
 .who .header-we {
   letter-spacing: 1.6rem;
   padding-left: 0.9rem;
+}
+.who-title {
+  font-size: 3rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
 }
 .who-description {
   font-size: 3rem;
@@ -420,6 +427,9 @@ nav .nav-links ul .active {
   padding-top: 9.5rem;
 }
 
+.faq {
+  padding: 8rem 0;
+}
 .faq h2 {
   text-align: center;
   font-size: 8rem;
@@ -442,10 +452,17 @@ nav .nav-links ul .active {
   font-size: 3rem;
   color: #fff;
   font-weight: 500;
+  text-align: left;
+}
+.faq button .question {
+  display: inline-block;
+  width: 97%;
+  text-align: center;
 }
 .faq .card {
-  border-radius: 2rem !important;
-  background-color: #fff;
+  border: none !important;
+  border-radius: 0 !important;
+  border-bottom: 0.2rem solid #000 !important;
 }
 .faq .card-body {
   color: #000 !important;
@@ -455,75 +472,12 @@ nav .nav-links ul .active {
   width: 100% !important;
   height: 8rem !important;
   text-decoration: none !important;
-  border-radius: 2rem !important;
-  transition: 0.3s;
-  padding: 0 !important;
-  color: #000;
-  border: 0.2rem solid rgba(0, 0, 0, 0.5);
-}
-.faq .changeborder {
-  border-radius: 2rem 2rem 0 0 !important;
-  background-color: rgba(255, 255, 255, 0);
-}
-.faq .cardchange {
-  border-radius: 5rem 5rem 2rem 2rem !important;
-}
-.faq p {
-  font-size: 2.5rem;
-  text-align: justify;
-}
-
-.faq2 {
-  padding: 8rem 0;
-}
-.faq2 h2 {
-  text-align: center;
-  font-size: 8rem;
-  margin: 5rem auto 3rem;
-  padding: 0.8rem 0 0;
-  font-family: "Montserrat", sans-serif;
-  font-weight: bold;
-}
-.faq2 .accordion {
-  width: 80%;
-  margin: auto;
-}
-.faq2 .accordion .row:not(:last-child) {
-  margin-bottom: 4rem !important;
-}
-.faq2 .accordion .row:last-child {
-  margin-bottom: 8rem !important;
-}
-.faq2 button {
-  font-size: 3rem;
-  color: #fff;
-  font-weight: 500;
-  text-align: left;
-}
-.faq2 button .question {
-  display: inline-block;
-  width: 97%;
-  text-align: center;
-}
-.faq2 .card {
-  border: none !important;
-  border-radius: 0 !important;
-  border-bottom: 0.2rem solid #000 !important;
-}
-.faq2 .card-body {
-  color: #000 !important;
-  padding: 4rem;
-}
-.faq2 .card-header {
-  width: 100% !important;
-  height: 8rem !important;
-  text-decoration: none !important;
   transition: 0.3s;
   padding: 0 !important;
   color: #000;
   background-color: rgba(0, 0, 0, 0) !important;
 }
-.faq2 p {
+.faq p {
   font-size: 2.5rem;
   text-align: justify;
 }
