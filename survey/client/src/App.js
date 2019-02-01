@@ -226,34 +226,36 @@ class App extends Component {
   render() {
     const projInfoState = this.state.projInfo;
     const busInfoState = this.state.businessInfo;
+    const contactInfoState = this.state.contactInfo;
 
     const projChosen = this.state.projectsChosen[0].project != null;
     const compChosen = this.state.complexityChosen[0].complexity != null;
     const colorChosen = this.state.primColor.length > 0;
     const descChosen = projInfoState.projDesc.length > 0 || projInfoState.projBudget.length > 0 || projInfoState.projTimeline.length > 0;
     const businessChosen = busInfoState.businessName.length > 0 || busInfoState.businessWeb.length > 0 || busInfoState.businessDesc.length > 0 || busInfoState.businessSlogan.length > 0 || busInfoState.businessAud.length > 0;
+    const contactChosen = contactInfoState.contactName.length > 0 || contactInfoState.contactEmail.length > 0 || contactInfoState.contactNumber.length > 0 || contactInfoState.contactMessage.length > 0;
 
     const projectsList = this.state.projects.map(project => {
       return (
         <React.Fragment>
         { project.project == "Other" ? (
-          <div style={{ display: "inline-block", width: "200px", height: "200px", border: "1px solid #000", cursor: "pointer", padding: 10 }} onClick={() => this.chooseProject(project.project, project.price)} key={project._id}>
-            <p>{project.project}</p>
+          <div className="buttons" onClick={() => this.chooseProject(project.project, project.price)} key={project._id}>
+            <p className="buttons-title">{project.project}</p>
             { this.state.other ? (
               <React.Fragment>
-                <input type="text" value={this.state.otherProj} placeholder="Input Your Project" onChange={e => this.inputText(e, "otherProj")} />
+                <input className="inputs" type="text" value={this.state.otherProj} placeholder="e.g. T-shirt Design" onChange={e => this.inputText(e, "otherProj")} />
                 <button onClick={() => this.chooseProject(this.state.otherProj, project.price)}>&#62;</button>
               </React.Fragment>
               ): null
             }
-            <p>{project.price}</p>
-            <p>{project.description}</p>
+            <p className="buttons-price">{project.price}</p>
+            <p className="buttons-desc">{project.description}</p>
           </div>
           ) : (
-          <div style={{ display: "inline-block", width: "200px", height: "200px", border: "1px solid #000", cursor: "pointer", padding: 10 }} onClick={() => this.chooseProject(project.project, project.price)} key={project._id}>
-            <p>{project.project}</p>
-            <p>{project.price}</p>
-            <p>{project.description}</p>
+          <div className="buttons" onClick={() => this.chooseProject(project.project, project.price)} key={project._id}>
+            <p className="buttons-title">{project.project}</p>
+            <p className="buttons-price">${project.price}</p>
+            <p className="buttons-desc">{project.description}</p>
           </div>
           )
         }
@@ -262,91 +264,130 @@ class App extends Component {
     });
 
     return (
-      <div style={{ position: "relative", height: "100%"}}>
+      <div className="survey">
         {/*questions*/}
-        <div style={{ width: "75%", height:"100%", display: "inline-block"}}>
+        <div className="question-sec">
           { this.state.steps === 1 ? (
             <div>
-              <p>How complex would you like your {this.state.projectsChosen[0].project.toLowerCase()} be?</p>
+              <p className="questions-header">How complex would you like your {this.state.projectsChosen[0].project.toLowerCase()} be?</p>
               { this.state.projectsChosen[0].project === "Custom Logo" ? (
                 <div>
-                  <button onClick={() => this.chooseComplexity("Simple", 0)}>Simple +$0</button>
-                  <button onClick={() => this.chooseComplexity("Complicated", 50)}>Complicated +$50</button>
+                  <div className="buttons" onClick={() => this.chooseComplexity("Simple", 0)}>
+                    <p className="buttons-title">Simple</p>
+                    <p className="buttons-price">+$0</p>
+                    <p className="buttons-desc">Has two or less elements for your logo.</p>
+                  </div>
+                  <div className="buttons" onClick={() => this.chooseComplexity("Complicated", 50)}>
+                    <p className="buttons-title">Complicated</p>
+                    <p className="buttons-price">+$50</p>
+                    <p className="buttons-desc">Has two or more elements for your logo.</p>
+                  </div>
                 </div>
                 ) : this.state.projectsChosen[0].project === "Business Card" ? (
                 <div>
-                  <button onClick={() => this.chooseComplexity("Single Side", 0)}>Single Side +$0</button>
-                  <button onClick={() => this.chooseComplexity("Double Side", 100)}>Double Side +$100</button>
+                  <div className="buttons" onClick={() => this.chooseComplexity("Single Side", 0)}>
+                    <p className="buttons-title">Single Side</p>
+                    <p className="buttons-price">+$0</p>
+                    <p className="buttons-desc">Keep all your information neat on a side.</p>
+                  </div>
+                  <div className="buttons" onClick={() => this.chooseComplexity("Double Side", 100)}>
+                    <p className="buttons-title">Double Side</p>
+                    <p className="buttons-price">+$100</p>
+                    <p className="buttons-desc">Add more design to your card by inluding another side.</p>
+                  </div>
                 </div>
                 ) : this.state.projectsChosen[0].project === "Website" ? (
                 <div>
-                  <button onClick={() => this.chooseComplexity("Single Page", 0)}>Single Page +$0</button>
-                  <button onClick={() => this.chooseComplexity("Multiple Pages", 200)}>Multiple Pages +$200</button>
+                  <div className="buttons" onClick={() => this.chooseComplexity("Single Page", 0)}>
+                    <p className="buttons-title">Single Page</p>
+                    <p className="buttons-price">+$0</p>
+                    <p className="buttons-desc">Keep it simple with a fluid one page website for your business.</p>
+                  </div>
+                  <div className="buttons" onClick={() => this.chooseComplexity("Multiple Pages", 200)}>
+                    <p className="buttons-title">Multiple Pages</p>
+                    <p className="buttons-price">+$200</p>
+                    <p className="buttons-desc">Have more to show? Add more pages for your customers to read.</p>
+                  </div>
                 </div>
                 ) : null
               }
             </div>
             ) : this.state.steps === 2 ? (
             <div>
-              <p>What is your budget for this {this.state.projectsChosen[0].project.toLowerCase()}?</p>
-              <input type="text" placeholder="Budget" onChange={e => this.inputText(e, "projBudget")} value={this.state.projInfo.projBudget} />
-              <p>Do you have a timeline for this project?</p>
-              <input type="text" placeholder="Timeline" onChange={e => this.inputText(e, "projTimeline")} value={this.state.projInfo.projTimeline} />
-              <p>Describe your project</p>
-              <textarea rows="10" style={{ width: "40%" }} placeholder="Comment here" onChange={e => this.inputText(e, "projDesc")} value={this.state.projInfo.projDesc} />
-              <button onClick={() => this.noInput("projDesc")}>&#62;</button>
+              <p className="questions-header">Tell Us More About The Project</p>
+              <div style={{ display: "inline-block", marginRight: 50 }}>
+              <p className="questions-minor">What is your budget for this {this.state.projectsChosen[0].project.toLowerCase()}?</p>
+              <input className="inputs" type="text" placeholder="e.g. $500" onChange={e => this.inputText(e, "projBudget")} value={this.state.projInfo.projBudget} />
+              </div>
+              <div style={{ display: "inline-block" }}>
+              <p className="questions-minor">Do you have a timeline for this project?</p>
+              <input className="inputs" type="text" placeholder="e.g. 1 month" onChange={e => this.inputText(e, "projTimeline")} value={this.state.projInfo.projTimeline} />
+              </div>
+              <p className="questions-minor">Describe your project</p>
+              <textarea className="textarea" rows="6" placeholder="Describe Project Here" onChange={e => this.inputText(e, "projDesc")} value={this.state.projInfo.projDesc} />
+              <div className="next-button" onClick={() => this.noInput("projDesc")}>Next</div>
             </div>
             ) : this.state.steps === 3 ? (
             <div>
-              <p>What are your business colors?</p>
-              <p>Primary</p>
+              <p className="questions-header">What are your business colors?</p>
+              <div style={{ display: "inline-block", verticalAlign: "top" }}>
+              <p className="questions-minor">Primary</p>
               <SketchPicker color={this.state.primColor} onChange={this.choosePrimColor} />
+              </div>
               { this.state.primColor.split('')[0] == "#" ? (
-                <div>
-                  <p>Secondary (It's alright if you only have one)</p>
+                <div style={{ display: "inline-block", marginLeft: 40}}>
+                  <p className="questions-minor">Secondary (Optional)</p>
                   <SketchPicker color={this.state.secColor} onChange={this.chooseSecColor} />
-                  <button onClick={() => this.cancelColor()}>Cancel Color</button>
+                  <div className="back-button" onClick={() => this.cancelColor()}>Cancel Color</div>
                 </div>
                 ): null
               }
-              <button onClick={() => this.noInput("primColor")}>&#62;</button>
+              <div className="next-button" onClick={() => this.noInput("primColor")}>Next</div>
             </div>
             ) : this.state.steps === 4 ? (
             <div>
-              <p>Tell Us About Your Business</p>
-              <p>What's the name of your business?</p>
-              <input type="text" placeholder="Name of business" onChange={e => this.inputText(e, "businessName")} value={this.state.businessInfo.businessName} />
-              <p>Do you have a website for your business?</p>
-              <input type="text" placeholder="Website" onChange={e => this.inputText(e, "businessWeb")} value={this.state.businessInfo.businessWeb} />
-              <p>What is your business?</p>
-              <textarea rows="10" style={{ width: "40%" }} placeholder="Comment here" onChange={e => this.inputText(e, "businessDesc")} value={this.state.businessInfo.businessDesc} />
-              <p>Do you have a motto/slogan?</p>
-              <textarea rows="4" style={{ width: "40%" }} placeholder="Comment here" onChange={e => this.inputText(e, "businessSlogan")} value={this.state.businessInfo.businessSlogan} />
-              <p>Who is your target audience?</p>
-              <input type="text" placeholder="Audience" onChange={e => this.inputText(e, "businessAud")} value={this.state.businessInfo.businessAud} />
-              <button onClick={() => this.noInput("businessName")}>&#62;</button>
+              <p className="questions-header">Tell Us About Your Business</p>
+              <div style={{ display: "inline-block", marginRight: 50 }}>
+                <p className="questions-minor">What's the name of your business?</p>
+                <input className="inputs" type="text" placeholder="e.g. The Graphic Jar" onChange={e => this.inputText(e, "businessName")} value={this.state.businessInfo.businessName} />
+              </div>
+              <div style={{ display: "inline-block" }}>
+                <p className="questions-minor">Do you have a website for your business?</p>
+                <input className="inputs" type="text" placeholder="e.g. thegraphicjar.com" onChange={e => this.inputText(e, "businessWeb")} value={this.state.businessInfo.businessWeb} />
+              </div>
+              <p className="questions-minor">What is your business?</p>
+              <textarea className="textarea" rows="6" placeholder="Describe Business Here" onChange={e => this.inputText(e, "businessDesc")} value={this.state.businessInfo.businessDesc} />
+              <p className="questions-minor">Do you have a motto/slogan?</p>
+              <textarea className="textarea" rows="4" placeholder="Add Motto/Slogan Here" onChange={e => this.inputText(e, "businessSlogan")} value={this.state.businessInfo.businessSlogan} />
+              <div className="next-button" onClick={() => this.noInput("businessName")}>Next</div>
             </div>
             ) : this.state.steps === 5 ? (
             <div>
-              <p>Want to add another project?</p>
-              <button onClick={() => this.addProject("yes")}>Yup! Sign me up for another one</button>
-              <button onClick={() => this.addProject("no")}>Nope! I'm good to go</button>
+              <p className="questions-header">Want to add another project?</p>
+              <div className="buttons" onClick={() => this.addProject("yes")}>Yup! Sign me up for another one</div>
+              <div className="buttons" onClick={() => this.addProject("no")}>Nope! I'm good to go</div>
             </div>
             ) : this.state.steps === 6 ? (
             <div>
-              <p>Contact Information</p>
-              <p>Name:</p>
-              <input type="text" placeholder="Your Name" onChange={e => this.inputText(e, "contactName")} value={this.state.contactInfo.contactName} />
-              <p>Email:</p>
-              <input type="text" placeholder="Your Email" onChange={e => this.inputText(e, "contactEmail")} value={this.state.contactInfo.contactEmail} />
-              <p>Phone Number:</p>
-              <input type="text" placeholder="Your Phone Number" onChange={e => this.inputText(e, "contactNumber")} value={this.state.contactInfo.contactNumber} />
-              <p>Message:</p>
-              <textarea rows="10" style={{ width: "40%" }} placeholder="Your Message" onChange={e => this.inputText(e, "contactMessage")} value={this.state.contactInfo.contactMessage} />
+              <p className="questions-header">Contact Information</p>
+              <div>
+                <p className="questions-minor">Your Name:</p>
+                <input className="inputs" type="text" placeholder="e.g. John Smith" onChange={e => this.inputText(e, "contactName")} value={this.state.contactInfo.contactName} />
+              </div>
+              <div style={{ display: "inline-block", marginRight: 50 }}>
+                <p className="questions-minor">Your Email:</p>
+                <input className="inputs" type="text" placeholder="e.g. thegraphicjar@gmail.com" onChange={e => this.inputText(e, "contactEmail")} value={this.state.contactInfo.contactEmail} />
+              </div>
+              <div style={{ display: "inline-block", marginRight: 50 }}>
+                <p className="questions-minor">Your Phone Number:</p>
+                <input className="inputs" type="text" placeholder="e.g. (123)456-7890" onChange={e => this.inputText(e, "contactNumber")} value={this.state.contactInfo.contactNumber} />
+              </div>
+              <p className="questions-minor">Message:</p>
+              <textarea className="textarea" rows="6" placeholder="Add Message Here" onChange={e => this.inputText(e, "contactMessage")} value={this.state.contactInfo.contactMessage} />
             </div>
             ) : (
             <div>
-              <p>What would you like to start with us?</p>
+              <p className="questions-header">What would you like to start with us?</p>
               {projectsList}
             </div>
            ) 
@@ -354,48 +395,54 @@ class App extends Component {
           {/*back button*/}
           <div>
             { this.state.steps > 0 ?
-            <button onClick={() => this.prevStep()}>&#60;</button>
+            <div className="back-button" onClick={() => this.prevStep()}>Back</div>
             : null
             }
           </div>
         </div>
         {/*project summary*/}
-        <div style={{ width: "20%", display: "inline-block", position: "absolute", top: 0, left: "80%", height: "100%", backgroundColor: "#ddd" }}>
-          <p style={{ margin: "20px auto", paddingBottom: "10px", textAlign: "center", fontSize: 20, fontWeight: "bold", borderBottom: "1px solid #000", width: "80%" }}>Project Summary</p>
+        <div className="summary-column">
+          <p className="summary-title">Project Summary</p>
           { projChosen ? (
             <React.Fragment>
-              <p onClick={() => this.goToStep(0)}>Project</p>
-              <p>{this.state.projectsChosen[0].project} +${this.state.projectsChosen[0].price}</p>
+              <p className="category-title" onClick={() => this.goToStep(0)}>Project</p>
+              <p className="category-desc">{this.state.projectsChosen[0].project} +${this.state.projectsChosen[0].price}</p>
             </React.Fragment>
             ) : null
           }
           { compChosen ? (
             <React.Fragment>
-              <p onClick={() => this.goToStep(1)}>Complexity</p>
-              <p>{this.state.complexityChosen[0].complexity} +${this.state.complexityChosen[0].price}</p>
+              <p className="category-title" onClick={() => this.goToStep(1)}>Complexity</p>
+              <p className="category-desc">{this.state.complexityChosen[0].complexity} +${this.state.complexityChosen[0].price}</p>
             </React.Fragment>
             ) : null
           }
           { descChosen ?
-            <p onClick={() => this.goToStep(2)}>Project Info</p> 
+            <p className="category-title" onClick={() => this.goToStep(2)}>Project Info</p> 
             : null
           }
           { colorChosen ? (
             <React.Fragment>
-              <p onClick={() => this.goToStep(3)}>Color</p>
-              <p>{this.state.primColor}</p>
-              <p>{this.state.secColor}</p>
+              <p className="category-title" onClick={() => this.goToStep(3)}>Color</p>
+              <p className="category-desc">{this.state.primColor}</p>
+              <p className="category-desc">{this.state.secColor}</p>
             </React.Fragment>
             ) : null
           }
           { businessChosen ? (
             <React.Fragment>
-              <p onClick={() => this.goToStep(4)}>Business Information</p>
+              <p className="category-title" onClick={() => this.goToStep(4)}>Business Information</p>
+            </React.Fragment>
+            ) : null
+          }
+          { contactChosen ? (
+            <React.Fragment>
+              <p className="category-title" onClick={() => this.goToStep(5)}>Contact Information</p>
             </React.Fragment>
             ) : null
           }
           {/*price*/}
-          <div style={{ position: "fixed", bottom: 0, width: "100%", height: 80, backgroundColor: "green", color: "white", fontSize: 24, fontWeight: "bold" }}>
+          <div className="est-price">
             Estimated Starting Price: 
             <span style={{ display: "block", fontSize: 34 }}>${this.state.finalPrice}</span>
           </div>
