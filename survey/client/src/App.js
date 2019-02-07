@@ -6,9 +6,11 @@ import './App.css';
 
 import { SketchPicker } from 'react-color';
 
-import image from './images/tgj_logo2.png';
-import image2 from './images/Full-logo.png';
 import newLogo from './images/tgj_new_logo.svg';
+import logoSimple from './images/logo-simple.jpg';
+import logoIntricate from './images/logo-intricate.png';
+import cardDouble1 from './images/card-double-1.jpg';
+import cardDouble2 from './images/card-double-2.jpg';
 
 // const optionsCursorTrueWithMargin = {
 //   followCursor: true,
@@ -314,13 +316,13 @@ class App extends Component {
                   <div className="buttons" onClick={() => this.chooseComplexity("Simple", 0)}>
                     <p className="buttons-title">Simple</p>
                     <p className="buttons-price">+$0</p>
-                    <img style={{ width: 150 }} src={image} alt="image" />
+                    <img style={{ width: 300 }} src={logoSimple} alt="simple-logo" />
                     <p className="buttons-desc">Has two or less elements for your logo.</p>
                   </div>
                   <div className="buttons" onClick={() => this.chooseComplexity("Complicated", 50)}>
                     <p className="buttons-title">Intricate</p>
                     <p className="buttons-price">+$50</p>
-                    <img style={{ width: 325 }} src={image2} alt="image" />
+                    <img style={{ width: 325 }} src={logoIntricate} alt="intricate-logo" />
                     <p className="buttons-desc">Has two or more elements for your logo.</p>
                   </div>
                 </div>
@@ -334,6 +336,8 @@ class App extends Component {
                   <div className="buttons" onClick={() => this.chooseComplexity("Double Side", 100)}>
                     <p className="buttons-title">Double Side</p>
                     <p className="buttons-price">+$100</p>
+                    <img style={{ width: 300 }} src={cardDouble1} alt="double-sided-1" />
+                    <img style={{ width: 300 }} src={cardDouble2} alt="double-sided-2" />
                     <p className="buttons-desc">Add more design to your card by inluding another side.</p>
                   </div>
                 </div>
