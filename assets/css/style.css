@@ -47,7 +47,7 @@ h3 {
   color: #000;
 }
 
-.process-box-3c p, .process-box-2c img, .process-box-1c img {
+.process-box-3c p, .process-box-img, .process-box-desc {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -389,6 +389,14 @@ nav .nav-links ul .active {
   margin: 0.5rem;
   border-radius: 0.5rem;
   box-shadow: inset 0 0 2rem #000;
+  position: relative;
+}
+.process-box-desc {
+  width: 90%;
+  font-size: 2.5rem;
+}
+.process-box-img {
+  width: 90%;
 }
 .process-box-1a {
   background-color: #5dafa9;
@@ -398,15 +406,9 @@ nav .nav-links ul .active {
 }
 .process-box-1b {
   background-color: #72cbcd;
-  padding: 8rem;
-  font-size: 2.5rem;
 }
 .process-box-1c {
   background-color: #95d6d8;
-  position: relative;
-}
-.process-box-1c img {
-  width: 90%;
 }
 .process-box-2a {
   background-color: #898a8a;
@@ -419,16 +421,10 @@ nav .nav-links ul .active {
 }
 .process-box-2b {
   background-color: #a2a2a2;
-  padding: 6rem;
-  font-size: 2.5rem;
   color: #fff;
 }
 .process-box-2c {
   background-color: #c4c6c6;
-  position: relative;
-}
-.process-box-2c img {
-  width: 90%;
 }
 .process-box-3a {
   background-color: #d8b464;
@@ -438,17 +434,14 @@ nav .nav-links ul .active {
 }
 .process-box-3b {
   background-color: #eeca69;
-  padding: 6rem;
-  font-size: 2.5rem;
 }
 .process-box-3c {
   background-color: #f9d480;
-  position: relative;
 }
 .process-box-3c p {
-  border: 0.5rem solid #fff;
+  border: 0.5rem solid #000;
   border-radius: 1rem;
-  color: #fff;
+  color: #000;
   display: inline-block;
   font-size: 8rem;
   padding: 2rem;
