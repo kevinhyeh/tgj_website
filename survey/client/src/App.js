@@ -8,6 +8,7 @@ import { SketchPicker } from 'react-color';
 
 import image from './images/tgj_logo2.png';
 import image2 from './images/Full-logo.png';
+import newLogo from './images/tgj_new_logo.svg';
 
 // const optionsCursorTrueWithMargin = {
 //   followCursor: true,
@@ -31,7 +32,6 @@ class App extends Component {
       },
       other: false,
       otherProj: "",
-      addProj: false,
       complexityChosen: {
         complexity: null,
         price: null
@@ -181,10 +181,25 @@ class App extends Component {
 
   addProject = (answer) => {
     if (answer == "yes") {
-      this.setState({ addProj: true });
+      this.setState({ finalPrice: 0 });
+      this.setState({ projectsChosen: {
+        project: null,
+        price: null
+      }});
+      this.setState({ complexityChosen: {
+        complexity: null,
+        price: null
+      }});
+      this.setState({ otherProj: "" });
+      this.setState({ other: false });
+      this.setState({ projInfo: {
+        projBudget: "",
+        projTimeline: "",
+        projDesc: "",
+      }})
       this.goToStep(0);
     } else {
-      this.nextStep();
+      window.close();
     }
   }
 
@@ -243,7 +258,7 @@ class App extends Component {
     }
     surveyRef.push(survey);
     this.nextStep();
-    return _emailClient(survey);
+    // return _emailClient(survey);
   };
 
   render() {
@@ -289,6 +304,7 @@ class App extends Component {
     return (
       <div className="survey">
         {/*questions*/}
+        <img className="tgj_logo" src={newLogo} />
         <div className={this.state.steps < 6 ? "question-sec" : "question-sec step-7"}>
           { this.state.steps === 1 ? (
             <div>
@@ -403,23 +419,34 @@ class App extends Component {
             </div>
             ) : this.state.steps === 6 ? (
               <div>
-                <h4>Thank you! Your order has been submitted!</h4>
-                <p>Shown below is your project summary, which has also been emailed to {this.state.contactInfo.contactEmail}</p>
-                <p>Estimated Project Price: ${this.state.finalPrice}</p>
-                <p>Project: {this.state.projectsChosen.project} ${this.state.projectsChosen.price}</p>
-                <p>Complexity: {this.state.complexityChosen.complexity} ${this.state.complexityChosen.price}</p>
-                <p>Budget: {this.state.projInfo.projBudget}</p>
-                <p>Timeline: {this.state.projInfo.projTimeline}</p>
-                <p>Project Description: {this.state.projInfo.projDesc}</p>
-                <p>Company Name: {this.state.businessInfo.businessName}</p>
-                <p>Company Website: {this.state.businessInfo.businessWeb}</p>
-                <p>Company Description: {this.state.businessInfo.businessDesc}</p>
-                <p>Company Slogan: {this.state.businessInfo.businessSlogan}</p>
-                <p>Color(s): {this.state.primColor}, {this.state.secColor}</p>
-                <p>Contact Name: {this.state.contactInfo.contactName}</p>
-                <p>Contact Email: {this.state.contactInfo.contactEmail}</p>
-                <p>Contact Number: {this.state.contactInfo.contactNumber}</p>
-                <p>Contact Message: {this.state.contactInfo.contactMessage}</p>
+                <p className="questions-header">Thank you! Your project has been sent!</p>
+                <p className="questions-minor">Below is your project summary, which has also been emailed to {this.state.contactInfo.contactEmail}</p>
+                <div className="end-summary-sec">
+                  <p><span className="end-summary-title">Estimated Project Price:</span> ${this.state.finalPrice}</p>
+                  <p><span className="end-summary-title">Project:</span> {this.state.projectsChosen.project} ${this.state.projectsChosen.price}</p>
+                  <p><span className="end-summary-title">Complexity:</span> {this.state.complexityChosen.complexity} ${this.state.complexityChosen.price}</p>
+                  <p><span className="end-summary-title">Budget:</span> {this.state.projInfo.projBudget}</p>
+                  <p><span className="end-summary-title">Timeline:</span> {this.state.projInfo.projTimeline}</p>
+                  <p><span className="end-summary-title">Project Description:</span> {this.state.projInfo.projDesc}</p>
+                </div>
+                <div className="end-summary-sec">
+                  <p><span className="end-summary-title">Company Name:</span> {this.state.businessInfo.businessName}</p>
+                  <p><span className="end-summary-title">Company Website:</span> {this.state.businessInfo.businessWeb}</p>
+                  <p><span className="end-summary-title">Company Description:</span> {this.state.businessInfo.businessDesc}</p>
+                  <p><span className="end-summary-title">Company Slogan:</span> {this.state.businessInfo.businessSlogan}</p>
+                  <p><span className="end-summary-title">Color(s):</span> {this.state.primColor}, {this.state.secColor}</p>
+                </div>
+                <div className="end-summary-sec">
+                  <p><span className="end-summary-title">Contact Name:</span> {this.state.contactInfo.contactName}</p>
+                  <p><span className="end-summary-title">Contact Email:</span> {this.state.contactInfo.contactEmail}</p>
+                  <p><span className="end-summary-title">Contact Number:</span> {this.state.contactInfo.contactNumber}</p>
+                  <p><span className="end-summary-title">Contact Message:</span> {this.state.contactInfo.contactMessage}</p>
+                </div>
+                <div>
+                  <p className="questions-minor">Add another project?</p>
+                  <div className="next-button" onClick={() => this.addProject("yes")}>Yes! Sign me up!</div>
+                  <div className="next-button" onClick={() => this.addProject("no")}>Nope! I'm all good.</div>
+                </div>
               </div>
             ) : (
             <div>

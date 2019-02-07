@@ -54,8 +54,8 @@ app.post('/email', (req, res) => {
   "<p>Contact Email: {{contactEmail}}</p>" +
   "<p>Contact Number: {{contactNumber}}</p>" +
   "<p>Contact Message: {{contactMessage}}</p>" +
-  "<h2>Thank you for sending in your order for a possible project with us! We will be reaching out to you via {{contactPref}} in about 2 business days to go over your submission as well as answering any questions you may have.</h2>" + 
-  "<h2>We hope you've your process with submitting a project design. If you have any feedback about your experience, please reply to this email with your thoughts.</h2>";
+  "<h2>Thank you for sending in your order for a possible project with us! You will recieve an email in about 2 business days to set up a free consultation over the phone. We will be going over your submission as well as answering any questions you may have.</h2>" + 
+  "<h2>We hope you've enjoyed our process with submitting a project design. If you have any feedback about your experience, please reply to this email with your thoughts.</h2>";
 
   const template = handlebars.compile(source);
 
