@@ -18,6 +18,12 @@ html {
   margin: auto;
 }
 
+@font-face {
+  font-family: "britannic_boldregular";
+  src: url("../custom_fonts/britannic_bold_regular-webfont.woff2") format("woff2"), url("britannic_bold_regular-webfont.woff") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
 .group {
   width: 90%;
   margin: auto;
@@ -247,7 +253,7 @@ nav .nav-links ul .active {
   }
 }
 .main-intro-info p {
-  font-size: 2.3rem;
+  font-size: 2.7rem;
 }
 @media screen and (max-width: 1440px) {
   .main-intro-info p {
@@ -298,7 +304,6 @@ nav .nav-links ul .active {
 
 .who {
   padding: 15rem;
-  position: relative;
 }
 .who:after {
   content: "";
@@ -312,13 +317,17 @@ nav .nav-links ul .active {
 .who .header {
   display: block;
   padding-top: 2rem;
+  font-family: "britannic_boldregular";
+  color: #fff;
+  text-shadow: 1rem 0.6rem #898a8a;
+  font-size: 13rem;
 }
 .who .header-are {
-  letter-spacing: 2rem;
+  letter-spacing: 1.5rem;
   padding-left: 0.9rem;
 }
 .who .header-we {
-  letter-spacing: 1.6rem;
+  letter-spacing: 1rem;
   padding-left: 0.9rem;
 }
 .who-title {
@@ -377,66 +386,71 @@ nav .nav-links ul .active {
   height: 40rem;
   color: #fff;
   font-family: "Montserrat", sans-serif;
+  text-align: center;
 }
 .process-box-1a {
-  background-color: #539CC7;
+  background-color: #5dafa9;
 }
 .process-box-1b {
-  background-color: #437EA1;
+  background-color: #72cbcd;
   padding: 8rem;
   font-size: 2.5rem;
 }
 .process-box-1c {
-  background-color: #294C61;
+  background-color: #95d6d8;
   position: relative;
 }
 .process-box-1c img {
   width: 70%;
 }
 .process-box-2a {
-  background-color: #26613B;
+  background-color: #898a8a;
 }
 .process-box-2b {
-  background-color: #3FA162;
+  background-color: #a2a2a2;
   padding: 6rem;
   font-size: 2.5rem;
 }
 .process-box-2c {
-  background-color: #50CF7E;
+  background-color: #c4c6c6;
 }
 .process-box-3a {
-  background-color: #CF7738;
+  background-color: #d8b464;
 }
 .process-box-3b {
-  background-color: #A15D2B;
+  background-color: #eeca69;
   padding: 6rem;
   font-size: 2.5rem;
 }
 .process-box-3c {
-  background-color: #7D4822;
+  background-color: #f9d480;
+}
+.process-step {
+  display: inline-block;
 }
 .process-step-num {
-  text-align: right;
-  margin: 0;
-  font-size: 24rem;
-  width: 13vw;
+  width: 6.5rem;
+  height: auto;
+  vertical-align: top;
+  margin-top: 9.5rem;
 }
 .process-step-title {
   font-size: 7rem;
   line-height: 5rem;
   padding-top: 9.5rem;
+  font-family: "britannic_boldregular";
+  display: inline-block;
+  color: #000;
 }
 
 .faq {
   padding: 8rem 0;
 }
-.faq h2 {
-  text-align: center;
-  font-size: 8rem;
-  margin: 5rem auto 3rem;
-  padding: 0.8rem 0 0;
-  font-family: "Montserrat", sans-serif;
-  font-weight: bold;
+.faq img {
+  width: 23rem;
+  margin: auto;
+  display: block;
+  margin-bottom: 5rem;
 }
 .faq .accordion {
   width: 80%;
@@ -466,7 +480,11 @@ nav .nav-links ul .active {
 }
 .faq .card-body {
   color: #000 !important;
-  padding: 4rem;
+  padding: 2rem 4rem 4rem;
+}
+.faq .card-body p {
+  font-size: 2.5rem;
+  text-align: justify;
 }
 .faq .card-header {
   width: 100% !important;
@@ -476,10 +494,6 @@ nav .nav-links ul .active {
   padding: 0 !important;
   color: #000;
   background-color: rgba(0, 0, 0, 0) !important;
-}
-.faq p {
-  font-size: 2.5rem;
-  text-align: justify;
 }
 
 .testimonial {
