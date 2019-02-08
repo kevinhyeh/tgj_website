@@ -4,13 +4,18 @@ import projectsJSON from './projects.json';
 import firebase from './firebase.js';
 import './App.css';
 
-import { SketchPicker } from 'react-color';
+// components
+import ProjectsList from './components/ProjectsList';
+import ComplexitySec from './components/ComplexitySec';
+import ProjectInfoSec from './components/ProjectInfoSec';
+import BusinessInfoSec from './components/BusinessInfoSec';
+import ColorsSec from './components/ColorsSec';
+import ContactInfoSec from './components/ContactInfoSec';
+import EndSummarySec from './components/EndSummarySec';
+import SmallButtons from './components/SmallButtons';
+import ProjSummaryColumn from './components/ProjSummaryColumn';
 
 import newLogo from './images/tgj_new_logo.svg';
-import logoSimple from './images/logo-simple.jpg';
-import logoIntricate from './images/logo-intricate.png';
-import cardDouble1 from './images/card-double-1.jpg';
-import cardDouble2 from './images/card-double-2.jpg';
 
 // const optionsCursorTrueWithMargin = {
 //   followCursor: true,
@@ -81,7 +86,7 @@ class App extends Component {
   }
 
   prevStep = () => {
-    if (this.state.projectsChosen.price == "TBD") {
+    if (this.state.projectsChosen.price == "TBD" && this.state.steps == 2) {
       this.goToStep(0);
     } else {
       this.setState({ steps: this.state.steps - 1 });
@@ -90,50 +95,45 @@ class App extends Component {
 
   // project functions
   chooseProject = (project, price) => {
-    if (this.state.addProj == true) {
-      // sequential projects
-      
-    } else {
-      // first project
-      if (price == "TBD") {
-        if (project == "Other") {
-          this.setState({ other: true });
-        } else {
-          this.setState({ finalPrice: price });
-          this.setState({ projectsChosen:
-            {
-              project: project,
-              price: price
-            }
-          });
-          this.setState({ complexityChosen:
-            {
-              complexity: null,
-              price: null
-            }
-          });
-          this.goToStep(2);
-        }
+    // first project
+    if (price == "TBD") {
+      if (project == "Other") {
+        this.setState({ other: true });
       } else {
-        if (this.state.projectsChosen.project != project) {
-          this.setState({ complexityChosen:
-            {
-              complexity: null,
-              price: null
-            }
-          })
-        }
+        this.setState({ finalPrice: price });
         this.setState({ projectsChosen:
           {
             project: project,
             price: price
           }
         });
-        setTimeout(function() {
-          this.totalPrice();
-        }.bind(this), 1)
-        this.setState({ steps: 1 });
+        this.setState({ complexityChosen:
+          {
+            complexity: null,
+            price: null
+          }
+        });
+        this.goToStep(2);
       }
+    } else {
+      if (this.state.projectsChosen.project != project) {
+        this.setState({ complexityChosen:
+          {
+            complexity: null,
+            price: null
+          }
+        })
+      }
+      this.setState({ projectsChosen:
+        {
+          project: project,
+          price: price
+        }
+      });
+      setTimeout(function() {
+        this.totalPrice();
+      }.bind(this), 1)
+      this.setState({ steps: 1 });
     }
   }
 
@@ -258,277 +258,38 @@ class App extends Component {
       businessInfo: this.state.businessInfo,
       contactInfo: this.state.contactInfo
     }
-    surveyRef.push(survey);
+    // surveyRef.push(survey);
     this.nextStep();
     // return _emailClient(survey);
   };
 
   render() {
-    const projInfoState = this.state.projInfo;
-    const busInfoState = this.state.businessInfo;
-    const contactInfoState = this.state.contactInfo;
-
-    const projChosen = this.state.projectsChosen.project != null;
-    const compChosen = this.state.complexityChosen.complexity != null;
-    const colorChosen = this.state.primColor.length > 0;
-    const descChosen = projInfoState.projDesc.length > 0 || projInfoState.projBudget.length > 0 || projInfoState.projTimeline.length > 0;
-    const businessChosen = busInfoState.businessName.length > 0 || busInfoState.businessWeb.length > 0 || busInfoState.businessDesc.length > 0 || busInfoState.businessSlogan.length > 0;
-    const contactChosen = contactInfoState.contactName.length > 0 || contactInfoState.contactEmail.length > 0 || contactInfoState.contactNumber.length > 0 || contactInfoState.contactMessage.length > 0;
-
-    const projectsList = this.state.projects.map(project => {
-      return (
-        <React.Fragment>
-        { project.project == "Other" ? (
-          <div className="buttons buttons-proj" onClick={() => this.chooseProject(project.project, project.price)} key={project._id}>
-            <p className="buttons-title">{project.project}</p>
-            { this.state.other ? (
-              <React.Fragment>
-                <input className="other-input" type="text" value={this.state.otherProj} placeholder="e.g. T-shirt Design" onChange={e => this.inputText(e, "otherProj")} />
-                <button onClick={() => this.chooseProject(this.state.otherProj, project.price)}>&#62;</button>
-              </React.Fragment>
-              ): null
-            }
-            <p className="buttons-price">{project.price}</p>
-            <p className="buttons-desc">{project.description}</p>
-          </div>
-          ) : (
-          <div className="buttons buttons-proj" onClick={() => this.chooseProject(project.project, project.price)} key={project._id}>
-            <p className="buttons-title">{project.project}</p>
-            <p className="buttons-price">${project.price}</p>
-            <p className="buttons-desc">{project.description}</p>
-          </div>
-          )
-        }
-        </React.Fragment>
-      ) 
-    });
-
     return (
       <div className="survey">
         {/*questions*/}
         <img className="tgj_logo" src={newLogo} />
         <div className={this.state.steps < 6 ? "question-sec" : "question-sec step-7"}>
           { this.state.steps === 1 ? (
-            <div>
-              <p className="questions-header">How complex would you like your {this.state.projectsChosen.project.toLowerCase()} be?</p>
-              { this.state.projectsChosen.project === "Custom Logo" ? (
-                <div>
-                  <div className="buttons" onClick={() => this.chooseComplexity("Simple", 0)}>
-                    <p className="buttons-title">Simple</p>
-                    <p className="buttons-price">+$0</p>
-                    <img style={{ width: 300 }} src={logoSimple} alt="simple-logo" />
-                    <p className="buttons-desc">Has two or less elements for your logo.</p>
-                  </div>
-                  <div className="buttons" onClick={() => this.chooseComplexity("Complicated", 50)}>
-                    <p className="buttons-title">Intricate</p>
-                    <p className="buttons-price">+$50</p>
-                    <img style={{ width: 325 }} src={logoIntricate} alt="intricate-logo" />
-                    <p className="buttons-desc">Has two or more elements for your logo.</p>
-                  </div>
-                </div>
-                ) : this.state.projectsChosen.project === "Business Card" ? (
-                <div>
-                  <div className="buttons" onClick={() => this.chooseComplexity("Single Side", 0)}>
-                    <p className="buttons-title">Single Side</p>
-                    <p className="buttons-price">+$0</p>
-                    <p className="buttons-desc">Keep all your information neat on a side.</p>
-                  </div>
-                  <div className="buttons" onClick={() => this.chooseComplexity("Double Side", 100)}>
-                    <p className="buttons-title">Double Side</p>
-                    <p className="buttons-price">+$100</p>
-                    <img style={{ width: 300 }} src={cardDouble1} alt="double-sided-1" />
-                    <img style={{ width: 300 }} src={cardDouble2} alt="double-sided-2" />
-                    <p className="buttons-desc">Add more design to your card by inluding another side.</p>
-                  </div>
-                </div>
-                ) : this.state.projectsChosen.project === "Website" ? (
-                <div>
-                  <div className="buttons" onClick={() => this.chooseComplexity("Single Page", 0)}>
-                    <p className="buttons-title">Single Page</p>
-                    <p className="buttons-price">+$0</p>
-                    <p className="buttons-desc">Keep it simple with a fluid one page website for your business.</p>
-                  </div>
-                  <div className="buttons" onClick={() => this.chooseComplexity("Multiple Pages", 200)}>
-                    <p className="buttons-title">Multiple Pages</p>
-                    <p className="buttons-price">+$200</p>
-                    <p className="buttons-desc">Have more to show? Add more pages for your customers to read.</p>
-                  </div>
-                </div>
-                ) : null
-              }
-            </div>
+            <ComplexitySec func={this.chooseComplexity} project={this.state.projectsChosen.project} />
             ) : this.state.steps === 2 ? (
-            <div>
-              <p className="questions-header">Tell Us More About The Project</p>
-              <div style={{ display: "inline-block", marginRight: 50 }}>
-              <p className="questions-minor">What is your budget for this {this.state.projectsChosen.project.toLowerCase()}?</p>
-              <input className="inputs" type="text" placeholder="e.g. $500" onChange={e => this.inputText(e, "projBudget")} value={this.state.projInfo.projBudget} />
-              </div>
-              <div style={{ display: "inline-block" }}>
-              <p className="questions-minor">Do you have a timeline for this project?</p>
-              <input className="inputs" type="text" placeholder="e.g. 1 month" onChange={e => this.inputText(e, "projTimeline")} value={this.state.projInfo.projTimeline} />
-              </div>
-              <p className="questions-minor">Describe your project</p>
-              <textarea className="textarea" rows="6" placeholder="Describe Project Here" onChange={e => this.inputText(e, "projDesc")} value={this.state.projInfo.projDesc} />
-            </div>
+            <ProjectInfoSec func={this.inputText} project={this.state.projectsChosen.project} projBudget={this.state.projInfo.projBudget} projTimeline={this.state.projInfo.projTimeline} projDesc={this.state.projInfo.projDesc} />
             ) : this.state.steps === 3 ? (
-            <div>
-              <p className="questions-header">Tell Us About Your Business</p>
-              <div style={{ display: "inline-block", marginRight: 50 }}>
-                <p className="questions-minor">What's the name of your business?</p>
-                <input className="inputs" type="text" placeholder="e.g. The Graphic Jar" onChange={e => this.inputText(e, "businessName")} value={this.state.businessInfo.businessName} />
-              </div>
-              <div style={{ display: "inline-block" }}>
-                <p className="questions-minor">Do you have a website for your business?</p>
-                <input className="inputs" type="text" placeholder="e.g. thegraphicjar.com" onChange={e => this.inputText(e, "businessWeb")} value={this.state.businessInfo.businessWeb} />
-              </div>
-              <p className="questions-minor">What is your business?</p>
-              <textarea className="textarea" rows="6" placeholder="Describe Business Here" onChange={e => this.inputText(e, "businessDesc")} value={this.state.businessInfo.businessDesc} />
-              <p className="questions-minor">Do you have a motto/slogan?</p>
-              <textarea className="textarea" rows="4" placeholder="Add Motto/Slogan Here" onChange={e => this.inputText(e, "businessSlogan")} value={this.state.businessInfo.businessSlogan} />
-            </div>
+            <BusinessInfoSec func={this.inputText} businessName={this.state.businessInfo.businessName} businessWeb={this.state.businessInfo.businessWeb} businessDesc={this.state.businessInfo.businessDesc} businessSlogan={this.state.businessInfo.businessSlogan} />
             ) : this.state.steps === 4 ? (
-            <div>
-              <p className="questions-header">What are your business colors?</p>
-              <div style={{ display: "inline-block", verticalAlign: "top" }}>
-              <p className="questions-minor">Primary</p>
-              <SketchPicker color={this.state.primColor} onChange={this.choosePrimColor} />
-              </div>
-              { this.state.primColor.split('')[0] == "#" ? (
-                <div style={{ display: "inline-block", marginLeft: 40}}>
-                  <p className="questions-minor">Secondary (Optional)</p>
-                  <SketchPicker color={this.state.secColor} onChange={this.chooseSecColor} />
-                  <div className="back-button" onClick={() => this.cancelColor()}>Cancel Color</div>
-                </div>
-                ): null
-              }
-            </div>
+            <ColorsSec primFunc={this.choosePrimColor} secFunc={this.chooseSecColor} cancelFunc={this.cancelColor} primColor={this.state.primColor} secColor={this.state.secColor} />
             ) : this.state.steps === 5 ? (
-            <div>
-              <p className="questions-header">Contact Information</p>
-              <div>
-                <p className="questions-minor">Your Name:</p>
-                <input className="inputs" type="text" placeholder="e.g. John Smith" onChange={e => this.inputText(e, "contactName")} value={this.state.contactInfo.contactName} />
-              </div>
-              <div>
-                <p className="questions-minor">Your Email:</p>
-                <input className="inputs" type="text" placeholder="e.g. thegraphicjar@gmail.com" onChange={e => this.inputText(e, "contactEmail")} value={this.state.contactInfo.contactEmail} />
-              </div>
-              <div>
-                <p className="questions-minor">Your Phone Number:</p>
-                <input className="inputs" type="text" placeholder="e.g. (123)456-7890" onChange={e => this.inputText(e, "contactNumber")} value={this.state.contactInfo.contactNumber} />
-              </div>
-              <p className="questions-minor">Message:</p>
-              <textarea className="textarea" rows="6" placeholder="Add Message Here" onChange={e => this.inputText(e, "contactMessage")} value={this.state.contactInfo.contactMessage} />
-            </div>
+            <ContactInfoSec func={this.inputText} contactName={this.state.contactInfo.contactName} contactEmail={this.state.contactInfo.contactEmail} contactNumber={this.state.contactInfo.contactNumber} contactMessage={this.state.contactInfo.contactMessage} />
             ) : this.state.steps === 6 ? (
-              <div>
-                <p className="questions-header">Thank you! Your project has been sent!</p>
-                <p className="questions-minor">Below is your project summary, which has also been emailed to {this.state.contactInfo.contactEmail}</p>
-                <div className="end-summary-sec">
-                  <p><span className="end-summary-title">Estimated Project Price:</span> ${this.state.finalPrice}</p>
-                  <p><span className="end-summary-title">Project:</span> {this.state.projectsChosen.project} ${this.state.projectsChosen.price}</p>
-                  <p><span className="end-summary-title">Complexity:</span> {this.state.complexityChosen.complexity} ${this.state.complexityChosen.price}</p>
-                  <p><span className="end-summary-title">Budget:</span> {this.state.projInfo.projBudget}</p>
-                  <p><span className="end-summary-title">Timeline:</span> {this.state.projInfo.projTimeline}</p>
-                  <p><span className="end-summary-title">Project Description:</span> {this.state.projInfo.projDesc}</p>
-                </div>
-                <div className="end-summary-sec">
-                  <p><span className="end-summary-title">Company Name:</span> {this.state.businessInfo.businessName}</p>
-                  <p><span className="end-summary-title">Company Website:</span> {this.state.businessInfo.businessWeb}</p>
-                  <p><span className="end-summary-title">Company Description:</span> {this.state.businessInfo.businessDesc}</p>
-                  <p><span className="end-summary-title">Company Slogan:</span> {this.state.businessInfo.businessSlogan}</p>
-                  <p><span className="end-summary-title">Color(s):</span> {this.state.primColor}, {this.state.secColor}</p>
-                </div>
-                <div className="end-summary-sec">
-                  <p><span className="end-summary-title">Contact Name:</span> {this.state.contactInfo.contactName}</p>
-                  <p><span className="end-summary-title">Contact Email:</span> {this.state.contactInfo.contactEmail}</p>
-                  <p><span className="end-summary-title">Contact Number:</span> {this.state.contactInfo.contactNumber}</p>
-                  <p><span className="end-summary-title">Contact Message:</span> {this.state.contactInfo.contactMessage}</p>
-                </div>
-                <div>
-                  <p className="questions-minor">Add another project?</p>
-                  <div className="next-button" onClick={() => this.addProject("yes")}>Yes! Sign me up!</div>
-                  <div className="next-button" onClick={() => this.addProject("no")}>Nope! I'm all good.</div>
-                </div>
-              </div>
+            <EndSummarySec func={this.addProject} finalPrice={this.state.finalPrice} project={this.state.projectsChosen.project} projPrice={this.state.projectsChosen.price} complexity={this.state.complexityChosen.complexity} compPrice={this.state.complexityChosen.price} projBudget={this.state.projInfo.projBudget} projTimeline={this.state.projInfo.projTimeline} projDesc={this.state.projInfo.projDesc} businessName={this.state.businessInfo.businessName} businesWeb={this.state.businessInfo.businesWeb} businessDesc={this.state.businessInfo.businessDesc} businessSlogan={this.state.businessInfo.businessSlogan} primColor={this.state.primColor} secColor={this.state.secColor} contactName={this.state.contactInfo.contactName} contactEmail={this.state.contactInfo.contactEmail} contactNumber={this.state.contactInfo.contactNumber} contactMessage={this.state.contactInfo.contactMessage} />
             ) : (
-            <div>
-              <p className="questions-header">What would you like to start with us?</p>
-              {projectsList}
-            </div>
+            <ProjectsList chooseProjFunc={this.chooseProject} inputTextFunc={this.inputText} projects={this.state.projects} other={this.state.other} otherProj={this.state.otherProj} />
            ) 
           }
-          {/*button*/}
-          <div>
-            { this.state.steps > 0 && this.state.steps < 6 ?
-              <div className="back-button" onClick={() => this.prevStep()}>Back</div>
-            : null
-            }
-            { this.state.steps == 2 ? 
-              <div className="next-button" onClick={() => this.noInput("projDesc")}>Next</div>
-            : this.state.steps == 3 ?
-              <div className="next-button" onClick={() => this.noInput("businessName")}>Next</div>
-            : this.state.steps == 4 ?
-              <div className="next-button" onClick={() => this.noInput("primColor")}>Next</div>
-            : this.state.steps == 5 ?
-              <div className="next-button" onClick={() => this.surveySubmit()}>Submit</div>
-            : null
-            }
-          </div>
+          {/*next back buttons*/}
+          <SmallButtons backFunc={this.prevStep} noInputFunc={this.noInput} submitFunc={this.surveySubmit} steps={this.state.steps} />
         </div>
         {/*project summary*/}
-        { this.state.steps < 6 ? (
-          <React.Fragment>
-            <div className="summary-column">
-              <p className="summary-title">Project Summary</p>
-              { projChosen ? (
-                <React.Fragment>
-                  <p className="category-title" onClick={() => this.goToStep(0)}>Project</p>
-                  <p className="category-desc">{this.state.projectsChosen.project} +${this.state.projectsChosen.price}</p>
-                </React.Fragment>
-                ) : null
-              }
-              { compChosen ? (
-                <React.Fragment>
-                  <p className="category-title" onClick={() => this.goToStep(1)}>Complexity</p>
-                  <p className="category-desc">{this.state.complexityChosen.complexity} +${this.state.complexityChosen.price}</p>
-                </React.Fragment>
-                ) : null
-              }
-              { descChosen ?
-                <p className="category-title" onClick={() => this.goToStep(2)}>Project Info</p> 
-                : null
-              }
-              { businessChosen ? (
-                <React.Fragment>
-                  <p className="category-title" onClick={() => this.goToStep(3)}>Business Information</p>
-                </React.Fragment>
-                ) : null
-              }
-              { colorChosen ? (
-                <React.Fragment>
-                  <p className="category-title" onClick={() => this.goToStep(4)}>Color</p>
-                  <p className="category-desc">{this.state.primColor}</p>
-                  <p className="category-desc">{this.state.secColor}</p>
-                </React.Fragment>
-                ) : null
-              }
-              { contactChosen ? (
-                <React.Fragment>
-                  <p className="category-title" onClick={() => this.goToStep(5)}>Contact Information</p>
-                </React.Fragment>
-                ) : null
-              }
-            </div>
-            {/*price*/}
-            <div className="est-price">
-              <span>Est. Starting Price:</span>
-              <span style={{ display: "block", fontSize: 34 }}>${this.state.finalPrice}</span>
-            </div>
-          </React.Fragment>
-        ) : null
-        }
+        <ProjSummaryColumn stepFunc={this.goToStep} finalPrice={this.state.finalPrice} projInfo={this.state.projInfo} businessInfo={this.state.businessInfo} contactInfo={this.state.contactInfo} steps={this.state.steps} project={this.state.projectsChosen.project} projPrice={this.state.projectsChosen.price} complexity={this.state.complexityChosen.complexity} compPrice={this.state.complexityChosen.price} primColor={this.state.primColor} secColor={this.state.secColor} />
       </div>
     );
   }
