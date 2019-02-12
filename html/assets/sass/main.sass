@@ -1,0 +1,154 @@
+// html/body style
+html,body 
+  padding: 0
+  margin: 0
+  box-sizing: border-box
+
+html 
+  font-size: 10px
+
+*.display-none
+  display: none
+
+*.container-center
+  width: 80%
+  margin: auto
+
+// variables
+$primary-grey: #888989
+$primary-blue: #69e2d3
+$primary-orange: #eaa04b
+$primary-gold: #f3c953
+$primary-white: #fff
+$primary-off-white: rgba(0,0,0,0.05)
+$bg-blue: #0098ff
+$primary-font: 'Montserrat', sans-serif
+$secondary-font: 'britannic_boldregular'
+$header-four: 4rem
+$regular-size: 3rem
+$secondary-size: 2.5rem
+
+@font-face 
+  font-family: 'britannic_boldregular'
+  src: url('../custom_fonts/britannic_bold_regular-webfont.woff2') format('woff2'), url('britannic_bold_regular-webfont.woff') format('woff2')
+  font-weight: normal
+  font-style: normal
+
+// GRID variables
+$grid-width: 124rem
+$gutter-vertical: 8rem
+$gutter-horizontal: 6rem
+
+// extends/inheritance
+
+.group
+  width: 90%
+  margin: auto
+
+h3
+  font-size: 10rem
+  font-weight: bold
+  font-family: $primary-font 
+  text-align: center
+  margin-bottom: 5rem
+
+.learn-more
+  font-family: $primary-font
+  font-size: 2rem
+  text-decoration: underline
+  color: #000
+
+  &:hover
+    color: #000
+
+%background-image
+  background-size: cover
+  background-position: center
+  filter: grayscale(10%)
+  background-repeat: no-repeat
+  width: 100%
+  height: 100%
+  position: absolute
+  top: 0
+  left: 0
+  z-index: -10
+
+%center-img
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+// clearing floats
+@mixin clearfix
+  &:after
+    content: ""
+    display: table
+    clear: both
+
+@mixin design-button
+  .start-design 
+    display: block
+    border-radius: .3rem
+    background-color: $primary-gold
+    // background-image: linear-gradient(140deg, $primary-gold, #FEA83A 70%, #FEA83A)
+    border: none
+    color: #fff
+    font-size: 2rem
+    padding: .3rem
+    width: 15rem
+    height: 5.5rem
+    transition: all .5s
+    cursor: pointer
+    margin: auto
+    font-family: $primary-font
+    
+
+  .start-design span 
+    cursor: pointer
+    display: inline-block
+    position: relative
+    transition: 0.5s
+        
+
+  .start-design span:after 
+    content: '\00bb'
+    position: absolute
+    opacity: 0
+    top: 0
+    right: -1rem
+    transition: 0.5s
+      
+
+  .start-design:hover span 
+    padding-right: 1.3rem
+      
+
+  .start-design:hover span:after 
+    opacity: 1
+    right: 0
+
+  .start-design:focus
+    outline: none
+        
+// import files
+@import _grid
+
+@import _navbar
+
+@import _index-intro
+
+@import _index-we
+
+@import _index-why
+
+@import _index-process
+
+@import _index-faq
+
+@import _index-testimonial
+
+// @import _form
+
+@import _contact
+
+@import _footer
