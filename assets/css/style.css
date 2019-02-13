@@ -173,6 +173,13 @@ h3 {
   margin: auto;
   font-family: "Montserrat", sans-serif;
 }
+@media screen and (max-width: 500px) {
+  .nav .design-button .start-design {
+    width: 14rem;
+    height: 3.2rem;
+    font-size: 1.8rem;
+  }
+}
 .nav .design-button .start-design span {
   cursor: pointer;
   display: inline-block;
@@ -209,7 +216,11 @@ h3 {
 @media screen and (max-width: 780px) {
   .nav-links {
     display: none;
-    padding-top: 1rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .nav-links {
+    margin: 1.5rem auto 1rem;
   }
 }
 .nav-links ul {
@@ -278,8 +289,9 @@ h3 {
 }
 @media screen and (max-width: 500px) {
   .main-intro {
-    background-size: 160%;
-    height: 100vw;
+    background-size: 240%;
+    height: 138vw;
+    padding-bottom: 0;
   }
 }
 .main-intro:after {
@@ -289,18 +301,20 @@ h3 {
 }
 .main-intro-info {
   margin: auto;
-  width: 100vw;
+  width: 60vw;
   padding-top: 4vw;
   padding-left: 1rem;
 }
 @media screen and (max-width: 780px) {
   .main-intro-info {
     padding-top: 0;
+    width: 90vw;
   }
 }
 @media screen and (max-width: 500px) {
   .main-intro-info {
     padding-top: 10vw;
+    width: 100vw;
   }
 }
 .main-intro-info h2, .main-intro-info p {
@@ -318,7 +332,7 @@ h3 {
 }
 @media screen and (max-width: 500px) {
   .main-intro-info h2 {
-    font-size: 9vw;
+    font-size: 12vw;
   }
 }
 .main-intro-info p {
@@ -331,7 +345,7 @@ h3 {
 }
 @media screen and (max-width: 500px) {
   .main-intro-info p {
-    font-size: 3.2vw;
+    font-size: 5.5vw;
   }
 }
 .main-intro-info .design-button .start-design {
@@ -348,6 +362,13 @@ h3 {
   cursor: pointer;
   margin: auto;
   font-family: "Montserrat", sans-serif;
+}
+@media screen and (max-width: 500px) {
+  .main-intro-info .design-button .start-design {
+    width: 14rem;
+    height: 3.2rem;
+    font-size: 1.8rem;
+  }
 }
 .main-intro-info .design-button .start-design span {
   cursor: pointer;
@@ -443,7 +464,6 @@ h3 {
 @media screen and (max-width: 500px) {
   .who-desc {
     font-size: 1.8rem;
-    text-align: center;
   }
 }
 .who-desc-title {
@@ -572,6 +592,107 @@ h3 {
   }
 }
 
+.process2 {
+  padding: 10rem;
+  width: 90%;
+  background-color: #69e2d3;
+  text-align: center;
+  margin: auto;
+}
+@media screen and (max-width: 1180px) {
+  .process2 {
+    padding: 5rem;
+    width: 100%;
+  }
+}
+.process2-column {
+  display: inline-block;
+  vertical-align: top;
+  color: #fff;
+  text-align: left;
+  font-family: "Montserrat", sans-serif;
+}
+@media screen and (max-width: 1180px) {
+  .process2-column {
+    display: block;
+    margin: auto;
+    width: 80vw !important;
+  }
+}
+.process2-column-1 {
+  width: 50%;
+}
+.process2-column-2 {
+  width: 40%;
+}
+.process2-header {
+  font-size: 7vw;
+  font-weight: bold;
+  line-height: 9vw;
+}
+@media screen and (max-width: 1180px) {
+  .process2-header {
+    font-size: 8vw;
+    margin-bottom: 4rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .process2-header {
+    font-size: 3.5rem;
+    line-height: 4rem;
+  }
+}
+.process2-title {
+  font-size: 1.8vw;
+  padding-bottom: 4rem;
+  position: relative;
+  font-weight: bold;
+}
+@media screen and (max-width: 1180px) {
+  .process2-title {
+    width: 80%;
+    margin: auto;
+    font-size: 3.5vw;
+  }
+}
+@media screen and (max-width: 500px) {
+  .process2-title {
+    padding-bottom: 2rem;
+    font-size: 2rem;
+  }
+}
+.process2-title:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0.1rem;
+  width: 50%;
+  border-bottom: 0.4rem solid #fff;
+}
+@media screen and (max-width: 500px) {
+  .process2-title:before {
+    border-bottom: 0.2rem solid #fff;
+  }
+}
+.process2-steps {
+  font-size: 1.2vw;
+  margin-top: 3rem;
+}
+@media screen and (max-width: 1180px) {
+  .process2-steps {
+    font-size: 2.2vw;
+    width: 80%;
+    margin: 5rem auto;
+  }
+}
+@media screen and (max-width: 500px) {
+  .process2-steps {
+    font-size: 1.8rem;
+    margin: 2rem auto;
+  }
+}
+
 .process .row {
   width: 100% !important;
   margin-bottom: 0 !important;
@@ -681,11 +802,6 @@ h3 {
   padding-bottom: 1rem;
   margin-bottom: 2rem;
 }
-@media screen and (max-width: 500px) {
-  .faq-card {
-    margin-bottom: 0.5rem;
-  }
-}
 .faq-card .symbol {
   margin-right: auto;
   font-size: 1.8vw;
@@ -726,6 +842,8 @@ h3 {
 @media screen and (max-width: 500px) {
   .faq-card-question {
     font-size: 1.8rem;
+    line-height: 3rem;
+    text-align: left;
   }
 }
 .faq-card-answer {
@@ -774,9 +892,6 @@ h3 {
   border-top: 0.1rem solid 0, 0, 0, 0.2;
   padding: 6rem 0 8rem;
 }
-.testimonial .row {
-  padding: 0 0 0 7rem;
-}
 .testimonial img.d-block {
   width: 35rem !important;
   margin: 3rem 0 0 !important;
@@ -822,6 +937,12 @@ h3 {
 .testimonial .carousel-control-next-icon {
   width: 4rem !important;
   height: 4rem !important;
+}
+@media screen and (max-width: 500px) {
+  .testimonial .carousel-control-prev-icon,
+.testimonial .carousel-control-next-icon {
+    width: 1rem !important;
+  }
 }
 .testimonial .carousel-control-prev-icon {
   background-image: url("../svg/prev_arrow.svg") !important;
@@ -969,6 +1090,13 @@ h3 {
   cursor: pointer;
   margin: auto;
   font-family: "Montserrat", sans-serif;
+}
+@media screen and (max-width: 500px) {
+  .contact-start .design-button .start-design {
+    width: 14rem;
+    height: 3.2rem;
+    font-size: 1.8rem;
+  }
 }
 .contact-start .design-button .start-design span {
   cursor: pointer;
