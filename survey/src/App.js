@@ -258,17 +258,20 @@ class App extends Component {
       businessInfo: this.state.businessInfo,
       contactInfo: this.state.contactInfo
     }
-    surveyRef.push(survey);
+    // surveyRef.push(survey);
     this.nextStep();
-    return _emailClient(survey);
+    // return _emailClient(survey);
   };
 
   render() {
     return (
       <div className="survey">
         {/*questions*/}
-        <img className="tgj_logo" src={newLogo} />
         <div className={this.state.steps < 6 ? "question-sec" : "question-sec step-7"}>
+          <div className="tgj">
+            <img className="tgj-logo" src={newLogo} />
+            <h3 className="tgj-name">the <span className="tgj-name-graphic">graphic</span> jar</h3>
+          </div>
           { this.state.steps === 1 ? (
             <ComplexitySec func={this.chooseComplexity} project={this.state.projectsChosen.project} />
             ) : this.state.steps === 2 ? (

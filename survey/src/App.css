@@ -14,19 +14,31 @@ html, body, #root {
   /*background-color: #eee;*/
 }
 
-.tgj_logo {
-  width: 60px;
-  position: absolute;
-  top: 60px;
-  left: 80px;
-  z-index: 1000;
+.tgj {
+  text-align: left;
+  margin-left: 20px;
+}
+
+.tgj-logo {
+  width: 40px;
+}
+
+.tgj-name {
+  display: inline-block;
+  vertical-align: top;
+  color: #58595b;
+  padding: 0 0 0 5px;
+}
+
+.tgj-name-graphic {
+  color: #69e2d3;
 }
 
 .question-sec {
   width: 74.5%;
   display: inline-block;
   text-align: center;
-  padding: 80px 0;
+  padding: 20px 0 60px;
   background-color: #fff;
   margin: 0 2.5% 30px;
   border-radius: 5px;
