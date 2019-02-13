@@ -466,6 +466,11 @@ h3 {
   letter-spacing: 1.5rem;
   padding-left: 0.9rem;
 }
+@media screen and (max-width: 500px) {
+  .who-header-are {
+    letter-spacing: 1rem;
+  }
+}
 .who-header-we {
   display: block;
   letter-spacing: 1rem;
@@ -594,7 +599,7 @@ h3 {
 }
 .why h4 {
   font-size: 3.2vw;
-  font-family: "montserratlight";
+  font-family: "montserratregular";
 }
 @media screen and (max-width: 950px) {
   .why h4 {
@@ -608,7 +613,7 @@ h3 {
 }
 .why p {
   font-size: 2vw;
-  font-family: "montserratthin";
+  font-family: "montserratlight";
 }
 @media screen and (max-width: 500px) {
   .why p {
