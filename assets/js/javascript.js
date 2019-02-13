@@ -14,7 +14,9 @@ $(document).on('scroll', function() {
     $('nav').removeClass('scroll-change');
     $('#nav-button').find('.start-design').css('display', 'none');
     $('#intro-button').find('.start-design').css('display', 'block');
-    $('.tgj-logo').attr('src', 'assets/svg/tgj_new_logo(white).svg');
+    if (window.matchMedia("(min-width: 781px)").matches) {
+      $('.tgj-logo').attr('src', 'assets/svg/tgj_new_logo(white).svg');
+    }
     $('h1').css('display', 'inline-block');
     $('.nav-links').find('a').css('color', '#fff');
   }
@@ -25,14 +27,54 @@ $('.start-design').on('click', function() {
   window.open('https://tgj-project-design-gl6yc0gnm.now.sh');
 });
 
-// faq
-$('.faq .symbol').html('&#43;');
-
-$('.faq button').on('click', function() {
-  if ($(this).attr("aria-expanded") == "false") {
-    $('.symbol', this).html('&#8722;');
+function logoChange(x) {
+  if (x.matches) {
+    $('.tgj-logo').attr('src', 'assets/svg/tgj_new_logo.svg');
   } else {
-    $('.symbol', this).html('&#43;');
+    $('.tgj-logo').attr('src', 'assets/svg/tgj_new_logo(white).svg');
+  }
+}
+
+const x = window.matchMedia("(max-width: 780px)")
+logoChange(x);
+x.addListener(logoChange);
+
+$('.fa-bars').on('click', function() {
+  if ($(this).hasClass('clicked')) {
+    $('.nav').find('.design-button').removeClass('unhidden');
+    $('.nav').find('.nav-links').removeClass('unhidden');
+    $('.fa-bars').removeClass('clicked');
+  } else {
+    $('.fa-bars').addClass('clicked');
+    $('.nav').find('.design-button').addClass('unhidden');
+    $('.nav').find('.nav-links').addClass('unhidden');
+  }
+});
+
+// faq
+// $('.faq .symbol').html('&#43;');
+
+// $('.faq button').on('click', function() {
+//   // if ($(this).attr("aria-expanded") == "false") {
+//   //   $('.symbol', this).html('&#8722;');
+//   // } else {
+//   //   $('.symbol', this).html('&#43;');
+//   // }
+//   if ($('.faq button').attr("aria-expanded") == "false") {
+//     $('')
+//   }
+// });
+
+$('.symbol').html('&#43;');
+
+$('.faq-card').on('click', function() {
+  // $('.faq-card-answer').removeClass('reveal-answer')
+  if ($(this).find('.faq-card-answer').hasClass('reveal-answer')) {
+    $(this).find('.faq-card-answer').removeClass('reveal-answer');
+    $(this).find('.symbol').html('&#43;');
+  } else {
+    $(this).find('.faq-card-answer').addClass('reveal-answer');
+    $(this).find('.symbol').html('&#8722;');
   }
 });
 

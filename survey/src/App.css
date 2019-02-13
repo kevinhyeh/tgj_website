@@ -1,6 +1,6 @@
 html, body, #root {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background-image: url('./images/wood-bg.jpg');
   background-position: cover;
   background-repeat: no-repeat;
@@ -10,7 +10,7 @@ html, body, #root {
 
 .survey {
   position: relative;
-  height: 100%;
+  height: 100vh;
   /*background-color: #eee;*/
 }
 

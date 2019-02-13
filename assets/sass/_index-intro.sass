@@ -1,27 +1,43 @@
 .main-intro
     background-image: url('../images/main-pic.jpg')
     background-repeat: no-repeat
-    background-size: cover
+    background-size: 100%
     background-attachment: fixed
-    padding: 14vh 0
+    padding: 10vw 0
+    height: 55vw
+
+    @media screen and (max-width: 780px)
+        padding-top: 18vw
+        background-size: 140%
+        background-position: center top
+        height: 80vw
+    
+    @media screen and (max-width: 500px)
+        background-size: 160%
+        height: 100vw
     
     @include clearfix
 
     &-info
         margin: auto
-        height: 70.1rem
-        width: 80rem
-        padding-top: 10rem 
+        width: 100vw
+        padding-top: 4vw 
         padding-left: 1rem
-        @media screen and (max-width: 1440px)
-            height: 57.2rem
-            width: 83.6rem
-            padding-top: 6.5rem
+        // @media screen and (max-width: 1440px)
+        //     height: 57.2rem
+        //     width: 83.6rem
+        //     padding-top: 6.5rem
          
-        @media screen and (max-width: 1180px)
-            width: 70rem
-            height: 50rem
-            padding-top: 7rem
+        // @media screen and (max-width: 1180px)
+        //     width: 70rem
+        //     height: 30rem
+        //     padding-top: 2rem
+
+        @media screen and (max-width: 780px)
+            padding-top: 0
+
+        @media screen and (max-width: 500px)
+            padding-top: 10vw
 
         h2, p
             color: $primary-white
@@ -29,19 +45,21 @@
             text-align: center
 
         h2
-            font-size: 8rem
-            // -webkit-text-stroke-width: .2rem
-            // -webkit-text-stroke-color: $primary-blue
-            @media screen and (max-width: 1440px)
-                font-size: 5.3rem
-            @media screen and (max-width: 1180px)
-                font-size: 4.2rem
+            font-size: 5.8vw
+
+            @media screen and (max-width: 780px)
+                font-size: 8vw
+
+            @media screen and (max-width: 500px)
+                font-size: 9vw
         p
-            font-size: 2.7rem
-            @media screen and (max-width: 1440px)
-                font-size: 1.6rem
-            @media screen and (max-width: 1180px)
-                font-size: 1.3rem
+            font-size: 2vw
+
+            @media screen and (max-width: 780px)
+                font-size: 2.8vw
+
+            @media screen and (max-width: 500px)
+                font-size: 3.2vw
 
 
         .design-button

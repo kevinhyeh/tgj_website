@@ -14,14 +14,19 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,500|Source+Sans+Pro" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
     <!-- navigation bar -->
     <header>
-      <nav>
+      <nav class="nav">
         <div class="nav-main-name">
           <a href="index.html"><img src="assets/svg/tgj_new_logo(white).svg" class="tgj-logo" alt="tgj_logo"></a>
           <h1><a href="index.html">the <span>graphic</span> jar</a></h1>
+        </div>
+        <div class="nav-icon">
+          <i class="fa fa-bars"></i>
         </div>
         <div class="design-button" id="nav-button">
           <button class="start-design"><span>Start Design</span></button>
@@ -47,31 +52,38 @@
     </main>
     <!-- who are we -->
     <section class="who">
-      <div class="row">
-        <div class="col-1-of-2">
-          <h3><span class="header">WHO</span><span class="header header-are">ARE</span><span class="header header-we">WE?</span></h3>
-        </div>
-        <div class="col-1-of-2">
-          <p class="who-title">Easy. Fun. Unique.</p>
-          <p class="who-description">We are a dedicated group of designers, illustrators, and photographers who make it our mission to enrich lives through creativity and design. Whether it be an entire branding project or a simple illustration, we do it all.</p>
-          <a href="#" class="learn-more">Learn more</a>
-        </div>
+      <div class="who-header">
+        <span class="who-header-who">WHO</span><span class="who-header-are">ARE</span><span class="who-header-we">WE?</span>
+      </div>
+      <div class="who-desc">
+        <p class="who-desc-title">Easy. Fun. Unique.</p>
+        <p class="who-desc-info">We are a dedicated group of designers, illustrators, and photographers who make it our mission to enrich lives through creativity and design. Whether it be an entire branding project or a simple illustration, we do it all.</p>
+        <a href="#" class="learn-more">Learn more</a>
       </div>
     </section>
     <!-- why we are different -->
     <section class="why">
       <div class="row">
         <div class="why-section">
-          <h4><span class="why-header">Branding</span>Is Our Niche</h4>
-          <p>Want to make your company stand out? We are filled with new ideas and are itching to create something special for you.</p>
+          <img class="why-section-img" src="assets/images/test1.jpg" alt="test1">
+          <div class="why-section-info">
+            <h4><span class="why-header">Branding</span>Is Our Niche</h4>
+            <p>Want to make your company stand out? We are filled with new ideas and are itching to create something special for you.</p>
+          </div>
         </div>
         <div class="why-section">
-          <h4><span class="why-header">Custom</span>Design Survey</h4>
-          <p>We have created a one of kind survey that is effortless for you and detailed for us. Why make simple complicated?</p>
+          <img class="why-section-img" src="assets/images/test2.jpg" alt="test2">
+          <div class="why-section-info">
+            <h4><span class="why-header">Custom</span>Design Survey</h4>
+            <p>We have created a one of kind survey that is effortless for you and detailed for us. Why make simple complicated?</p>
+          </div>
         </div>
         <div class="why-section">
-          <h4><span class="why-header">Around</span>The Clock Service</h4>
-          <p>Customer first is our motto. We pride ourselves on our turn around time as well as our quality of work.</p>
+          <img class="why-section-img" src="assets/images/test3.jpg" alt="test3">
+          <div class="why-section-info">
+            <h4><span class="why-header">Around</span>The Clock Service</h4>
+            <p>Customer first is our motto. We pride ourselves on our turn around time as well as our quality of work.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -149,95 +161,38 @@
       <div>
         <img src="assets/svg/faq_title.svg" alt="faq_title">
       </div>
-      <div class="accordion" id="accordionExample">
-        <div class="row">
-          <div class="col-1-of-2">
-            <div class="card">
-              <h5 class="mb-0">
-              <button class="btn btn-link card-header collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" id="headingOne">
-              <span class="symbol"></span><div class="question">What forms of payment do we take?</div>
-              </button>
-              </h5>
-              <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                <div class="card-body">
-                  <p>Our main forms of payment are either through check, cash, Venmo, Paypal, or Square Cash. If there is another form of payment that you prefer, we can surely accommodate.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-1-of-2">
-            <div class="card">
-              <h5 class="mb-0">
-              <button class="btn btn-link card-header collapsed" id="headingTwo" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-              <span class="symbol"></span><div class="question">How many concepts do we provide?</div>
-              </button>
-              </h5>
-              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                <div class="card-body">
-                  <p>We typically provide 2-3 concepts but if you don't love any of them, we will do another round on the house.</p>
-                </div>
-              </div>
-            </div>
-          </div>
+      <div class="faq-column">
+        <div class="faq-card">
+          <span class="symbol"></span>
+          <div class="faq-card-question">What forms of payment do we take?</div>
+          <p class="faq-card-answer">Our main forms of payment are either through check, cash, Venmo, Paypal, or Square Cash. If there is another form of payment that you prefer, we can surely accommodate.</p>
         </div>
-        <div class="row">
-            <div class="col-1-of-2">
-              <div class="card">
-                <h5 class="mb-0">
-                <button class="btn btn-link card-header collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" id="headingThree">
-                <span class="symbol"></span><div class="question">What's your cancellation policy?</div>
-                </button>
-                </h5>
-                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                  <div class="card-body">
-                    <p>Both parties reserve the right to cancel the project if deemed necessary. However any work that has been done must be accommodated. Don't worry though, we wont leave unless things get really bad.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-1-of-2">
-              <div class="card">
-                <h5 class="mb-0">
-                <button class="btn btn-link card-header collapsed" id="headingFour" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                <span class="symbol"></span><div class="question">What forms of payment do we take?</div>
-                </button>
-                </h5>
-                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
-                  <div class="card-body">
-                    <p></p>
-                  </div>
-                </div>
-              </div>
-            </div>
+        <div class="faq-card">
+          <span class="symbol"></span>
+          <div class="faq-card-question">How many concepts do we provide?</div>
+          <p class="faq-card-answer">We typically provide 2-3 concepts but if you don't love any of them, we will do another round on the house.</p>
         </div>
-        <div class="row">
-          <div class="col-1-of-2">
-            <div class="card">
-              <h5 class="mb-0">
-              <button class="btn btn-link card-header collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive" id="headingFive">
-              <span class="symbol"></span><div class="question">What forms of payment do we take?</div>
-              </button>
-              </h5>
-              <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
-                <div class="card-body">
-                  <p>Let us know if you have another form of payment that you prefer, we'll add it to the list!</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-1-of-2">
-            <div class="card">
-              <h5 class="mb-0">
-              <button class="btn btn-link card-header collapsed" id="headingSix" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-              <span class="symbol"></span><div class="question">What forms of payment do we take?</div>
-              </button>
-              </h5>
-              <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
-                <div class="card-body">
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="faq-card">
+          <span class="symbol"></span>
+          <div class="faq-card-question">What's your cancellation policy?</div>
+          <p class="faq-card-answer">Both parties reserve the right to cancel the project if deemed necessary. However any work that has been done must be accommodated. Don't worry though, we wont leave unless things get really bad.</p>
+        </div>
+      </div>
+      <div class="faq-column" id="accordionExample">
+        <div class="faq-card">
+          <span class="symbol"></span>
+          <div class="faq-card-question">What forms of payment do we take?</div>
+          <p class="faq-card-answer">Our main forms of payment are either through check, cash, Venmo, Paypal, or Square Cash. If there is another form of payment that you prefer, we can surely accommodate.</p>
+        </div>
+        <div class="faq-card">
+          <span class="symbol"></span>
+          <div class="faq-card-question">How many concepts do we provide?</div>
+          <p class="faq-card-answer">We typically provide 2-3 concepts but if you don't love any of them, we will do another round on the house.</p>
+        </div>
+        <div class="faq-card">
+          <span class="symbol"></span>
+          <div class="faq-card-question">What's your cancellation policy?</div>
+          <p class="faq-card-answer">Both parties reserve the right to cancel the project if deemed necessary. However any work that has been done must be accommodated. Don't worry though, we wont leave unless things get really bad.</p>
         </div>
       </div>
     </section>

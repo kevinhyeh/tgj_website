@@ -2,8 +2,12 @@
   background-image: url('../images/wood-bg.jpg')
   background-repeat: no-repeat
   background-size: cover
-  height: 85rem
+  height: 90vh
   position: relative
+
+  @media screen and (max-width: 950px)
+    height: auto
+    padding: 10rem 0
 
   &-main
     width: 60%
@@ -14,6 +18,12 @@
     padding: 5rem 3rem
     @extend %center-img
 
+    @media screen and (max-width: 950px)
+      transform: none
+      position: static
+      margin: auto
+      width: 80%
+
   &-form
     width: 40%
     display: inline-block
@@ -22,7 +32,16 @@
     margin-right: 2rem
     border-right: 0.1rem solid #000
     padding-right: 4rem
-    
+
+    @media screen and (max-width: 950px)
+      border-bottom: 0.1rem solid #000
+      border-right: 0
+      display: block
+      margin: auto
+      width: 80%
+      padding-bottom: 5rem
+      margin-bottom: 5rem
+      padding-right: 0
 
     &-contents
       // display: none
@@ -86,6 +105,9 @@
     vertical-align: top
     display: inline-block
     // margin-top: 9rem
+
+    @media screen and (max-width: 950px)
+      width: 80%
 
     h5
       font-size: 4rem

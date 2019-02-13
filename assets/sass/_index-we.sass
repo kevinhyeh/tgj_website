@@ -1,36 +1,79 @@
 .who
-    padding: 15rem
-    @include clearfix
+    padding: 15rem 8vw
+    text-align: center
 
-    h3
-        line-height: 8rem
-        // border: .6rem solid #000
-        // margin: 0 20rem 0 25rem
-        padding-top: 1rem
-        // border-radius: 2rem
-
-    .header
-        display: block
-        padding-top: 2rem
-        font-family: $secondary-font
+    @media screen and (max-width: 950px)
+        padding: 5rem
+    
+    &-header
+        display: inline-block
+        vertical-align: top
+        width: 40%
+        padding-top: 6rem
+        font-family: $primary-font
         color: $primary-white
+        font-weight: bold
         text-shadow: 1rem .6rem #898a8a
-        font-size: 13rem
+        font-size: 8vw
+        line-height: 8.5vw
+
+        @media screen and (max-width: 950px)
+            display: block
+            width: 100%
+            padding-top: 0
+            padding-bottom: 5rem
+            font-size: 11vw
+            line-height: 10vw
+            text-shadow: 0.5rem .6rem #898a8a
+
+        @media screen and (max-width: 500px)
+            font-size: 6rem
+            line-height: 6rem
+
+        &-who
+            display: block
 
         &-are
+            display: block
             letter-spacing: 1.5rem
             padding-left: 0.9rem
 
         &-we
+            display: block
             letter-spacing: 1rem
             padding-left: 0.9rem
 
-    &-title
-        font-size: $regular-size
+    &-desc
+        display: inline-block
+        width: 40%
+        text-align: left
+        font-size: 2.2vw
         font-family: $primary-font
-        font-weight: bold
-    
-    &-description
-        font-size: $regular-size
+
+        @media screen and (max-width: 950px)
+            display: block
+            width: 90%
+            margin: auto
+            font-size: 3vw
+
+        @media screen and (max-width: 500px)
+            font-size: 1.8rem
+            text-align: center
+
+        &-title
+            font-weight: bold
+        
+        &-info
+            font-weight: lighter
+
+    .learn-more
         font-family: $primary-font
-        font-weight: lighter
+        font-size: 2.2vw
+        text-decoration: underline
+        color: #000
+
+        @media screen and (max-width: 950px)
+            font-size: 3vw
+
+        @media screen and (max-width: 500px)
+            font-size: 1.8rem

@@ -1,53 +1,88 @@
 .faq
   padding: 8rem 0
+  text-align: center
+
+  &-column
+    // margin-top: 5rem
+    width: 45%
+    display: inline-block
+    vertical-align: top
+
+    &:nth-child(2)
+      margin-right: 5rem
+
+    @media screen and (max-width: 1180px)
+      display: block
+      width: 80%
+      margin: auto!important
+
+  &-card
+    border-bottom: .2rem solid #000
+    padding-bottom: 1rem
+    margin-bottom: 2rem
+
+    @media screen and (max-width: 500px)
+      margin-bottom: .5rem
+
+    .symbol
+      margin-right: auto
+      font-size: 1.8vw
+
+      @media screen and (max-width: 1180px)
+        font-size: 3vw
+        
+      @media screen and (max-width: 780px)
+        font-size: 4vw
+
+      @media screen and (max-width: 500px)
+        font-size: 1.4rem
+
+    &-question
+      font-size: 2vw
+      font-weight: 500
+      // background-color: rgba(0,0,0,0.2)
+      line-height: 6rem
+      cursor: pointer
+      width: 96%
+      display: inline-block
+
+      @media screen and (max-width: 1180px)
+        font-size: 3vw
+        
+      @media screen and (max-width: 780px)
+        font-size: 4vw
+
+      @media screen and (max-width: 500px)
+        font-size: 1.8rem
+
+    &-answer
+      font-size: $secondary-size
+      text-align: justify
+      width: 80%
+      margin: auto
+      // padding-bottom: 2rem
+      max-height: 0
+      transition: max-height 1s
+      overflow: hidden
+
+      @media screen and (max-width: 1180px)
+        font-size: 2.4vw
+        
+      @media screen and (max-width: 780px)
+        font-size: 2.8vw
+
+      @media screen and (max-width: 500px)
+        font-size: 1.4rem
+
+  .reveal-answer
+    max-height: 50rem
+    transition: max-height 1s
 
   img
     width: 23rem
     margin: auto
     display: block
-    margin-bottom: 5rem
+    margin-bottom: 3rem
 
-  .accordion
-    width: 80%
-    margin: auto
-
-    .row:not(:last-child)
-      margin-bottom: 4rem!important
-
-    .row:last-child
-      margin-bottom: 8rem!important
-
-  button
-    font-size: $regular-size
-    color: #fff
-    font-weight: 500
-    text-align: left
-
-    .question
-      display: inline-block
-      width: 97%
-      text-align: center
-
-  .card
-    border: none!important
-    border-radius: 0!important
-    border-bottom: .2rem solid #000!important
-
-  .card-body
-    color: #000!important
-    padding: 2rem 4rem 4rem
-
-    p
-      font-size: $secondary-size
-      text-align: justify
-
-  .card-header
-    width: 100%!important
-    height: 8rem!important
-    text-decoration: none!important
-    transition: .3s
-    padding: 0!important
-    color: #000
-    background-color: rgba(0, 0, 0, 0)!important
-
-  
+    @media screen and (max-width: 500px)
+      width: 18rem
