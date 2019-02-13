@@ -24,6 +24,30 @@ html {
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "montserratbold";
+  src: url("../custom_fonts/montserrat-bold-webfont.woff2") format("woff2"), url("montserrat-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "montserratregular";
+  src: url("../custom_fonts/montserrat-regular-webfont.woff2") format("woff2"), url("montserrat-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "montserratlight";
+  src: url("../custom_fonts/montserrat-light-webfont.woff2") format("woff2"), url("montserrat-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "montserratthin";
+  src: url("../custom_fonts/montserrat-thin-webfont.woff2") format("woff2"), url("montserrat-thin-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 .group {
   width: 90%;
   margin: auto;
@@ -32,7 +56,7 @@ html {
 h3 {
   font-size: 10rem;
   font-weight: bold;
-  font-family: "Montserrat", sans-serif;
+  font-family: "montserratregular";
   text-align: center;
   margin-bottom: 5rem;
 }
@@ -135,7 +159,7 @@ h3 {
 }
 .nav-main-name h1 {
   margin-bottom: 2rem;
-  font-family: "Montserrat", sans-serif;
+  font-family: "montserratregular";
   font-weight: 500;
   display: inline-block;
 }
@@ -171,7 +195,7 @@ h3 {
   transition: all 0.5s;
   cursor: pointer;
   margin: auto;
-  font-family: "Montserrat", sans-serif;
+  font-family: "montserratregular";
 }
 @media screen and (max-width: 500px) {
   .nav .design-button .start-design {
@@ -241,7 +265,7 @@ h3 {
   color: #fff;
   transition: 0.3s;
   font-size: 2rem;
-  font-family: "Montserrat", sans-serif;
+  font-family: "montserratregular";
   font-weight: 1000;
 }
 @media screen and (max-width: 780px) {
@@ -319,11 +343,11 @@ h3 {
 }
 .main-intro-info h2, .main-intro-info p {
   color: #fff;
-  font-family: "Montserrat", sans-serif;
   text-align: center;
 }
 .main-intro-info h2 {
   font-size: 5.8vw;
+  font-family: "montserratbold";
 }
 @media screen and (max-width: 780px) {
   .main-intro-info h2 {
@@ -337,6 +361,7 @@ h3 {
 }
 .main-intro-info p {
   font-size: 2vw;
+  font-family: "montserratregular";
 }
 @media screen and (max-width: 780px) {
   .main-intro-info p {
@@ -361,7 +386,7 @@ h3 {
   transition: all 0.5s;
   cursor: pointer;
   margin: auto;
-  font-family: "Montserrat", sans-serif;
+  font-family: "montserratregular";
 }
 @media screen and (max-width: 500px) {
   .main-intro-info .design-button .start-design {
@@ -409,7 +434,7 @@ h3 {
   vertical-align: top;
   width: 40%;
   padding-top: 6rem;
-  font-family: "Montserrat", sans-serif;
+  font-family: "montserratbold";
   color: #fff;
   font-weight: bold;
   text-shadow: 1rem 0.6rem #898a8a;
@@ -451,7 +476,6 @@ h3 {
   width: 40%;
   text-align: left;
   font-size: 2.2vw;
-  font-family: "Montserrat", sans-serif;
 }
 @media screen and (max-width: 950px) {
   .who-desc {
@@ -467,14 +491,14 @@ h3 {
   }
 }
 .who-desc-title {
-  font-weight: bold;
+  font-family: "montserratbold";
 }
 .who-desc-info {
-  font-weight: lighter;
+  font-family: "montserratlight";
 }
 .who .learn-more {
-  font-family: "Montserrat", sans-serif;
-  font-size: 2.2vw;
+  font-family: "montserratlight";
+  font-size: 1.8vw;
   text-decoration: underline;
   color: #000;
 }
@@ -496,7 +520,7 @@ h3 {
 .why-header {
   display: block;
   font-size: 3.2vw;
-  font-weight: bold;
+  font-family: "montserratbold";
 }
 @media screen and (max-width: 950px) {
   .why-header {
@@ -570,7 +594,7 @@ h3 {
 }
 .why h4 {
   font-size: 3.2vw;
-  font-weight: normal;
+  font-family: "montserratlight";
 }
 @media screen and (max-width: 950px) {
   .why h4 {
@@ -584,7 +608,7 @@ h3 {
 }
 .why p {
   font-size: 2vw;
-  font-weight: lighter;
+  font-family: "montserratthin";
 }
 @media screen and (max-width: 500px) {
   .why p {
@@ -610,7 +634,6 @@ h3 {
   vertical-align: top;
   color: #fff;
   text-align: left;
-  font-family: "Montserrat", sans-serif;
 }
 @media screen and (max-width: 1180px) {
   .process2-column {
@@ -629,6 +652,7 @@ h3 {
   font-size: 7vw;
   font-weight: bold;
   line-height: 9vw;
+  font-family: "montserratbold";
 }
 @media screen and (max-width: 1180px) {
   .process2-header {
@@ -647,6 +671,7 @@ h3 {
   padding-bottom: 4rem;
   position: relative;
   font-weight: bold;
+  font-family: "montserratbold";
 }
 @media screen and (max-width: 1180px) {
   .process2-title {
@@ -678,6 +703,7 @@ h3 {
 .process2-steps {
   font-size: 1.2vw;
   margin-top: 3rem;
+  font-family: "montserratregular";
 }
 @media screen and (max-width: 1180px) {
   .process2-steps {
@@ -703,7 +729,7 @@ h3 {
 }
 .process-box {
   height: 40rem;
-  font-family: "Montserrat", sans-serif;
+  font-family: "montserratlight";
   text-align: center;
   margin: 0.5rem;
   border-radius: 0.5rem;
@@ -782,6 +808,24 @@ h3 {
   padding: 8rem 0;
   text-align: center;
 }
+.faq-header {
+  font-family: "britannic_boldregular";
+  font-size: 10rem;
+  color: #efd59a;
+  text-shadow: -0.7rem -0.5rem #69e2d3, -1.4rem 0 #000;
+  border: 0.8rem double #000;
+  line-height: 12rem;
+  margin: 0 auto 5rem;
+  width: 30rem;
+}
+@media screen and (max-width: 500px) {
+  .faq-header {
+    font-size: 8rem;
+    width: 20rem;
+    line-height: 9rem;
+    text-shadow: -0.5rem -0.3rem #69e2d3, -1rem 0 #000;
+  }
+}
 .faq-column {
   width: 45%;
   display: inline-block;
@@ -823,11 +867,11 @@ h3 {
 }
 .faq-card-question {
   font-size: 1.6vw;
-  font-weight: 500;
   line-height: 6rem;
   cursor: pointer;
   width: 96%;
   display: inline-block;
+  font-family: "montserratregular";
 }
 @media screen and (max-width: 1180px) {
   .faq-card-question {
@@ -854,6 +898,7 @@ h3 {
   max-height: 0;
   transition: max-height 1s;
   overflow: hidden;
+  font-family: "montserratlight";
 }
 @media screen and (max-width: 1180px) {
   .faq-card-answer {
@@ -874,17 +919,6 @@ h3 {
   max-height: 50rem;
   transition: max-height 1s;
 }
-.faq img {
-  width: 23rem;
-  margin: auto;
-  display: block;
-  margin-bottom: 3rem;
-}
-@media screen and (max-width: 500px) {
-  .faq img {
-    width: 18rem;
-  }
-}
 
 .testimonial {
   background-color: rgba(0, 0, 0, 0.05);
@@ -901,16 +935,18 @@ h3 {
 }
 .testimonial .clients {
   font-size: 4rem;
-  font-weight: bold;
   border-bottom: 0.2rem solid #000;
   width: 65%;
+  font-family: "montserratbold";
 }
 .testimonial .comment {
   font-size: 2.5rem;
   font-style: italic;
+  font-family: "montserratlight";
 }
 .testimonial .author {
   font-size: 2rem;
+  font-family: "montserratregular";
 }
 .testimonial a {
   text-align: center;
@@ -1089,7 +1125,7 @@ h3 {
   transition: all 0.5s;
   cursor: pointer;
   margin: auto;
-  font-family: "Montserrat", sans-serif;
+  font-family: "montserratregular";
 }
 @media screen and (max-width: 500px) {
   .contact-start .design-button .start-design {
@@ -1155,7 +1191,7 @@ h3 {
   color: #fff;
   text-decoration: underline;
   font-size: 16px;
-  font-weight: bold;
+  font-family: "montserratregular";
   cursor: not-allowed;
 }
 

@@ -22,7 +22,10 @@ $primary-gold: #f3c953
 $primary-white: #fff
 $primary-off-white: rgba(0,0,0,0.05)
 $bg-blue: #0098ff
-$primary-font: 'Montserrat', sans-serif
+$primary-font-reg: 'montserratlight'
+$primary-font-bold: 'montserratbold'
+$primary-font-semi: 'montserratregular'
+$primary-font-thin: 'montserratthin'
 $secondary-font: 'britannic_boldregular'
 $header-four: 4rem
 $regular-size: 3rem
@@ -31,6 +34,30 @@ $secondary-size: 2.5rem
 @font-face 
   font-family: 'britannic_boldregular'
   src: url('../custom_fonts/britannic_bold_regular-webfont.woff2') format('woff2'), url('britannic_bold_regular-webfont.woff') format('woff2')
+  font-weight: normal
+  font-style: normal
+
+@font-face 
+  font-family: 'montserratbold'
+  src: url('../custom_fonts/montserrat-bold-webfont.woff2') format('woff2'), url('montserrat-bold-webfont.woff') format('woff')
+  font-weight: normal
+  font-style: normal
+
+@font-face 
+  font-family: 'montserratregular'
+  src: url('../custom_fonts/montserrat-regular-webfont.woff2') format('woff2'), url('montserrat-regular-webfont.woff') format('woff')
+  font-weight: normal
+  font-style: normal
+
+@font-face 
+  font-family: 'montserratlight'
+  src: url('../custom_fonts/montserrat-light-webfont.woff2') format('woff2'), url('montserrat-light-webfont.woff') format('woff')
+  font-weight: normal
+  font-style: normal
+
+@font-face 
+  font-family: 'montserratthin'
+  src: url('../custom_fonts/montserrat-thin-webfont.woff2') format('woff2'), url('montserrat-thin-webfont.woff') format('woff')
   font-weight: normal
   font-style: normal
 
@@ -48,7 +75,7 @@ $gutter-horizontal: 6rem
 h3
   font-size: 10rem
   font-weight: bold
-  font-family: $primary-font 
+  font-family: $primary-font-semi
   text-align: center
   margin-bottom: 5rem
 
@@ -91,7 +118,7 @@ h3
     transition: all .5s
     cursor: pointer
     margin: auto
-    font-family: $primary-font
+    font-family: $primary-font-semi
 
     @media screen and (max-width: 500px)
       width: 14rem
