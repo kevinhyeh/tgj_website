@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "3bfa9a7d484c363fc04d",
-    "url": "/static/css/main.8a453ec3.chunk.css"
+    "revision": "697d4594c7acbeacb5bc",
+    "url": "/static/css/main.cc2b3ecf.chunk.css"
   },
   {
-    "revision": "3bfa9a7d484c363fc04d",
-    "url": "/static/js/main.3bfa9a7d.chunk.js"
+    "revision": "697d4594c7acbeacb5bc",
+    "url": "/static/js/main.697d4594.chunk.js"
   },
   {
     "revision": "8ebd4c0a274ebb8bcc6d",
@@ -40,7 +40,7 @@ self.__precacheManifest = [
     "url": "/static/media/tgj_new_logo.382519a2.svg"
   },
   {
-    "revision": "c1ecb8545d4a54852b578264c407cf28",
+    "revision": "e0b5eb9ae2c7d0e26bcb9fe7ff9a9b7a",
     "url": "/index.html"
   }
 ];

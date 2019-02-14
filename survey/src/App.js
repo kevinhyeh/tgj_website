@@ -260,9 +260,9 @@ class App extends Component {
       businessInfo: this.state.businessInfo,
       contactInfo: this.state.contactInfo
     }
-    // surveyRef.push(survey);
+    surveyRef.push(survey);
     this.nextStep();
-    // return _emailClient(survey);
+    return _emailClient(survey);
   };
 
   render() {
