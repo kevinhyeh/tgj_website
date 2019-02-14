@@ -2,7 +2,7 @@ html, body, #root {
   width: 100vw;
   height: 100vh;
   background-image: url('./images/wood-bg.jpg');
-  background-position: cover;
+  background-position: 100% 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
   /*background-color: #eee;*/
@@ -83,7 +83,7 @@ html, body, #root {
 }
 
 .inputs:focus {
-  outline-width: 0;
+  outline: 0;
 }
 
 .textarea {
