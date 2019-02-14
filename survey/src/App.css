@@ -16,7 +16,7 @@ html, body, #root {
 
 .tgj {
   text-align: left;
-  margin-left: 20px;
+  margin-left: 30px;
 }
 
 .tgj-logo {
@@ -63,11 +63,19 @@ html, body, #root {
   font-size: 24px;
 }
 
+.input-column {
+  display: inline-block;
+}
+
+.input-column-right {
+  margin-right: 50px;
+}
+
 .inputs, .other-input {
   border: none;
   border-bottom: 1px solid #000;
   font-size: 18px;
-  border-radius: 5px;
+  /*border-radius: 5px;*/
 }
 
 .inputs {
@@ -87,6 +95,18 @@ html, body, #root {
 
 .textarea:focus {
   outline-width: 0;
+}
+
+.primary-color, .secondary-color {
+  display: inline-block;
+}
+
+.primary-color {
+  vertical-align: top;
+}
+
+.secondary-color {
+  margin-left: 40px;
 }
 
 .buttons {
@@ -135,7 +155,14 @@ html, body, #root {
 
 .buttons-desc {
   font-size: 20px;
+}
 
+.logo-simple {
+  width: 300px;
+}
+
+.logo-intricate {
+  width: 325px;
 }
 
 .small-button {
@@ -163,9 +190,16 @@ html, body, #root {
   color: #eeca68;
 }
 
-.back-button:hover, .next-button:hover {
+.back-button:hover, .next-button:hover, .small-button:hover {
   background-color: #eeca68;
   color: #fff;
+}
+
+.fa-bars {
+  font-size: 30px;
+  color: #72cbcd;
+  cursor: pointer;
+  text-align: right;
 }
 
 .summary-column { 
@@ -238,4 +272,107 @@ html, body, #root {
 
 .end-summary-title {
   font-weight: bold;
+}
+
+@media screen and (max-width: 1080px) {
+  .question-sec {
+    width: 94vw;
+  }
+
+  .input-column-right {
+    margin: 0;
+  }
+
+  .questions-header {
+    width: 90%;
+    margin: 20px auto 0;
+  }
+
+  .questions-minor {
+    font-size: 20px;
+    width: 80%;
+    margin: 20px auto;
+  }
+
+  .summary-column {
+    margin-top: 10px;
+    width: auto;
+    height: auto;
+    padding: 8px;
+  }
+
+  .category-title {
+    padding-left: 5px;
+  }
+
+  .category-desc {
+    padding-left: 25px;
+  }
+
+  .est-price {
+    width: 100%;
+    position: static;
+    font-size: 18px;
+    margin-top: 30px;
+    box-shadow: none;
+  }
+
+  .end-summary-sec {
+    margin: auto!important;
+    width: 60%;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .tgj {
+    text-align: center;
+  }
+
+  .questions-header {
+    width: 100%;
+    font-size: 30px;
+  }
+
+  .inputs {
+    width: 230px;
+  }
+
+  .textarea {
+    width: 300px;
+  }
+
+  .secondary-color {
+    margin-left: 0;
+  }
+
+  .buttons-proj {
+    width: 200px!important;
+    height: 200px;
+    margin: 30px 0 0!important;
+  }
+
+  .buttons {
+    width: 250px;
+  }
+
+  .buttons-title {
+    font-size: 26px;
+  }
+
+  .buttons-price {
+    font-size: 24px;
+  }
+
+  .logo-simple {
+    width: 200px;
+  }
+
+  .logo-intricate {
+    width: 250px;
+  }
+
+  .end-summary-sec {
+    width: 80%;
+  }
 }

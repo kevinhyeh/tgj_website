@@ -6,11 +6,11 @@ class ProjectInfoSec extends Component {
     return(
       <div>
         <p className="questions-header">Tell Us More About The Project</p>
-        <div style={{ display: "inline-block", marginRight: 50 }}>
+        <div className="input-column input-column-right">
           <p className="questions-minor">What is your budget for this {this.props.project.toLowerCase()}?</p>
           <input className="inputs" type="text" placeholder="e.g. $500" onChange={e => this.props.func(e, "projBudget")} value={this.props.projBudget} />
         </div>
-        <div style={{ display: "inline-block" }}>
+        <div className="input-column">
           <p className="questions-minor">Do you have a timeline for this project?</p>
           <input className="inputs" type="text" placeholder="e.g. 1 month" onChange={e => this.props.func(e, "projTimeline")} value={this.props.projTimeline} />
         </div>

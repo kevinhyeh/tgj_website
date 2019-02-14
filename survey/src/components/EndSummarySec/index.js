@@ -30,8 +30,8 @@ class EndSummarySec extends Component {
         </div>
         <div>
           <p className="questions-minor">Add another project?</p>
-          <div className="small-button" onClick={() => this.props.func("yes")}>Yes! Sign me up!</div>
-          <div className="small-button next-button" onClick={() => this.props.func("no")}>Nope! I'm all good.</div>
+          <div className="small-button" onClick={() => this.props.func("yes")}>Yes!</div>
+          <div className="small-button next-button" onClick={() => this.props.func("no")}>I'm ok!</div>
         </div>
       </div>
     )

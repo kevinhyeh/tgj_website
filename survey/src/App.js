@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { _emailClient } from './services/fetchCalls';
 import projectsJSON from './projects.json';
 import firebase from './firebase.js';
+import Media from 'react-media';
 import './App.css';
 
 // components
@@ -14,6 +15,7 @@ import ContactInfoSec from './components/ContactInfoSec';
 import EndSummarySec from './components/EndSummarySec';
 import SmallButtons from './components/SmallButtons';
 import ProjSummaryColumn from './components/ProjSummaryColumn';
+import NavbarCollapse from './components/NavbarCollapse';
 
 import newLogo from './images/tgj_new_logo.svg';
 
@@ -292,7 +294,15 @@ class App extends Component {
           <SmallButtons backFunc={this.prevStep} noInputFunc={this.noInput} submitFunc={this.surveySubmit} steps={this.state.steps} />
         </div>
         {/*project summary*/}
-        <ProjSummaryColumn stepFunc={this.goToStep} finalPrice={this.state.finalPrice} projInfo={this.state.projInfo} businessInfo={this.state.businessInfo} contactInfo={this.state.contactInfo} steps={this.state.steps} project={this.state.projectsChosen.project} projPrice={this.state.projectsChosen.price} complexity={this.state.complexityChosen.complexity} compPrice={this.state.complexityChosen.price} primColor={this.state.primColor} secColor={this.state.secColor} />
+        <Media query="(min-width: 1080px)">
+        { matches =>
+          matches ? (
+            <ProjSummaryColumn stepFunc={this.goToStep} finalPrice={this.state.finalPrice} projInfo={this.state.projInfo} businessInfo={this.state.businessInfo} contactInfo={this.state.contactInfo} steps={this.state.steps} project={this.state.projectsChosen.project} projPrice={this.state.projectsChosen.price} complexity={this.state.complexityChosen.complexity} compPrice={this.state.complexityChosen.price} primColor={this.state.primColor} secColor={this.state.secColor} />
+          ) : (
+            <NavbarCollapse stepFunc={this.goToStep} finalPrice={this.state.finalPrice} projInfo={this.state.projInfo} businessInfo={this.state.businessInfo} contactInfo={this.state.contactInfo} steps={this.state.steps} project={this.state.projectsChosen.project} projPrice={this.state.projectsChosen.price} complexity={this.state.complexityChosen.complexity} compPrice={this.state.complexityChosen.price} primColor={this.state.primColor} secColor={this.state.secColor} />
+          )
+        }
+        </Media>
       </div>
     );
   }

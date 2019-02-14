@@ -6,11 +6,11 @@ class BusinessInfoSec extends Component {
     return(
       <div>
         <p className="questions-header">Tell Us About Your Business</p>
-        <div style={{ display: "inline-block", marginRight: 50 }}>
+        <div className="input-column input-column-right">
           <p className="questions-minor">What's the name of your business?</p>
           <input className="inputs" type="text" placeholder="e.g. The Graphic Jar" onChange={e => this.props.func(e, "businessName")} value={this.props.businessName} />
         </div>
-        <div style={{ display: "inline-block" }}>
+        <div className="input-column">
           <p className="questions-minor">Do you have a website for your business?</p>
           <input className="inputs" type="text" placeholder="e.g. thegraphicjar.com" onChange={e => this.props.func(e, "businessWeb")} value={this.props.businessWeb} />
         </div>

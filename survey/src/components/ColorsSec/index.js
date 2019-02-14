@@ -8,12 +8,12 @@ class ColorsSec extends Component {
     return(
       <div>
         <p className="questions-header">What are your business colors?</p>
-        <div style={{ display: "inline-block", verticalAlign: "top" }}>
+        <div className="primary-color">
         <p className="questions-minor">Primary</p>
         <SketchPicker color={this.props.primColor} onChange={this.props.primFunc} />
         </div>
         { this.props.primColor.split('')[0] == "#" ? (
-          <div style={{ display: "inline-block", marginLeft: 40}}>
+          <div className="secondary-color">
             <p className="questions-minor">Secondary (Optional)</p>
             <SketchPicker color={this.props.secColor} onChange={this.props.secFunc} />
             <div className="back-button" onClick={() => this.props.cancelFunc()}>Cancel Color</div>
