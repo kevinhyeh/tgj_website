@@ -9,7 +9,7 @@ class ProjSummaryColumn extends Component {
 
     const currentStep = this.props.steps < 6;
     const projChosen = this.props.project != null;
-    const compChosen = this.props.complexity != null;
+    const compChosen = this.props.complexity1 != null;
     const colorChosen = this.props.primColor.length > 0;
     const descChosen = projInfoState.projDesc.length > 0 || projInfoState.projBudget.length > 0 || projInfoState.projTimeline.length > 0;
     const businessChosen = busInfoState.businessName.length > 0 || busInfoState.businessWeb.length > 0 || busInfoState.businessDesc.length > 0 || busInfoState.businessSlogan.length > 0;
@@ -30,7 +30,8 @@ class ProjSummaryColumn extends Component {
             { compChosen ? (
               <React.Fragment>
                 <p className="category-title" onClick={() => this.props.stepFunc(1)}>Complexity</p>
-                <p className="category-desc">{this.props.complexity} +${this.props.compPrice}</p>
+                <p className="category-desc">{this.props.complexity1} +${this.props.compPrice1}</p>
+                <p className="category-desc">{this.props.complexity2} +${this.props.compPrice2}</p>
               </React.Fragment>
               ) : null
             }

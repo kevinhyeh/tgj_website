@@ -1,8 +1,8 @@
 html, body, #root {
-  width: 100vw;
+  /*width: 100vw;*/
   height: 100vh;
   background-image: url('./images/wood-bg.jpg');
-  background-position: 100% 100%;
+  background-position: fixed;
   background-repeat: no-repeat;
   background-attachment: fixed;
   /*background-color: #eee;*/
@@ -120,8 +120,12 @@ html, body, #root {
   padding: 10px;
   text-align: center;
   margin: 60px 10px 0;
-  /*background-image: linear-gradient(#a3e2e2, #a3e2e2 40%, #6bc6c6 80%);*/
-  background-image: linear-gradient(to bottom right,#6bc6c6, #b9eae9);
+  /*background-image: linear-gradient(to bottom right,#6bc6c6, #b9eae9);*/
+  background-color: #b9eae9;
+}
+
+.clicked {
+  background-color: #6bc6c6;
 }
 
 .buttons-proj {
@@ -278,7 +282,7 @@ html, body, #root {
 
 @media screen and (max-width: 1080px) {
   .question-sec {
-    width: 94vw;
+    width: 90vw;
   }
 
   .input-column-right {
@@ -341,7 +345,7 @@ html, body, #root {
   }
 
   .textarea {
-    width: 300px;
+    width: 250px;
   }
 
   .secondary-color {

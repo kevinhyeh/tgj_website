@@ -24,7 +24,7 @@ $(document).on('scroll', function() {
 // }
 
 $('.start-design').on('click', function() {
-  window.open('https://tgj-project-builder-q98mnwxq6.now.sh');
+  window.open('https://tgj-project-builder-hcwn7xhj4.now.sh');
 });
 
 function logoChange(x) {

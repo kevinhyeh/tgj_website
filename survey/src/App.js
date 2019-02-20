@@ -42,8 +42,10 @@ class App extends Component {
       other: false,
       otherProj: "",
       complexityChosen: {
-        complexity: null,
-        price: null
+        complexity1: null,
+        price1: null,
+        complexity2: null,
+        price2: null
       },
       primColor: "",
       secColor: "",
@@ -75,8 +77,9 @@ class App extends Component {
   totalPrice = () => { 
     let finalPrice = 0
     let projArrPrice = this.state.projectsChosen.price;
-    let compArrPrice = this.state.complexityChosen.price;
-    this.setState({ finalPrice: projArrPrice + compArrPrice });
+    let compArrPrice1 = this.state.complexityChosen.price1;
+    let compArrPrice2 = this.state.complexityChosen.price2;
+    this.setState({ finalPrice: projArrPrice + compArrPrice1 + compArrPrice2});
   }
 
   goToStep = (step) => {
@@ -111,8 +114,10 @@ class App extends Component {
         });
         this.setState({ complexityChosen:
           {
-            complexity: null,
-            price: null
+            complexity1: null,
+            price1: null,
+            complexity2: null,
+            price2: null
           }
         });
         this.goToStep(2);
@@ -121,8 +126,10 @@ class App extends Component {
       if (this.state.projectsChosen.project != project) {
         this.setState({ complexityChosen:
           {
-            complexity: null,
-            price: null
+            complexity1: null,
+            price1: null,
+            complexity2: null,
+            price2: null
           }
         })
       }
@@ -139,17 +146,17 @@ class App extends Component {
     }
   }
 
-  chooseComplexity = (complex, price) => {
-    this.setState({ complexityChosen:
-      {
-        complexity: complex,
-        price: price
-      }
-    });
+  chooseComplexity = (complex, price, num) => {
+    if (num == 1) {
+      this.setState({ complexityChosen: {...this.state.complexityChosen, complexity1: complex, price1: price} });
+    } else {
+      this.setState({ complexityChosen: {...this.state.complexityChosen, complexity2: complex, price2: price} });
+    }
     setTimeout(function() {
       this.totalPrice();
     }.bind(this), 1)
-    this.nextStep();
+    console.log(complex)
+    // this.nextStep();
   } 
 
   choosePrimColor = (color) => {
@@ -166,19 +173,17 @@ class App extends Component {
   } 
 
   noInput = (state) => {
+    if (state == "complexity" && this.state.complexityChosen.complexity1 == null) {
+      this.setState({ complexityChosen: {...this.state.complexityChosen, complexity1: "No Input"} });
+    }
     if (state == "primColor" && this.state[state] == "") {
       this.setState({ primColor: "No Colors" });
     }
     if (state == "projDesc" && this.state.projInfo[state] == "") {
-      this.setState({ projInfo: {...this.state.projInfo, projBudget: "No Input"} });
-      this.setState({ projInfo: {...this.state.projInfo, projTimeline: "No Input"} });
-      this.setState({ projInfo: {...this.state.projInfo, projDesc: "No Input"} });
+      this.setState({ projInfo: {...this.state.projInfo, projBudget: "No Input", projTimeline: "No Input", projDesc: "No Input"} });
     }
     if (state == "businessName" && this.state.businessInfo[state] == "") {
-      this.setState({ businessInfo: {...this.state.businessInfo, businessName: "No Input"} });
-      this.setState({ businessInfo: {...this.state.businessInfo, businessWeb: "No Input"} });
-      this.setState({ businessInfo: {...this.state.businessInfo, businessDesc: "No Input"} });
-      this.setState({ businessInfo: {...this.state.businessInfo, businessSlogan: "No Input"} });
+      this.setState({ businessInfo: {...this.state.businessInfo, businessName: "No Input", businessWeb: "No Input", businessDesc: "No Input", businessSlogan: "No Input"} });
     }
     this.nextStep();
   }
@@ -285,7 +290,7 @@ class App extends Component {
             ) : this.state.steps === 5 ? (
             <ContactInfoSec func={this.inputText} contactName={this.state.contactInfo.contactName} contactEmail={this.state.contactInfo.contactEmail} contactNumber={this.state.contactInfo.contactNumber} contactMessage={this.state.contactInfo.contactMessage} />
             ) : this.state.steps === 6 ? (
-            <EndSummarySec func={this.addProject} finalPrice={this.state.finalPrice} project={this.state.projectsChosen.project} projPrice={this.state.projectsChosen.price} complexity={this.state.complexityChosen.complexity} compPrice={this.state.complexityChosen.price} projBudget={this.state.projInfo.projBudget} projTimeline={this.state.projInfo.projTimeline} projDesc={this.state.projInfo.projDesc} businessName={this.state.businessInfo.businessName} businesWeb={this.state.businessInfo.businesWeb} businessDesc={this.state.businessInfo.businessDesc} businessSlogan={this.state.businessInfo.businessSlogan} primColor={this.state.primColor} secColor={this.state.secColor} contactName={this.state.contactInfo.contactName} contactEmail={this.state.contactInfo.contactEmail} contactNumber={this.state.contactInfo.contactNumber} contactMessage={this.state.contactInfo.contactMessage} />
+            <EndSummarySec func={this.addProject} finalPrice={this.state.finalPrice} project={this.state.projectsChosen.project} projPrice={this.state.projectsChosen.price} complexity1={this.state.complexityChosen.complexity1} compPrice1={this.state.complexityChosen.price1} complexity2={this.state.complexityChosen.complexity2} compPrice2={this.state.complexityChosen.price2} projBudget={this.state.projInfo.projBudget} projTimeline={this.state.projInfo.projTimeline} projDesc={this.state.projInfo.projDesc} businessName={this.state.businessInfo.businessName} businesWeb={this.state.businessInfo.businesWeb} businessDesc={this.state.businessInfo.businessDesc} businessSlogan={this.state.businessInfo.businessSlogan} primColor={this.state.primColor} secColor={this.state.secColor} contactName={this.state.contactInfo.contactName} contactEmail={this.state.contactInfo.contactEmail} contactNumber={this.state.contactInfo.contactNumber} contactMessage={this.state.contactInfo.contactMessage} />
             ) : (
             <ProjectsList chooseProjFunc={this.chooseProject} inputTextFunc={this.inputText} projects={this.state.projects} other={this.state.other} otherProj={this.state.otherProj} />
            ) 
@@ -297,9 +302,9 @@ class App extends Component {
         <Media query="(min-width: 1080px)">
         { matches =>
           matches ? (
-            <ProjSummaryColumn stepFunc={this.goToStep} finalPrice={this.state.finalPrice} projInfo={this.state.projInfo} businessInfo={this.state.businessInfo} contactInfo={this.state.contactInfo} steps={this.state.steps} project={this.state.projectsChosen.project} projPrice={this.state.projectsChosen.price} complexity={this.state.complexityChosen.complexity} compPrice={this.state.complexityChosen.price} primColor={this.state.primColor} secColor={this.state.secColor} />
+            <ProjSummaryColumn stepFunc={this.goToStep} finalPrice={this.state.finalPrice} projInfo={this.state.projInfo} businessInfo={this.state.businessInfo} contactInfo={this.state.contactInfo} steps={this.state.steps} project={this.state.projectsChosen.project} projPrice={this.state.projectsChosen.price} complexity1={this.state.complexityChosen.complexity1} compPrice1={this.state.complexityChosen.price1} complexity2={this.state.complexityChosen.complexity2} compPrice2={this.state.complexityChosen.price2} primColor={this.state.primColor} secColor={this.state.secColor} />
           ) : (
-            <NavbarCollapse stepFunc={this.goToStep} finalPrice={this.state.finalPrice} projInfo={this.state.projInfo} businessInfo={this.state.businessInfo} contactInfo={this.state.contactInfo} steps={this.state.steps} project={this.state.projectsChosen.project} projPrice={this.state.projectsChosen.price} complexity={this.state.complexityChosen.complexity} compPrice={this.state.complexityChosen.price} primColor={this.state.primColor} secColor={this.state.secColor} />
+            <NavbarCollapse stepFunc={this.goToStep} finalPrice={this.state.finalPrice} projInfo={this.state.projInfo} businessInfo={this.state.businessInfo} contactInfo={this.state.contactInfo} steps={this.state.steps} project={this.state.projectsChosen.project} projPrice={this.state.projectsChosen.price} complexity1={this.state.complexityChosen.complexity1} compPrice1={this.state.complexityChosen.price1} complexity2={this.state.complexityChosen.complexity2} compPrice2={this.state.complexityChosen.price2} primColor={this.state.primColor} secColor={this.state.secColor} />
           )
         }
         </Media>

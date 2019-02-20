@@ -9,7 +9,9 @@ class SmallButtons extends Component {
           <div className="back-button" onClick={() => this.props.backFunc()}>Back</div>
         : null
         }
-        { this.props.steps == 2 ? 
+        { this.props.steps == 1 ? 
+          <div className="small-button next-button" onClick={() => this.props.noInputFunc("complexity")}>Next</div>
+        : this.props.steps == 2 ?
           <div className="small-button next-button" onClick={() => this.props.noInputFunc("projDesc")}>Next</div>
         : this.props.steps == 3 ?
           <div className="small-button next-button" onClick={() => this.props.noInputFunc("businessName")}>Next</div>

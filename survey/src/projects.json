@@ -2,13 +2,13 @@
   {
     "_id": 1,
     "project": "Custom Logo",
-    "price": 400,
+    "price": 300,
     "description": "Custom logo for your company"
   },
   {
     "_id": 2,
     "project": "Business Card",
-    "price": 150,
+    "price": 100,
     "description": "Have all your information on a beautiful one sided business card"
   },
   {

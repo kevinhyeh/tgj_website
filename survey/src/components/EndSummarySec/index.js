@@ -10,7 +10,7 @@ class EndSummarySec extends Component {
         <div className="end-summary-sec">
           <p><span className="end-summary-title">Estimated Project Price:</span> ${this.props.finalPrice}</p>
           <p><span className="end-summary-title">Project:</span> {this.props.project} ${this.props.projPrice}</p>
-          <p><span className="end-summary-title">Complexity:</span> {this.props.complexity} ${this.props.compPrice}</p>
+          <p><span className="end-summary-title">Complexity:</span> {this.props.complexity1} ${this.props.compPrice1}<br></br>{this.props.complexity2} ${this.props.compPrice2} </p>
           <p><span className="end-summary-title">Budget:</span> {this.props.projBudget}</p>
           <p><span className="end-summary-title">Timeline:</span> {this.props.projTimeline}</p>
           <p><span className="end-summary-title">Project Description:</span> {this.props.projDesc}</p>
