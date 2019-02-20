@@ -15,7 +15,7 @@ class ProjectInfoSec extends Component {
           <input className="inputs" type="text" placeholder="e.g. 1 month" onChange={e => this.props.func(e, "projTimeline")} value={this.props.projTimeline} />
         </div>
         <p className="questions-minor">Describe your project</p>
-        <textarea className="textarea" rows="6" placeholder="Describe Project Here" onChange={e => this.props.func(e, "projDesc")} value={this.props.projDesc} />
+        <textarea className="textarea" rows="6" placeholder="Project price may vary depending on description" onChange={e => this.props.func(e, "projDesc")} value={this.props.projDesc} />
       </div>
     )
   }
