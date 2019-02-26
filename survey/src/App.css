@@ -196,11 +196,6 @@ html, body, #root {
   color: #eeca68;
 }
 
-.back-button:hover, .next-button:hover, .small-button:hover {
-  background-color: #eeca68;
-  color: #fff;
-}
-
 .fa-bars {
   font-size: 30px;
   color: #72cbcd;
@@ -380,5 +375,12 @@ html, body, #root {
 
   .end-summary-sec {
     width: 80%;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .back-button:hover, .next-button:hover, .small-button:hover {
+    background-color: #eeca68;
+    color: #fff;
   }
 }

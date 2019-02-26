@@ -31,8 +31,8 @@ class CardComplexity extends Component {
           <div className="buttons" onClick={() => this.props.func("Double Side", 100, 2)}>
             <p className="buttons-title">Double Side</p>
             <p className="buttons-price">+$100</p>
-            <img style={{ width: 300 }} src={cardDouble1} alt="double-sided-1" />
-            <img style={{ width: 300 }} src={cardDouble2} alt="double-sided-2" />
+            {/*<img style={{ width: 300 }} src={cardDouble1} alt="double-sided-1" />
+            <img style={{ width: 300 }} src={cardDouble2} alt="double-sided-2" />*/}
             <p className="buttons-desc">Add more design to your card by inluding another side.</p>
           </div>
         </div>
