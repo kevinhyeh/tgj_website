@@ -1,4 +1,4 @@
-const address = '165.22.152.209:3001';
+const address = 'localhost:3001';
 
 export const _loadProjects = () => {
   return fetch('http://' + address + '/projects', {

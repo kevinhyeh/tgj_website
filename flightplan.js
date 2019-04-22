@@ -1,10 +1,10 @@
 var plan = require('flightplan');
 
-var tgjProjectBuilder = 'tgj_website';
+var appName = 'node-app';
 var username = 'deploy';
-var startFile = 'server.js';
+var startFile = 'bin/server.js';
 
-var tmpDir = tgjProjectBuilder+'-' + new Date().getTime();
+var tmpDir = appName+'-' + new Date().getTime();
 
 // configuration
 plan.target('staging', [
@@ -17,7 +17,7 @@ plan.target('staging', [
 
 plan.target('production', [
   {
-    host: '165.22.152.209',
+    host: '104.131.93.215',
     username: username,
     agent: process.env.SSH_AUTH_SOCK
   },
@@ -51,7 +51,7 @@ plan.remote(function(remote) {
   remote.sudo('npm --production --prefix ~/' + tmpDir + ' install ~/' + tmpDir, {user: username});
 
   remote.log('Reload application');
-  remote.sudo('ln -snf ~/' + tmpDir + ' ~/'+tgjProjectBuilder, {user: username});
-  remote.exec('forever stop ~/'+tgjProjectBuilder+'/'+startFile, {failsafe: true});
-  remote.exec('forever start ~/'+tgjProjectBuilder+'/'+startFile);
+  remote.sudo('ln -snf ~/' + tmpDir + ' ~/'+appName, {user: username});
+  remote.exec('forever stop ~/'+appName+'/'+startFile, {failsafe: true});
+  remote.exec('forever start ~/'+appName+'/'+startFile);
 });

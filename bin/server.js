@@ -2,15 +2,15 @@ const express = require('express');
 const app = express();
 const https = require('https');
 const http = require('http');
-const fs = require('fs');
+// const fs = require('fs');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const handlebars = require('handlebars');
 
-const options = {
-  key: fs.readFileSync('test/fixtures/keys/agent2-key.pem'),
-  cert: fs.readFileSync('test/fixtures/keys/agent2-cert.cert')
-};
+// const options = {
+//   key: fs.readFileSync('test/fixtures/keys/agent2-key.pem'),
+//   cert: fs.readFileSync('test/fixtures/keys/agent2-cert.cert')
+// };
 
 app.use(bodyParser());
 
@@ -19,6 +19,10 @@ app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   res.header("Access-Control-Allow-Methods", "POST, GET, OPTIONS, PUT, DELETE");
   next();
+});
+
+app.get('/', function(req, res){
+  res.send('hi there');
 });
 
 app.post('/email', (req, res) => {

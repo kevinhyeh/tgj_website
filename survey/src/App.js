@@ -254,7 +254,7 @@ class App extends Component {
   }
 
   surveySubmit = () => {
-    const surveyRef = firebase.database().ref('surveys');
+    const surveyRef = firebase.database().ref('survey');
     const survey = {
       dateTime: dateStamp,
       finalPrice: this.state.finalPrice,
