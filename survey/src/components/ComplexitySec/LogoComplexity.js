@@ -14,7 +14,7 @@ class LogoComplexity extends Component {
           {/*<img className="logo-simple" src={logoSimple} alt="simple-logo" />*/}
           <p className="buttons-desc">Has two or less elements for your logo.</p>
         </div>
-        <div className="buttons" onClick={() => this.props.func("Complicated", 50, 1)}>
+        <div className="buttons" onClick={() => this.props.func("Intricate", 50, 1)}>
           <p className="buttons-title">Intricate</p>
           <p className="buttons-price">+$50</p>
           {/*<img className="logo-intricate" src={logoIntricate} alt="intricate-logo" />*/}

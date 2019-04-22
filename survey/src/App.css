@@ -1,11 +1,11 @@
 html, body, #root {
   /*width: 100vw;*/
   height: 100vh;
-  background-image: url('./images/wood-bg.jpg');
+/*  background-image: url('./images/wood-bg.jpg');
   background-position: fixed;
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  /*background-color: #eee;*/
+  background-attachment: fixed;*/
+  background-color: #fff;
 }
 
 .survey {
@@ -38,15 +38,15 @@ html, body, #root {
   width: 74.5%;
   display: inline-block;
   text-align: center;
-  padding: 20px 0 60px;
+  padding: 20px 5px 40px;
   background-color: #fff;
-  margin: 0 2.5% 30px;
+  margin: 0 30px 30px;
   border-radius: 5px;
   position: absolute;
   top: 30px;
   /*transform: translateY(-50%);*/
-  box-shadow: 0 0 10px .3px rgba(0, 0, 0, 0.4);
-  border: 2px solid #72cbcd;
+  /*box-shadow: 0 0 10px .3px rgba(0, 0, 0, 0.4);*/
+  /*border: 2px solid #72cbcd;*/
 }
 
 .step-7 {
@@ -119,7 +119,7 @@ html, body, #root {
   cursor: pointer;
   padding: 10px;
   text-align: center;
-  margin: 60px 10px 0;
+  margin: 30px 10px 0;
   /*background-image: linear-gradient(to bottom right,#6bc6c6, #b9eae9);*/
   background-color: #b9eae9;
 }
@@ -134,11 +134,11 @@ html, body, #root {
 }
 
 .buttons-proj:nth-child(3) {
-  margin: 60px 5px 0 0;
+  margin: 30px 5px 0 0;
 }
 
 .buttons-proj:nth-child(4) {
-  margin: 60px 0 0 5px;
+  margin: 30px 0 0 5px;
 }
 
 .buttons:hover {
@@ -214,8 +214,8 @@ html, body, #root {
   top: 30px;
   margin: 0 20px;
   border-radius: 5px;
-  box-shadow: 0 0 10px .3px rgba(0, 0, 0, 0.4);
-  border: 2px solid #72cbcd;
+  /*box-shadow: 0 0 10px .3px rgba(0, 0, 0, 0.4);*/
+  /*border: 2px solid #72cbcd;*/
 }
 
 .summary-title {
@@ -277,7 +277,9 @@ html, body, #root {
 
 @media screen and (max-width: 1080px) {
   .question-sec {
-    width: 90vw;
+    width: calc(100vw - 100px);
+    margin-left: 15px;
+    top: 15px;
   }
 
   .input-column-right {
@@ -286,7 +288,7 @@ html, body, #root {
 
   .questions-header {
     width: 90%;
-    margin: 20px auto 0;
+    /*margin: auto 0;*/
   }
 
   .questions-minor {
@@ -296,10 +298,14 @@ html, body, #root {
   }
 
   .summary-column {
-    margin-top: 10px;
+    z-index: 100;
     width: auto;
-    height: auto;
+    height: 100vh;
     padding: 8px;
+    top: 0;
+    margin: 0;
+    border: 0;
+    border-radius: 0;
   }
 
   .category-title {
@@ -336,11 +342,11 @@ html, body, #root {
   }
 
   .inputs {
-    width: 230px;
+    width: 200px;
   }
 
   .textarea {
-    width: 250px;
+    width: 200px;
   }
 
   .secondary-color {
@@ -348,13 +354,13 @@ html, body, #root {
   }
 
   .buttons-proj {
-    width: 200px!important;
-    height: 200px;
-    margin: 30px 0 0!important;
+    width: 180px!important;
+    height: 180px;
   }
 
   .buttons {
-    width: 250px;
+    width: 180px;
+    margin: 30px 0 0!important;
   }
 
   .buttons-title {

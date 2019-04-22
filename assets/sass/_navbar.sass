@@ -1,9 +1,9 @@
 .nav
-  width: 100vw
+  width: 100%
   background: rgba(0,0,0,0)
   transition: .3s
   position: fixed
-  z-index: 100000
+  z-index: 100
   text-align: center
   padding-top: 1rem
   padding-bottom: .5rem
@@ -60,15 +60,21 @@
 
     a
       color: $primary-white
+      transition: .3s all
 
       @media screen and (max-width: 780px)
         color: $primary-grey
 
       &:hover
         text-decoration: none
+        color: $primary-blue
 
     span
       color: $primary-blue
+
+      &:before,
+      &:after
+        content: ' '
 
   .design-button
     @include design-button
@@ -109,8 +115,14 @@
           font-family: $primary-font-semi
           font-weight: 1000
 
+          @media screen and (max-width: 990px)
+            font-size: 1.6rem
+
           @media screen and (max-width: 780px)
             color: #000!important
+
+          &:hover
+            color: $primary-blue!important
 
       .active 
           color: $primary-blue!important

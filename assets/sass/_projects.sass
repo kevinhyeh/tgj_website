@@ -1,0 +1,234 @@
+.projects-banner
+  background-image: url('../images/wood-bg.jpg')
+  height: 60vh
+  display: flex
+  align-items: center
+  justify-content: center
+
+  &__header 
+    color: #fff
+    text-transform: uppercase
+    font-size: 7rem
+
+.client 
+  width: 100%
+  min-height: 90vh
+  display: flex
+  position: relative
+  align-items: center
+
+  &__bg, &__image
+    width: 100%
+    height: 100%
+    position: absolute
+
+  &__bg
+    background-color: #c78f58
+
+  &__image
+    background-image: url('../images/projects/project-1/project-1-bg.jpg')
+    background-size: cover
+    display: flex
+    align-items: center
+
+  &__info
+    margin-left: calc(20vw + 40rem)
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    background-color: rgba(0,0,0,0.5)
+    border-radius: .5rem
+    width: 40vw
+    height: auto
+    padding: 5rem
+
+    &-name
+      color: #fff
+      font-family: $primary-font-bold
+      font-size: 6rem
+      text-transform: uppercase
+
+    &-desc
+      color: #fff
+      font-family: $primary-font-semi
+      font-size: 2rem
+      border-radius: .5rem
+
+    &-link
+      font-size: 1.8rem
+      color: $primary-blue
+      display: block
+      margin-top: 2rem
+      transition: .3s all
+      cursor: pointer
+
+      &:hover
+        color: $primary-blue
+
+  &__selector
+    width: 50rem
+    height: 60rem
+    background-color: rgba(255,255,255,0.8)
+    border-radius: .5rem
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-evenly
+    align-content: space-evenly
+    z-index: 100
+    margin-left: 8%
+
+    h4
+      width: 100%
+      text-align: center
+      font-size: 2.8rem
+      text-transform: uppercase
+      font-family: $primary-font-semi
+      text-decoration: underline
+
+  &__project
+    width: 18rem
+    height: 18rem
+    border-radius: .5rem
+    cursor: pointer
+    background-size: contain
+    background-repeat: no-repeat
+    background-position: center
+    transition: .3 all
+
+    &:hover
+      border: .2rem solid #000
+
+    &-1
+      background-image: url('../images/projects/project-1/project-1.jpg')
+
+    &-2
+      background-image: url('../images/projects/project-2/project-2.png')
+
+    &-3
+      background-image: url('../images/projects/project-3/project-3.png')
+
+    &-4
+      background-image: url('../images/projects/project-4/project-4.png')
+
+.illustrations
+  display: flex
+  justify-content: center
+  position: relative
+  flex-wrap: wrap
+  padding: 7rem 15rem
+  background-color: #f9f2df
+
+  &__title
+    position: absolute
+    transform: rotate(-90deg)
+    font-size: 15rem
+    top: 45rem
+    left: -30rem
+    opacity: .2
+    // line-height: .1rem
+
+  // &__collection
+
+  &__image
+    width: 35rem
+    height: 35rem
+    margin: 5rem
+    z-index: 10
+    box-shadow: 0 0 3rem .3rem #aaa
+
+.project-active
+  border: .2rem solid $primary-orange
+
+.run-animation-1
+  animation: projectFadeColor 1s
+
+.run-animation-2
+  animation: projectFadeIn 1s
+
+@keyframes projectFadeIn
+  from
+    opacity: 0
+    left: -15rem
+  to
+    opacity: 1
+    left: 0
+
+@keyframes projectFadeColor
+  from
+    opacity: .5
+  to
+    opacity: 1
+
+// .card
+//   perspective: 150rem
+//   -moz-perspective: 150rem
+//   border: none
+//   position: relative
+//   width: 40rem
+//   height: 50rem
+//   background-color: rgba(0,0,0,0)
+
+//   &-side
+//     height: 50rem
+//     transition: all .8s ease
+//     position: absolute
+//     top: 0
+//     left: 0
+//     width: 100%
+//     backface-visibility: hidden
+//     border-radius: .5rem
+//     box-shadow: 0 1.5rem 4rem rgba(0,0,0,.15)
+
+
+//     &-front
+//       background-color: #fff
+
+//       img
+//         width: 40rem
+//         margin: auto
+
+//     &-back
+//       background-color: green
+//       transform: rotateY(180deg)
+
+//   &:hover &-side-front
+//     transform: rotateY(-180deg)
+
+//   &:hover &-side-back
+//     transform: rotateY(0)
+
+  
+//   h4
+//     width: auto
+//     font-size: 3rem
+//     // transform: rotate(-90deg)
+//     // text-align: center
+//     display: inline-block
+//     color: $primary-blue
+//     // vertical-align: top
+//     margin-bottom: 5rem
+//     background-color: #fff
+//     font-family: $primary-font-semi
+//     padding: 1rem
+//     border-radius: .5rem
+//     text-transform: uppercase
+
+//   &-list
+//     width: 100%
+//     // margin: auto
+//     display: inline-block
+//     text-align: center
+
+
+//     div
+//       margin-right: 3rem
+//       display: inline-block
+//       // background-color: #fff
+//       border-radius: .5rem
+
+//       &:last-child
+//         margin: 0
+
+//     img
+//       width: 30rem
+//       cursor: pointer

@@ -1,4 +1,4 @@
-const address = 'localhost:3001';
+const address = '165.22.152.209:3001';
 
 export const _loadProjects = () => {
   return fetch('http://' + address + '/projects', {
@@ -7,7 +7,7 @@ export const _loadProjects = () => {
 }
 
 export const _emailClient = (survey) => {
-  return fetch('http://' + address + '/email', {
+  return fetch('https://' + address + '/email', {
     method: 'POST',
     headers: {
       'Accept': 'application/json',

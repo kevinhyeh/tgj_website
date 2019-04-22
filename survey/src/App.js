@@ -276,8 +276,10 @@ class App extends Component {
         {/*questions*/}
         <div className={this.state.steps < 6 ? "question-sec" : "question-sec step-7"}>
           <div className="tgj">
+          <a href="https://www.thegraphicjar.com/">
             <img className="tgj-logo" src={newLogo} />
             <h3 className="tgj-name">the <span className="tgj-name-graphic">graphic</span> jar</h3>
+          </a>
           </div>
           { this.state.steps === 1 ? (
             <ComplexitySec func={this.chooseComplexity} project={this.state.projectsChosen.project} />

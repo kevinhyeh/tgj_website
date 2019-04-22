@@ -12,7 +12,7 @@ class WebsiteComplexity extends Component {
             <p className="buttons-price">+$0</p>
             <p className="buttons-desc">Using a third party service to design your website. Less options but will get the job done.</p>
           </div>
-          <div className="buttons" onClick={() => this.props.func("Fully Custom", 200, 1)}>
+          <div className="buttons" onClick={() => this.props.func("Fully Custom", 400, 1)}>
             <p className="buttons-title">Fully Custom</p>
             <p className="buttons-price">+$200</p>
             <p className="buttons-desc">Have your website fully custom by a developer where we can provide wonderous features.</p>

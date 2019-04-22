@@ -1,8 +1,16 @@
 const express = require('express');
 const app = express();
+const https = require('https');
+const http = require('http');
+const fs = require('fs');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const handlebars = require('handlebars');
+
+const options = {
+  key: fs.readFileSync('test/fixtures/keys/agent2-key.pem'),
+  cert: fs.readFileSync('test/fixtures/keys/agent2-cert.cert')
+};
 
 app.use(bodyParser());
 
@@ -19,7 +27,7 @@ app.post('/email', (req, res) => {
   "<h2>This is your project summary from The Graphic Jar</h2>" + 
   "<p>Est. Final Price: ${{estFinalPrice}}</p>" + 
   "<p>Project: {{project}} ${{projPrice}}</p>" + 
-  "<p>Complexity: {{complexity}} ${{compPrice}}</p>" + 
+  "<p>Complexity: {{complexity1}} ${{compPrice1}} {{complexity2}} ${{compPrice2}}</p>" + 
   "<p>Project Budget: {{projBudget}}</p>" + 
   "<p>Project Timeline: {{projTimeline}}</p>" +
   "<p>Project Description: {{projDesc}}</p>" +
@@ -41,8 +49,10 @@ app.post('/email', (req, res) => {
     estFinalPrice: req.body.survey.finalPrice,
     project: req.body.survey.projectsChosen.project,
     projPrice: req.body.survey.projectsChosen.price,
-    complexity: req.body.survey.complexityChosen.complexity,
-    compPrice: req.body.survey.complexityChosen.price,
+    complexity1: req.body.survey.complexityChosen.complexity1,
+    compPrice1: req.body.survey.complexityChosen.price1,
+    complexity2: req.body.survey.complexityChosen.complexity2,
+    compPrice2: req.body.survey.complexityChosen.price2,
     projBudget: req.body.survey.projectsInfo.projBudget,
     projTimeline: req.body.survey.projectsInfo.projTimeline,
     projDesc: req.body.survey.projectsInfo.projDesc,
@@ -86,3 +96,5 @@ app.post('/email', (req, res) => {
 app.listen(3001, () => {
     console.log("listening on 3001");
 });
+// http.createServer(app).listen(80);
+// https.createServer(options, app).listen(443);

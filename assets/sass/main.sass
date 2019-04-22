@@ -68,6 +68,12 @@ $gutter-horizontal: 6rem
 
 // extends/inheritance
 
+@keyframes fadeIn
+  from
+    opacity: 0
+  to
+    opacity: 1
+
 .group
   width: 90%
   margin: auto
@@ -78,6 +84,35 @@ h3
   font-family: $primary-font-semi
   text-align: center
   margin-bottom: 5rem
+
+.banner
+  position: fixed
+  left: 50%
+  top: 50%
+  background-color: rgba(0,0,0,.5)
+  transform: translate(-50%, -50%)
+  animation: fadeIn 1s
+  z-index: 1000
+  width: 100vw
+  height: 100vh
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+
+  &-button
+    border: none
+    background-color: transparent
+    color: #fff
+    font-family: $primary-font-semi
+    font-size: 2.2rem
+    cursor: pointer
+
+    &:focus
+      outline: none
+
+    &:hover
+      color: $primary-blue
 
 %background-image
   background-size: cover
@@ -169,6 +204,10 @@ h3
 @import _index-faq
 
 @import _index-testimonial
+
+@import _projects
+
+@import _project-detail
 
 @import _contact
 

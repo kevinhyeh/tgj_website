@@ -2,7 +2,7 @@
   {
     "_id": 1,
     "project": "Custom Logo",
-    "price": 300,
+    "price": 350,
     "description": "Custom logo for your company"
   },
   {
@@ -14,7 +14,7 @@
   {
     "_id": 3,
     "project": "Website",
-    "price": 500,
+    "price": 600,
     "description": "Increase the design by adding a second side to your card"
   },
   {

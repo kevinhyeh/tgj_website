@@ -1,7 +1,8 @@
+//////////////
+// nav bar
 $('#nav-button').find('.start-design').css('display', 'none');
 
 // header scroll function
-// if (window.location.href == "file:///Users/kevinyeh/Desktop/Desktop/the_graphic_jar/tgj_website/index.html") {
 $(document).on('scroll', function() {
   if ($(document).scrollTop()) {
     $('nav').addClass('scroll-change');
@@ -21,12 +22,83 @@ $(document).on('scroll', function() {
     $('.nav-links').find('a').css('color', '#fff');
   }
 });
-// }
+//////////////
 
+///////////////
+// ad banner
+function loadBanner() {
+  var div = $('<div>');
+  var img = $('<img>');
+  var button = $('<button>');
+  div.html(img);
+  div.append(button);
+  img.attr('src', 'assets/images/carousel1.png');
+  img.addClass('banner-image');
+  div.addClass('banner');
+  button.html('Continue to site');
+  button.addClass('banner-button');
+  $('body').prepend(div);
+  $('.banner-button').on('click', function() {
+    $('.banner').css('display', 'none');
+  });
+};
+
+if (window.location.href == "file:///Users/kevinyeh/Desktop/Desktop/the_graphic_jar/tgj_website/index.html") {
+  $(document).ready(function() {
+    setTimeout(loadBanner, 5000);
+    // loadBanner();
+  });
+}
+//////////////
+
+//////////////
+// projects change
+function removeAnimation() {
+  $('.client__bg').removeClass('run-animation-1');
+  $('.client__image').removeClass('run-animation-2');
+}
+
+function addAnimation() {
+  $('.client__bg').addClass('run-animation-1');
+  $('.client__image').addClass('run-animation-2');
+}
+
+function changeProject(color, background, website, title, desc) {
+  $('.client__bg').css('background-color', color);
+  $('.client__image').css('background-image', background);
+  addAnimation();
+  $('.client-link').attr('href', website);
+  $('.client__info-name').html(title);
+  $('.client__info-desc').html(desc);
+};
+
+setTimeout(removeAnimation, 1000);
+
+$('.client__project').on('click', function() {
+  $('.client__project').removeClass('project-active');
+  $(this).addClass('project-active');
+  if ($(this).attr('id') === 'project-1') {
+    changeProject('#c78f58', 'url("assets/images/projects/project-1/project-1-bg.jpg")', 'http://www.thegraphicjar.com', 'Tell Their Stories', 'Tell their Stories is a multi-media project that aims to give a voice to individuals who have been affected by mass incarceration.');
+  } else if ($(this).attr('id') === 'project-2') {
+    changeProject('#aa4f51', 'url("assets/images/projects/project-2/project-2-bg.jpg")', 'http://www.thegraphicjar.com', 'Green Goddess Gardens', 'hello');
+  } else if ($(this).attr('id') === 'project-3') {
+    changeProject('#ac8c66', 'url("assets/images/projects/project-3/project-3-bg.jpg")', 'http://www.thegraphicjar.com', 'The Forest Floor', 'The Forest Floor wanted a logo that represents their brand and had the similar feel to the National Forest Sign that we all know and love.');
+  } else if ($(this).attr('id') === 'project-4') {
+    changeProject('#499b04', 'url("assets/images/projects/project-4/project-4-bg.jpg")', 'http://www.thegraphicjar.com', 'Gusto di Roma', 'Eating authentic Italian food at home can be simple. I personally select a variety of ready-to-eat small bites and mail flavors of Italy to you once a month.');
+  }
+  setTimeout(removeAnimation, 1000);
+})
+//////////////
+
+//////////////
+// project builder link
 $('.start-design').on('click', function() {
-  window.open('https://tgj-project-builder-r5getxuj8.now.sh');
+  window.open('https://tgj-project-builder-aw9dgwqe7.now.sh');
 });
+//////////////
 
+//////////////
+// logo change
 function logoChange(x) {
   if (x.matches) {
     $('.tgj-logo').attr('src', 'assets/svg/tgj_new_logo.svg');
@@ -50,21 +122,10 @@ $('.fa-bars').on('click', function() {
     $('.nav').find('.nav-links').addClass('unhidden');
   }
 });
+//////////////
 
-// faq
-// $('.faq .symbol').html('&#43;');
-
-// $('.faq button').on('click', function() {
-//   // if ($(this).attr("aria-expanded") == "false") {
-//   //   $('.symbol', this).html('&#8722;');
-//   // } else {
-//   //   $('.symbol', this).html('&#43;');
-//   // }
-//   if ($('.faq button').attr("aria-expanded") == "false") {
-//     $('')
-//   }
-// });
-
+//////////////
+// faq symbol
 $('.symbol').html('&#43;');
 
 $('.faq-card').on('click', function() {
@@ -77,7 +138,9 @@ $('.faq-card').on('click', function() {
     $(this).find('.symbol').html('&#8722;');
   }
 });
+//////////////
 
+//////////////
 // Initialize Firebase
 const config = {
   apiKey: "AIzaSyAySZLurAbI-t0gFuyS0CJZzOR7lQN-p5Q",
@@ -89,7 +152,9 @@ const config = {
 };
 firebase.initializeApp(config);
 const database = firebase.database();
+//////////////
 
+//////////////
 // contact form
 $('.contact-form').submit(function(e) {
   e.preventDefault();
@@ -110,4 +175,5 @@ $('.contact-form').submit(function(e) {
     $('.error-msg').html('Please enter a valid email address');
   }
 });
+//////////////
 

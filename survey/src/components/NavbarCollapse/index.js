@@ -36,7 +36,7 @@ class NavbarCollapse extends Component {
             { this.state.navClicked ? (
               <React.Fragment>
               <i className="fa fa-bars" onClick={() => this.collapse()}></i>
-              <p className="summary-title">Hello Summary</p>
+              <p className="summary-title">Project Summary</p>
               { projChosen ? (
                 <React.Fragment>
                   <p className="category-title" onClick={() => this.props.stepFunc(0)}>Project</p>

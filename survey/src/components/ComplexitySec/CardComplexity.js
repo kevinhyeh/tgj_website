@@ -15,7 +15,7 @@ class CardComplexity extends Component {
             <p className="buttons-price">+$0</p>
             <p className="buttons-desc">Keep it simple with just an image and your contact info.</p>
           </div>
-          <div className="buttons" onClick={() => this.props.func("Intricate", 100, 1)}>
+          <div className="buttons" onClick={() => this.props.func("Intricate", 50, 1)}>
             <p className="buttons-title">Intricate</p>
             <p className="buttons-price">+$50</p>
             <p className="buttons-desc">Include some flare with design tailored to you.</p>
@@ -28,7 +28,7 @@ class CardComplexity extends Component {
             <p className="buttons-price">+$0</p>
             <p className="buttons-desc">Keep all your information neat on a side.</p>
           </div>
-          <div className="buttons" onClick={() => this.props.func("Double Side", 100, 2)}>
+          <div className="buttons" onClick={() => this.props.func("Double Side", 50, 2)}>
             <p className="buttons-title">Double Side</p>
             <p className="buttons-price">+$100</p>
             {/*<img style={{ width: 300 }} src={cardDouble1} alt="double-sided-1" />
