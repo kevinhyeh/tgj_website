@@ -1,3 +1,5 @@
+const mainPages = window.location.href == "file:///Users/kevinyeh/Desktop/Desktop/the_graphic_jar/tgj_website/index.html" || window.location.href == "file:///Users/kevinyeh/Desktop/Desktop/the_graphic_jar/tgj_website/projects.html" || window.location.href == "file:///Users/kevinyeh/Desktop/Desktop/the_graphic_jar/tgj_website/contact.html"
+
 //////////////
 // nav bar
 $('#nav-button').find('.start-design').css('display', 'none');
@@ -8,15 +10,21 @@ $(document).on('scroll', function() {
     $('nav').addClass('scroll-change');
     $('#nav-button').find('.start-design').css('display', 'block');
     $('#intro-button').find('.start-design').css('display', 'none');
-    $('.tgj-logo').attr('src', 'assets/svg/tgj_new_logo.svg');
+    if (mainPages) {
+      $('.tgj-logo').attr('src', 'assets/svg/tgj_new_logo.svg');
+    } else {
+      $('.tgj-logo').attr('src', '../../assets/svg/tgj_new_logo.svg');
+    }
     $('h1').css('display', 'none');
     $('.nav-links').find('a').css('color', '#000');
   } else {
     $('nav').removeClass('scroll-change');
     $('#nav-button').find('.start-design').css('display', 'none');
     $('#intro-button').find('.start-design').css('display', 'block');
-    if (window.matchMedia("(min-width: 781px)").matches) {
+    if (window.matchMedia("(min-width: 781px)").matches && mainPages) {
       $('.tgj-logo').attr('src', 'assets/svg/tgj_new_logo(white).svg');
+    } else if (window.matchMedia("(min-width: 781px)").matches) {
+      $('.tgj-logo').attr('src', '../../assets/svg/tgj_new_logo(white).svg');
     }
     $('h1').css('display', 'inline-block');
     $('.nav-links').find('a').css('color', '#fff');
@@ -26,29 +34,29 @@ $(document).on('scroll', function() {
 
 ///////////////
 // ad banner
-function loadBanner() {
-  var div = $('<div>');
-  var img = $('<img>');
-  var button = $('<button>');
-  div.html(img);
-  div.append(button);
-  img.attr('src', 'assets/images/carousel1.png');
-  img.addClass('banner-image');
-  div.addClass('banner');
-  button.html('Continue to site');
-  button.addClass('banner-button');
-  $('body').prepend(div);
-  $('.banner-button').on('click', function() {
-    $('.banner').css('display', 'none');
-  });
-};
+// function loadBanner() {
+//   var div = $('<div>');
+//   var img = $('<img>');
+//   var button = $('<button>');
+//   div.html(img);
+//   div.append(button);
+//   img.attr('src', 'assets/images/carousel1.png');
+//   img.addClass('banner-image');
+//   div.addClass('banner');
+//   button.html('Continue to site');
+//   button.addClass('banner-button');
+//   $('body').prepend(div);
+//   $('.banner-button').on('click', function() {
+//     $('.banner').css('display', 'none');
+//   });
+// };
 
-if (window.location.href == "file:///Users/kevinyeh/Desktop/Desktop/the_graphic_jar/tgj_website/index.html") {
-  $(document).ready(function() {
-    setTimeout(loadBanner, 5000);
-    // loadBanner();
-  });
-}
+// if (window.location.href == "file:///Users/kevinyeh/Desktop/Desktop/the_graphic_jar/tgj_website/index.html") {
+//   $(document).ready(function() {
+//     setTimeout(loadBanner, 5000);
+//     // loadBanner();
+//   });
+// }
 //////////////
 
 //////////////
@@ -67,7 +75,7 @@ function changeProject(color, background, website, title, desc) {
   $('.client__bg').css('background-color', color);
   $('.client__image').css('background-image', background);
   addAnimation();
-  $('.client-link').attr('href', website);
+  $('.client__info-link').attr('href', website);
   $('.client__info-name').html(title);
   $('.client__info-desc').html(desc);
 };
@@ -78,13 +86,13 @@ $('.client__project').on('click', function() {
   $('.client__project').removeClass('project-active');
   $(this).addClass('project-active');
   if ($(this).attr('id') === 'project-1') {
-    changeProject('#c78f58', 'url("assets/images/projects/project-1/project-1-bg.jpg")', 'http://www.thegraphicjar.com', 'Tell Their Stories', 'Tell their Stories is a multi-media project that aims to give a voice to individuals who have been affected by mass incarceration.');
+    changeProject('#c78f58', 'url("assets/images/projects/project-1/project-1-bg.jpg")', 'public/clients-page/tell-their-stories.html', 'Tell Their Stories', 'Tell their Stories is a multi-media project that aims to give a voice to individuals who have been affected by mass incarceration.');
   } else if ($(this).attr('id') === 'project-2') {
-    changeProject('#aa4f51', 'url("assets/images/projects/project-2/project-2-bg.jpg")', 'http://www.thegraphicjar.com', 'Green Goddess Gardens', 'hello');
+    changeProject('#aa4f51', 'url("assets/images/projects/project-2/project-2-bg.jpg")', 'public/clients-page/green-goddess-gardens.html', 'Green Goddess Gardens', 'hello');
   } else if ($(this).attr('id') === 'project-3') {
-    changeProject('#ac8c66', 'url("assets/images/projects/project-3/project-3-bg.jpg")', 'http://www.thegraphicjar.com', 'The Forest Floor', 'The Forest Floor wanted a logo that represents their brand and had the similar feel to the National Forest Sign that we all know and love.');
+    changeProject('#ac8c66', 'url("assets/images/projects/project-3/project-3-bg.jpg")', 'public/clients-page/the-forest-floor.html', 'The Forest Floor', 'The Forest Floor wanted a logo that represents their brand and had the similar feel to the National Forest Sign that we all know and love.');
   } else if ($(this).attr('id') === 'project-4') {
-    changeProject('#499b04', 'url("assets/images/projects/project-4/project-4-bg.jpg")', 'http://www.thegraphicjar.com', 'Gusto di Roma', 'Eating authentic Italian food at home can be simple. I personally select a variety of ready-to-eat small bites and mail flavors of Italy to you once a month.');
+    changeProject('#499b04', 'url("assets/images/projects/project-4/project-4-bg.jpg")', 'public/clients-page/gusto-di-roma.html', 'Gusto di Roma', 'Eating authentic Italian food at home can be simple. I personally select a variety of ready-to-eat small bites and mail flavors of Italy to you once a month.');
   }
   setTimeout(removeAnimation, 1000);
 })
@@ -101,9 +109,17 @@ $('.start-design').on('click', function() {
 // logo change
 function logoChange(x) {
   if (x.matches) {
-    $('.tgj-logo').attr('src', 'assets/svg/tgj_new_logo.svg');
+    if (mainPages) {
+      $('.tgj-logo').attr('src', 'assets/svg/tgj_new_logo.svg');
+    } else {
+      $('.tgj-logo').attr('src', '../../assets/svg/tgj_new_logo.svg');
+    }
   } else {
-    $('.tgj-logo').attr('src', 'assets/svg/tgj_new_logo(white).svg');
+    if (mainPages) {
+      $('.tgj-logo').attr('src', 'assets/svg/tgj_new_logo(white).svg');
+    } else {
+      $('.tgj-logo').attr('src', '../../assets/svg/tgj_new_logo(white).svg');
+    }
   }
 }
 

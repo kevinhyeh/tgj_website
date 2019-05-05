@@ -155,7 +155,6 @@ class App extends Component {
     setTimeout(function() {
       this.totalPrice();
     }.bind(this), 1)
-    console.log(complex)
     // this.nextStep();
   } 
 
@@ -268,6 +267,7 @@ class App extends Component {
     surveyRef.push(survey);
     this.nextStep();
     return _emailClient(survey);
+    console.log(survey)
   };
 
   render() {
