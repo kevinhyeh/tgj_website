@@ -12,7 +12,7 @@ class ColorsSec extends Component {
         <p className="questions-minor">Primary</p>
         <SketchPicker color={this.props.primColor} onChange={this.props.primFunc} />
         </div>
-        { this.props.primColor.split('')[0] == "#" ? (
+        { this.props.primColor.split('')[0] === "#" ? (
           <div className="secondary-color">
             <p className="questions-minor">Secondary (Optional)</p>
             <SketchPicker color={this.props.secColor} onChange={this.props.secFunc} />

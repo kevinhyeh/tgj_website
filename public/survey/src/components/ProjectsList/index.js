@@ -5,8 +5,8 @@ class ProjectInfoSec extends Component {
   render() {
     const projectsList = this.props.projects.map(project => {
       return (
-        <React.Fragment>
-        { project.project == "Other" ? (
+        <React.Fragment key={project._id}>
+        { project.project === "Other" ? (
           <div className="buttons buttons-proj" onClick={() => this.props.chooseProjFunc(project.project, project.price)} key={project._id}>
             <p className="buttons-title">{project.project}</p>
             { this.props.other ? (

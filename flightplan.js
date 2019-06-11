@@ -19,6 +19,7 @@ plan.target('production', [
   {
     host: '138.197.203.242',
     username: username,
+    password: 'tbiwsia123',
     agent: process.env.SSH_AUTH_SOCK
   },
 //add in another server if you have more than one

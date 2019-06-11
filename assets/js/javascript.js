@@ -172,24 +172,24 @@ const database = firebase.database();
 
 //////////////
 // contact form
-$('.contact-form').submit(function(e) {
-  e.preventDefault();
-  const dateStamp = new Date().toString();
-  const contactRef = database.ref('contacts');
-  const contact = {
-    dateTime: dateStamp,
-    name: $('#contact-name').val(),
-    email: $('#contact-email').val(),
-    number: $('#contact-number').val(),
-    description: $('#contact-desc').val()
-  }
-  if ($('#contact-email').val().indexOf('@') > -1) {
-    $('.contact-form-contents').css('display', 'none');
-    $('.contact-sent').css('display', 'block');
-    contactRef.push(contact);
-  } else {
-    $('.error-msg').html('Please enter a valid email address');
-  }
-});
+// $('.contact-form').submit(function(e) {
+//   e.preventDefault();
+//   const dateStamp = new Date().toString();
+//   const contactRef = database.ref('contacts');
+//   const contact = {
+//     dateTime: dateStamp,
+//     name: $('#contact-name').val(),
+//     email: $('#contact-email').val(),
+//     number: $('#contact-number').val(),
+//     description: $('#contact-desc').val()
+//   }
+//   if ($('#contact-email').val().indexOf('@') > -1) {
+//     $('.contact-form-contents').css('display', 'none');
+//     $('.contact-sent').css('display', 'block');
+//     contactRef.push(contact);
+//   } else {
+//     $('.error-msg').html('Please enter a valid email address');
+//   }
+// });
 //////////////
 

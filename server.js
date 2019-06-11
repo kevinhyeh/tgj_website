@@ -25,7 +25,12 @@ app.get('/', function(req, res){
   res.send('hi there');
 });
 
+app.get('/test', function(req, res){
+  res.send('this is a test');
+});
+
 app.post('/email', (req, res) => {
+  console.log(req.body)
   const source = 
   "<h1>Hello!</h1>" + 
   "<h2>This is your project summary from The Graphic Jar</h2>" + 
@@ -98,7 +103,7 @@ app.post('/email', (req, res) => {
 });
 
 app.listen(3001, () => {
-    console.log("listening on 3001");
+  console.log("listening on 3001");
 });
 // http.createServer(app).listen(80);
 // https.createServer(options, app).listen(443);

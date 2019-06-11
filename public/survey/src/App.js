@@ -75,7 +75,7 @@ class App extends Component {
 
   // global functions
   totalPrice = () => { 
-    let finalPrice = 0
+    // let finalPrice = 0
     let projArrPrice = this.state.projectsChosen.price;
     let compArrPrice1 = this.state.complexityChosen.price1;
     let compArrPrice2 = this.state.complexityChosen.price2;
@@ -91,7 +91,7 @@ class App extends Component {
   }
 
   prevStep = () => {
-    if (this.state.projectsChosen.price == "TBD" && this.state.steps == 2) {
+    if (this.state.projectsChosen.price === "TBD" && this.state.steps === 2) {
       this.goToStep(0);
     } else {
       this.setState({ steps: this.state.steps - 1 });
@@ -101,8 +101,8 @@ class App extends Component {
   // project functions
   chooseProject = (project, price) => {
     // first project
-    if (price == "TBD") {
-      if (project == "Other") {
+    if (price === "TBD") {
+      if (project === "Other") {
         this.setState({ other: true });
       } else {
         this.setState({ finalPrice: price });
@@ -123,7 +123,7 @@ class App extends Component {
         this.goToStep(2);
       }
     } else {
-      if (this.state.projectsChosen.project != project) {
+      if (this.state.projectsChosen.project !== project) {
         this.setState({ complexityChosen:
           {
             complexity1: null,
@@ -147,7 +147,7 @@ class App extends Component {
   }
 
   chooseComplexity = (complex, price, num) => {
-    if (num == 1) {
+    if (num === 1) {
       this.setState({ complexityChosen: {...this.state.complexityChosen, complexity1: complex, price1: price} });
     } else {
       this.setState({ complexityChosen: {...this.state.complexityChosen, complexity2: complex, price2: price} });
@@ -172,23 +172,23 @@ class App extends Component {
   } 
 
   noInput = (state) => {
-    if (state == "complexity" && this.state.complexityChosen.complexity1 == null) {
+    if (state === "complexity" && this.state.complexityChosen.complexity1 === null) {
       this.setState({ complexityChosen: {...this.state.complexityChosen, complexity1: "No Input"} });
     }
-    if (state == "primColor" && this.state[state] == "") {
+    if (state === "primColor" && this.state[state] === "") {
       this.setState({ primColor: "No Colors" });
     }
-    if (state == "projDesc" && this.state.projInfo[state] == "") {
+    if (state === "projDesc" && this.state.projInfo[state] === "") {
       this.setState({ projInfo: {...this.state.projInfo, projBudget: "No Input", projTimeline: "No Input", projDesc: "No Input"} });
     }
-    if (state == "businessName" && this.state.businessInfo[state] == "") {
+    if (state === "businessName" && this.state.businessInfo[state] === "") {
       this.setState({ businessInfo: {...this.state.businessInfo, businessName: "No Input", businessWeb: "No Input", businessDesc: "No Input", businessSlogan: "No Input"} });
     }
     this.nextStep();
   }
 
   addProject = (answer) => {
-    if (answer == "yes") {
+    if (answer === "yes") {
       this.setState({ finalPrice: 0 });
       this.setState({ projectsChosen: {
         project: null,
@@ -264,10 +264,10 @@ class App extends Component {
       businessInfo: this.state.businessInfo,
       contactInfo: this.state.contactInfo
     }
+    console.log(survey)
     surveyRef.push(survey);
     this.nextStep();
     return _emailClient(survey);
-    console.log(survey)
   };
 
   render() {
@@ -277,7 +277,7 @@ class App extends Component {
         <div className={this.state.steps < 6 ? "question-sec" : "question-sec step-7"}>
           <div className="tgj">
           <a href="https://www.thegraphicjar.com/">
-            <img className="tgj-logo" src={newLogo} />
+            <img className="tgj-logo" src={newLogo} alt="TGJ Logo" />
             <h3 className="tgj-name">the <span className="tgj-name-graphic">graphic</span> jar</h3>
           </a>
           </div>

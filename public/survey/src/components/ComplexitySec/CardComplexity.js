@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import '../../App.css';
 
-import cardDouble1 from '../../images/card-double-1.jpg';
-import cardDouble2 from '../../images/card-double-2.jpg';
-
 class CardComplexity extends Component {
   render() {
     return(

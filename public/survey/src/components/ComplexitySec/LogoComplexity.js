@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import '../../App.css';
 
-import logoSimple from '../../images/logo-simple.jpg';
-import logoIntricate from '../../images/logo-intricate.png';
-
 class LogoComplexity extends Component {
   render() {
     return(

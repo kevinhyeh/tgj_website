@@ -43,15 +43,15 @@
     <section class="contact">
       <div class="contact-main">
         <div class="contact-form">
-          <form class="contact-form-contents">
+          <form class="contact-form-contents" action="https://formspree.io/thegraphicjar@gmail.com" method="POST">
             <p class="contact-form-title">Name:</p>
-            <input type="text" class="contact-form-input" id="contact-name" placeholder="e.g. John Smith" required>
+            <input type="text" name="name" class="contact-form-input" id="contact-name" placeholder="e.g. John Smith" required>
             <p class="contact-form-title">Email:</p>
-            <input type="text" class="contact-form-input" id="contact-email" placeholder="e.g. johnsmith@gmail.com" required>
+            <input type="email" name="email" class="contact-form-input" id="contact-email" placeholder="e.g. johnsmith@gmail.com" required>
             <p class="contact-form-title">Phone Number:</p>
-            <input type="text" class="contact-form-input" id="contact-number" placeholder="e.g. 123-456-7890" required>
+            <input type="number" name="number" class="contact-form-input" id="contact-number" placeholder="e.g. 123-456-7890" required>
             <p class="contact-form-title">Your Message:</p>
-            <textarea class="contact-form-desc" id="contact-desc" required rows="4"></textarea>
+            <textarea name="message" class="contact-form-desc" id="contact-desc" required rows="4"></textarea>
             <button class="contact-form-submit" type="submit">Submit</button>
             <span class="error-msg"></span>
           </form>
