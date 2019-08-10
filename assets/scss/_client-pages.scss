@@ -1,0 +1,79 @@
+.project {
+	background: linear-gradient(to bottom,rgb(210, 184, 158) 0%, #F9F2DF 10%);
+  // background-color: #f9f2df;
+  padding: 15rem 0;
+  &__detail {
+    width: 50%;
+    margin: auto;
+    position: relative;
+    padding-bottom: 15rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    &:before {
+      content: "";
+      position: absolute;
+      left: 25%;
+      bottom: 0;
+      height: .1rem;
+      width: 50%;
+      border-bottom: .2rem solid #000;
+		}
+    &-title {
+      opacity: 0;
+      font-size: 4rem;
+      text-transform: uppercase;
+      margin-bottom: 4rem;
+      font-family: $primary-font-bold;
+      animation: loadIn 3s 1s forwards;
+		}
+    &-image {
+      width: 35rem;
+      height: auto;
+      margin: 0 auto 8rem;
+      animation: loadIn 3s;
+		}
+    &-desc {
+      opacity: 0;
+      font-size: 2rem;
+      font-family: $primary-font-semi;
+      animation: loadIn 3s 1s forwards;
+      &:not(:last-child) {
+        margin-bottom: 2rem;
+			}
+		}
+	}
+	&__concepts, 
+	&__final {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 5rem;
+    justify-content: center;
+    align-items: center;
+		&-title {
+			font-family: $primary-font-bold;
+			font-size: 3rem;
+			flex: 0 0 100%;
+			text-align: center;
+			margin: 5rem 0 5rem;
+		}
+		&-image {
+			width: 30rem;
+			height: auto;
+			margin-bottom: 5rem;
+			&:not(:last-child) {
+				margin-right: 5rem;
+			}
+		}
+	}
+}
+@keyframes loadIn {
+  from {
+    transform: translateY(-3rem);
+    opacity: 0;
+	}
+  to {
+    transform: translateY(0);
+    opacity: 1;
+	}
+}

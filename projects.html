@@ -10,7 +10,6 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <!-- External CSS -->
-    <link rel="stylesheet" type="text/css" href="assets/css/clientss.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,500|Source+Sans+Pro" rel="stylesheet">
@@ -20,71 +19,147 @@
   <body>
     <!-- navigation bar -->
     <header>
-      <nav class="nav">
-        <div class="nav-main-name">
-          <a href="index.html"><img src="../../assets/svg/tgj_new_logo(white).svg" class="tgj-logo" alt="tgj_logo">
-          <h1>the<span>graphic</span>jar</h1></a>
-        </div>
-        <div class="nav-icon">
-          <i class="fa fa-bars"></i>
-        </div>
-        <div class="design-button" id="nav-button">
-          <button class="start-design"><span>Start Design</span></button>
-        </div>
-        <div class="nav-links">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a class="active" href="projects.html">Projects</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
-    </header>
-    <section class="client">
-      <div class="client__bg run-animation-1"></div>
-      <div class="client__image run-animation-2">
-        <div class="client__info">
-          <h4 class="client__info-name">Tell Their Stories</h4>
-          <p class="client__info-desc">Tell their Stories is a multi-media project that aims to give a voice to individuals who have been affected by mass incarceration.</p>
-          <a href="public/clients-page/tell-their-stories.html" class="client__info-link">Learn More <span>&rarr;</span></a>
-        </div>
-      </div>
-      <div class="client__selector">
-        <h4>Our Clients</h4>
-        <div class="client__project client__project-1 project-active" id="project-1"></div>
-        <div class="client__project client__project-2" id="project-2"></div>
-        <div class="client__project client__project-3" id="project-3"></div>
-        <div class="client__project client__project-4" id="project-4"></div>
-      </div>
-    </section>
-
-    <section class="illustrations">
-      <h3 class="illustrations__title">Illustrations</h3>
-      <!-- <img class="illustrations-image" src="assets/images/illustrations/illustration-1.jpg" alt=""> -->
-      <!-- <div class="illustrations__collection"> -->
-        <img class="illustrations__image" src="assets/images/illustrations/illustration-2.png" alt="">
-        <img class="illustrations__image" src="assets/images/illustrations/illustration-3.png" alt="">
-        <img class="illustrations__image" src="assets/images/illustrations/illustration-4.png" alt="">
-        <img class="illustrations__image" src="assets/images/illustrations/illustration-5.png" alt="">
-        <img class="illustrations__image" src="assets/images/illustrations/illustration-6.png" alt="">
-        <img class="illustrations__image" src="assets/images/illustrations/illustration-7.png" alt="">
-      <!-- </div> -->
-    </section>
+			<nav class="nav">
+				<a href="index.html" class="nav_brand">
+					<img src="assets/svg/tgj_new_logo(white).svg" class="nav_brand-logo" alt="tgj_logo">
+					<h1 class="nav_brand-name">the<span>graphic</span>jar</h1>
+				</a>
+				<div class="nav-icon">
+					<i class="fa fa-bars"></i>
+				</div>
+				<div class="design-button" id="nav-button">
+					<a href="contact.html">
+						<button class="start-design"><span>Contact Us</span></button>
+					</a>
+				</div>
+				<ul class="nav-links">
+					<li><a href="index.html">Home</a></li>
+					<li><a class="active" href="projects.html">Projects</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main class="projects">
+			<section class="projects_banner">
+				<div class="projects_banner-box">
+					<img src="assets/svg/tgj_jar.svg" alt="TGJ Jar" class="projects_banner-image">
+					<div class="insert"></div>
+					<!-- <div class="projects_banner-info">
+						<div class="projects_banner-rotate">
+							<p class="bold projects_banner-rotate-1">Current</p>
+							<p class="bold projects_banner-rotate-2">Finished</p>
+							<p class="bold projects_banner-rotate-3">TGJ</p>
+						</div> -->
+						<p class="bold projects_banner-secondary tu">Projects</p>
+					<!-- </div> -->
+				</div>
+			</section>
+			<section class="projects_sec">
+				<h3 class="projects_sec-title bold tu">Current Projects</h3>
+				<div class="projects_sec-proj">
+					<div class="card-flip">
+						<div class="card-flip_side card-flip_side-front tu bold">
+							<p class="projects_sec-proj-title">Nancy Fareed Moreno</p>
+						</div>
+						<div class="card-flip_side card-flip_side-back">
+							<div>
+								<p class="tu bold">Project Details</p>
+								<ul class="tu bold">
+									<li>Custom Logo</li>
+									<li>Business Card</li>
+									<li>Website</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="card-flip">
+						<div class="card-flip_side card-flip_side-front tu bold">
+							<p class="projects_sec-proj-title">Soldiers Softball Team</p>
+						</div>
+						<div class="card-flip_side card-flip_side-back">
+							<div>
+								<p class="tu bold">Project Details</p>
+								<ul class="tu bold">
+									<li>Custom Logo</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<h3 class="projects_sec-title bold tu">Finished Projects</h3>
+				<div class="projects_sec-proj">
+					<div class="projects_sec-box">
+						<a href="public/clients-page/tell-their-stories.html" class="projects_sec-link">
+							<p class="projects_sec-client tu bold">Tell Their Stories</p>
+							<div class="projects_sec-image" id="stories">
+							</div>
+						</a>
+					</div>
+					<div class="projects_sec-box">
+						<a href="public/clients-page/the-forest-floor.html" class="projects_sec-link">
+							<p class="projects_sec-client tu bold">The Forest Floor</p>
+							<div class="projects_sec-image" id="forest">
+							</div>
+						</a>
+					</div>
+					<div class="projects_sec-box">
+						<a href="public/clients-page/gusto-di-roma.html" class="projects_sec-link">
+							<p class="projects_sec-client tu bold">Gusto Di Roma</p>
+							<div class="projects_sec-image" id="gusto">
+							</div>
+						</a>
+					</div>
+					<div class="projects_sec-box">
+						<a href="public/clients-page/green-goddess-gardens.html" class="projects_sec-link">
+							<p class="projects_sec-client tu bold">Green Goddess Gardens</p>
+							<div class="projects_sec-image" id="gardens">
+							</div>
+						</a>
+					</div>
+				</div>
+			</section>
+			<section class="projects_tgj">
+				<div class="projects_tgj-container">
+					<div class="projects_tgj-header">
+						<p class="projects_tgj-title bold tu">TGJ</p>
+						<p class="projects_tgj-title bold tu">Projects</p>
+					</div>
+					<div class="projects_tgj-image" id="illustration_1">
+					</div>
+					<div class="projects_tgj-image" id="illustration_2">
+					</div>
+					<div class="projects_tgj-image" id="illustration_3">
+					</div>
+					<div class="projects_tgj-image" id="illustration_4">
+					</div>
+					<div class="projects_tgj-image" id="illustration_5">
+					</div>
+					<div class="projects_tgj-image" id="illustration_6">
+					</div>
+					<div class="projects_tgj-image" id="illustration_7">
+					</div>
+				</div>
+			</section>
+		</main>
     <!-- footer -->
     <footer class="footer">
-      <div class="footer-info">
-        <img class="footer-image" src="assets/svg/tgj_new_logo(white).svg">
-        <div class="footer-social">
-          <img src="assets/svg/facebook-logo.svg" alt="facebook logo">
-          <img src="assets/svg/instagram.svg" alt="instagram">
-        </div>
-        <ul class="footer-list">
-          <li class="footer-list-link"><a href="info-pages/about.html">About Us</a></li>
-          <li class="footer-list-link"><a href="info-pages/policy.html">TGJ Policies</a></li>
-          <li class="footer-list-link"><a href="info-pages/faq.html">More FAQ</a></li>
-          <li class="footer-list-link"><a href="contact.html">Contact Us</a></li>
-        </ul>
-      </div>
+			<div class="footer-info">
+				<img class="footer-image" src="assets/svg/tgj_new_logo(white).svg">
+				<ul class="footer-list">
+					<li class="footer-list-link"><a href="public/info-pages/about.html">About Us</a></li>
+					<li class="footer-list-link"><a href="public/info-pages/policies.html">TGJ Policies</a></li>
+					<li class="footer-list-link"><a href="public/info-pages/faq.html">More FAQ</a></li>
+					<li class="footer-list-link"><a href="contact.html">Contact Us</a></li>
+				</ul>
+				<div class="footer-social">
+					<a href="https://www.facebook.com/thegraphicjar/" target="_blank">
+						<img src="assets/svg/facebook-logo.svg" alt="facebook logo">
+					</a>
+					<a href="https://www.instagram.com/thegraphicjar/?hl=en" target="_blank">
+						<img src="assets/svg/instagram.svg" alt="instagram">
+					</a>
+				</div>
+			</div>
     </footer>
     <!-- Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

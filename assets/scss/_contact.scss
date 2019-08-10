@@ -1,0 +1,79 @@
+.contact {
+	background-image: url('../images/contact-4.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 90rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	-webkit-transform-style: preserve-3d;
+	-webkit-transform: translate3d(0,0,0);
+	-webkit-backface-visibility: hidden;
+	-webkit-animation: contactBgAnimate 15s 2s ease-in-out infinite;
+	animation: contactBgAnimate 15s 2s ease-in-out infinite;
+	&_form {
+		background-color: rgba(255,255,255,0.8);
+		border: .5rem solid $primary-blue;
+		border-radius: .5rem;
+		padding: 5rem;
+		width: 40%;
+		&-title {
+			font-size: 2rem;
+			text-transform: uppercase;
+			font-family: $primary-font-bold;
+		}
+		&-input,
+		&-desc {
+			border: none;
+			font-size: 1.4rem;
+			border-radius: .5rem;
+			width: 100%;
+			margin-bottom: 2rem;
+		}
+		&-submit {
+			background-color: $primary-orange;
+			font-size: 1.8rem;
+			font-family: $primary-font-reg;
+			border-radius: .5rem;
+			padding: 1rem 2rem;
+			color: #fff;
+			text-transform: uppercase;
+			cursor: pointer;
+			transition: .3s all;
+			&:hover {
+				transform: translateY(-4px);
+				box-shadow: 0 .5rem .5rem #aaa;
+			}
+			&:focus {
+				transform: translateY(0);
+				outline: none;
+				border: none;
+			}
+		}
+	}
+	&-sent h4 {
+		font-size: 3rem;
+	}
+	&-sent p {
+		font-size: 2rem;
+		margin-top: 2rem;
+	}
+}
+// @keyframes contactBgAnimate {
+// 	0% {
+// 		background-image: url('../images/contact-1.jpg');
+// 	}
+// 	25% {
+// 		background-image: url('../images/contact-2.jpg');
+// 	}
+// 	50% {
+// 		background-image: url('../images/contact-3.jpg');
+// 	}
+// 	75% {
+// 		background-image: url('../images/contact-4.jpg');
+// 	}
+// 	100% {
+// 		background-image: url('../images/contact-1.jpg');
+// 	}
+// }

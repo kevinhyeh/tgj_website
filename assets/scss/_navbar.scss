@@ -1,0 +1,82 @@
+.nav {
+	width: 100%;
+	background-color: rgba(0,0,0,0);
+	transition: .3s all;
+	position: fixed;
+	top: 0;
+	z-index: 100;
+	text-align: center;
+	padding: 1rem 12rem .5rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	&.scroll-change {
+		background-color: rgba(255,255,255,0.97);
+		border-bottom: .4rem solid $secondary-blue;
+	}
+	&_brand {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 40rem;
+		&:hover {
+			text-decoration: none;
+		}
+		&:focus {
+			outline: none;
+		}
+		&-logo {
+			width: 4rem;
+			margin-right: 1rem;
+		}
+		&-name {
+			font-family: $primary-font-semi;
+			font-weight: 500;
+			color: $primary-white;
+			transition: .3s all;
+			& span {
+				color: $primary-blue;
+			}
+		}
+	}
+	&-icon {
+		display: none;
+	}
+	&-links {
+		list-style: none;
+		padding: 0;
+		margin-top: 1rem;
+		width: 40rem;
+		& li {
+			display: inline;
+		}
+		& li:nth-child(2) {
+			margin: 0 .8rem;
+		}
+		& a {
+			color: $primary-white;
+			font-size: 2rem;
+			text-transform: uppercase;
+			font-family: $primary-font-semi;
+			transition: .3s all;
+		}
+		& a:hover {
+			text-decoration: none;
+			color: $primary-blue!important;
+		}
+	}
+}
+.design-button {
+	@include design-button
+}
+.active {
+	color: $primary-blue!important;
+}
+
+@media screen and (max-width: 780px) {
+	.nav {
+		&-icon {
+			display: inline-block;
+		}
+	}
+}

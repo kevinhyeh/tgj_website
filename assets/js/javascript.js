@@ -11,26 +11,48 @@ $(document).on('scroll', function() {
     $('#nav-button').find('.start-design').css('display', 'block');
     $('#intro-button').find('.start-design').css('display', 'none');
     if (mainPages) {
-      $('.tgj-logo').attr('src', 'assets/svg/tgj_new_logo.svg');
+      $('.nav_brand-logo').attr('src', 'assets/svg/tgj_new_logo.svg');
     } else {
-      $('.tgj-logo').attr('src', '../../assets/svg/tgj_new_logo.svg');
+      $('.nav_brand-logo').attr('src', '../../assets/svg/tgj_new_logo.svg');
     }
-    $('h1').css('display', 'none');
+    $('.nav_brand-name').css('display', 'none');
     $('.nav-links').find('a').css('color', '#000');
   } else {
     $('nav').removeClass('scroll-change');
     $('#nav-button').find('.start-design').css('display', 'none');
     $('#intro-button').find('.start-design').css('display', 'block');
     if (window.matchMedia("(min-width: 781px)").matches && mainPages) {
-      $('.tgj-logo').attr('src', 'assets/svg/tgj_new_logo(white).svg');
+      $('.nav_brand-logo').attr('src', 'assets/svg/tgj_new_logo(white).svg');
     } else if (window.matchMedia("(min-width: 781px)").matches) {
-      $('.tgj-logo').attr('src', '../../assets/svg/tgj_new_logo(white).svg');
+      $('.nav_brand-logo').attr('src', '../../assets/svg/tgj_new_logo(white).svg');
     }
-    $('h1').css('display', 'inline-block');
+    $('.nav_brand-name').css('display', 'inline-block');
     $('.nav-links').find('a').css('color', '#fff');
   }
 });
 //////////////
+
+// contact us submit
+$('.contact_form-contents').on('submit', function() {
+	$(this).addClass('hidden');
+	$('.contact-sent').removeClass('hidden');
+})
+
+// var initialText
+// $('.projects_sec-image').hover(function(e) {
+// 	console.log('e', e.target.id)
+// 	initialText = e.target.innerText
+// 	switch (e.target.id) {
+// 		case 'nancy fareed moreno': 
+// 			$(this).find('p').text('Hello');
+// 		break
+// 		case 'tgj-2': 
+// 			$(this).find('p').text('bye');
+// 		break
+// 	}
+// }, function() {
+// 	$(this).find('p').text(initialText)
+// })
 
 ///////////////
 // ad banner
@@ -99,10 +121,10 @@ $('.client__project').on('click', function() {
 //////////////
 
 //////////////
-// project builder link
-$('.start-design').on('click', function() {
-  window.open('https://tgj-project-builder-aw9dgwqe7.now.sh');
-});
+// // project builder link
+// $('.start-design').on('click', function() {
+//   window.open('https://tgj-project-builder-aw9dgwqe7.now.sh');
+// });
 //////////////
 
 //////////////
@@ -110,15 +132,15 @@ $('.start-design').on('click', function() {
 function logoChange(x) {
   if (x.matches) {
     if (mainPages) {
-      $('.tgj-logo').attr('src', 'assets/svg/tgj_new_logo.svg');
+      $('.nav_brand-logo').attr('src', 'assets/svg/tgj_new_logo.svg');
     } else {
-      $('.tgj-logo').attr('src', '../../assets/svg/tgj_new_logo.svg');
+      $('.nav_brand-logo').attr('src', '../../assets/svg/tgj_new_logo.svg');
     }
   } else {
     if (mainPages) {
-      $('.tgj-logo').attr('src', 'assets/svg/tgj_new_logo(white).svg');
+      $('.nav_brand-logo').attr('src', 'assets/svg/tgj_new_logo(white).svg');
     } else {
-      $('.tgj-logo').attr('src', '../../assets/svg/tgj_new_logo(white).svg');
+      $('.nav_brand-logo').attr('src', '../../assets/svg/tgj_new_logo(white).svg');
     }
   }
 }
@@ -142,18 +164,16 @@ $('.fa-bars').on('click', function() {
 
 //////////////
 // faq symbol
-$('.symbol').html('&#43;');
+// $('.symbol').html('&#43;');
 
-$('.faq-card').on('click', function() {
-  // $('.faq-card-answer').removeClass('reveal-answer')
-  if ($(this).find('.faq-card-answer').hasClass('reveal-answer')) {
-    $(this).find('.faq-card-answer').removeClass('reveal-answer');
-    $(this).find('.symbol').html('&#43;');
-  } else {
-    $(this).find('.faq-card-answer').addClass('reveal-answer');
-    $(this).find('.symbol').html('&#8722;');
-  }
-});
+// $('.btn-link').on('click', function() {
+//   // $('.faq-card-answer').removeClass('reveal-answer')
+//   if (!$(this).hasClass('collapsed')) {
+//     $(this).find('span').html('&#43;');
+//   } else {
+//     $(this).find('span').html('&#8722;');
+//   }
+// });
 //////////////
 
 //////////////
