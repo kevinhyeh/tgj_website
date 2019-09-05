@@ -1,10 +1,10 @@
 .about {
 	&_banner {
 		background-image: url('../images/main-pic.jpg');
-    background-repeat: no-repeat;
+		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center;
-    background-attachment: fixed;
+		background-attachment: fixed;
 		height: 75rem;
 		display: flex;
 		justify-content: center;
@@ -32,7 +32,6 @@
 		&-image {
 			width: 40rem;
 			height: 40rem;
-			shape-outside: circle(50%);
 			margin: 8rem;
 		}
 		& p {
@@ -44,14 +43,36 @@
 		display: flex;
 		justify-content: center;
 		align-content: center;
-		height: 50rem;
-		margin: 5rem;
+		margin: 10rem 5rem;
+		&-click {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			z-index: 10;
+			color: #fff;
+			transform: translate(-50%, -50%);
+			font-size: 2rem;
+			font-family: $primary-font-bold;
+			width: 100%;
+			text-align: center;
+			height: 100%;
+			margin: 0;
+			border-radius: 50%;
+			padding-top: 16rem;
+			background-image: linear-gradient(
+				to top,
+				rgba(0, 0, 0, 0.3),
+				transparent
+			);
+			cursor: pointer;
+		}
 		&-title {
 			width: 100%;
 			text-align: center;
 			font-size: 4rem;
 		}
-		&-kevin, &-christina {
+		&-kevin,
+		&-christina {
 			overflow: hidden;
 			display: flex;
 			justify-content: space-evenly;
@@ -68,9 +89,9 @@
 				width: 15rem;
 				height: 15rem;
 				border-radius: 50%;
-				transition: all .7s;
+				transition: all 0.7s;
 				z-index: -1;
-				transform: translate(-50%,-50%);
+				transform: translate(-50%, -50%);
 			}
 			&-info {
 				font-size: 2.4rem;
@@ -78,11 +99,12 @@
 				text-align: center;
 				position: relative;
 			}
-			&-name, &-about {
+			&-name,
+			&-about {
 				position: absolute;
 				top: 50%;
 				left: 50%;
-				transition: all .8s;
+				transition: all 0.8s;
 				transform: translate(-50%, -50%);
 				width: 100%;
 			}
@@ -98,7 +120,7 @@
 			width: 25rem;
 			height: 25rem;
 			border-radius: 50%;
-			transition: all .3s;
+			transition: all 0.3s;
 			cursor: pointer;
 			&:hover {
 				// transform: translateY(-1%);
@@ -118,7 +140,9 @@
 		}
 	}
 }
-#about-christina:checked ~ .about_people-christina-image .about_people-christina-bg,
+#about-christina:checked
+	~ .about_people-christina-image
+	.about_people-christina-bg,
 #about-kevin:checked ~ .about_people-kevin-image .about_people-kevin-bg {
 	transform: scale(12);
 }
@@ -126,12 +150,125 @@
 #about-kevin:checked ~ .about_people-kevin-image img {
 	box-shadow: 0 0 2rem #444;
 }
-#about-christina:checked ~ .about_people-christina-info .about_people-christina-about,
+#about-christina:checked
+	~ .about_people-christina-info
+	.about_people-christina-about,
 #about-kevin:checked ~ .about_people-kevin-info .about_people-kevin-about {
 	opacity: 1;
 	color: #fff;
-} 
-#about-christina:checked ~ .about_people-christina-info .about_people-christina-name,
+}
+#about-christina:checked
+	~ .about_people-christina-info
+	.about_people-christina-name,
 #about-kevin:checked ~ .about_people-kevin-info .about_people-kevin-name {
 	opacity: 0;
-} 
+}
+
+@media screen and (max-width: 900px) {
+	.about {
+		&_banner {
+			height: 45rem;
+			padding-top: 12rem;
+			&-image {
+				width: 10rem;
+			}
+			&-secondary {
+				font-size: 6rem;
+				margin: 0;
+			}
+		}
+		&_info {
+			flex-direction: column;
+			margin-bottom: 5rem;
+			&-image {
+				width: 35vw;
+				height: 35vw;
+				margin: 5rem;
+			}
+			& p {
+				font-size: 2.4rem;
+				width: 70%;
+				text-align: center;
+			}
+		}
+		&_people {
+			flex-direction: column;
+			& img {
+				width: 20rem;
+				height: 20rem;
+			}
+			&-christina {
+				margin: 0 auto 2rem;
+			}
+			&-kevin {
+				margin: 0 auto;
+			}
+			&-christina,
+			&-kevin {
+				padding: 2rem;
+				width: 90%;
+				&-info {
+					font-size: 2rem;
+				}
+			}
+			&-click {
+				padding-top: 14rem;
+				font-size: 1.6rem;
+			}
+		}
+	}
+	.insert {
+		height: 20rem;
+		width: 1rem;
+	}
+}
+@media screen and (max-width: 500px) {
+	.about {
+		&_banner {
+			padding-top: 16rem;
+			&-image {
+				width: 5rem;
+			}
+			&-secondary {
+				font-size: 3rem;
+			}
+		}
+		&_info {
+			&-image {
+				width: 200px;
+				height: 200px;
+				margin: 3rem;
+			}
+			& p {
+				font-size: 2rem;
+				width: 80%;
+			}
+		}
+		&_people {
+			margin: 3rem;
+			&-title {
+				font-size: 2.5rem;
+			}
+			&-christina,
+			&-kevin {
+				height: 45rem;
+				flex-direction: column-reverse;
+				justify-content: flex-end;
+				width: 100%;
+				&-info {
+					font-size: 1.6rem;
+					width: 100%;
+				}
+				&-name,
+				&-about {
+					margin-top: 110px;
+				}
+			}
+		}
+	}
+	.insert {
+		height: 11rem;
+		width: 0.5rem;
+		margin: 0 2rem;
+	}
+}

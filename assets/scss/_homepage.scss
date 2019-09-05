@@ -2,10 +2,10 @@
 	font-family: $primary-font-semi;
 	&_banner {
 		background-image: url('../images/main-pic.jpg');
-    background-repeat: no-repeat;
+		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center;
-    background-attachment: fixed;
+		background-attachment: fixed;
 		height: 75rem;
 		text-align: center;
 		position: relative;
@@ -19,7 +19,8 @@
 		}
 		&-header {
 			font-size: 7rem;
-			white-space: pre-line;
+			width: 70%;
+			margin: 0 auto;
 		}
 		&-minor {
 			font-size: 2.5em;
@@ -45,9 +46,9 @@
 		&-desc {
 			width: 500px;
 			font-size: 2.2rem;
-			border: .4rem solid #000;
+			border: 0.4rem solid #000;
 			padding: 5rem;
-			transition: .3s all;
+			transition: 0.3s all;
 		}
 		// &-desc:hover {
 		// 	background-color: #69e2d3;
@@ -69,12 +70,12 @@
 		justify-content: center;
 		align-items: stretch;
 		&-card {
-			border: .5rem solid #000;
+			border: 0.5rem solid #000;
 			&:nth-child(2) {
 				border-left: none;
 				border-right: none;
 			}
-		} 
+		}
 		&-image {
 			background-position: center;
 			background-size: cover;
@@ -102,15 +103,16 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: flex-start;
-		padding: 10rem;
+		padding: 6vw;
 		&-header,
 		&-steps {
 			color: #fff;
 		}
 		&-header {
 			font-family: $primary-font-semi;
-			font-size: 9rem;
+			font-size: 6vw;
 			width: 600px;
+			margin-right: 2rem;
 		}
 		&-steps {
 			width: 40%;
@@ -140,36 +142,36 @@
 }
 
 .btn-link {
-	width: 100%!important;
-	height: 100%!important;
-	color: #000!important;
-	font-family: $primary-font-semi!important;
-	font-size: 2.2rem!important;
-	transition: .3s all!important;
-	text-align: center!important;
+	width: 100% !important;
+	height: 100% !important;
+	color: #000 !important;
+	font-family: $primary-font-semi !important;
+	font-size: 2.2rem !important;
+	transition: 0.3s all !important;
+	text-align: center !important;
 	&:hover,
 	&:focus {
-		text-decoration: none!important;
+		text-decoration: none !important;
 	}
 	& span {
 		margin-right: 2rem;
 	}
 }
 .testimonial {
-  background-color: rgba(0, 0, 0, 0.05);
-  height: auto;
-  border-top: .1rem solid (0, 0, 0, 0.2);
+	background-color: rgba(0, 0, 0, 0.05);
+	height: auto;
+	border-top: 0.1rem solid (0, 0, 0, 0.2);
 	padding: 6rem 0 8rem;
 	img.d-block {
-		width: 35rem!important;
-		margin: 0 auto!important;
+		width: 35rem !important;
+		margin: 0 auto !important;
 	}
 	p {
 		color: #000;
 	}
 	.clients {
 		font-size: $header-four;
-		border-bottom: .2rem solid #000;
+		border-bottom: 0.2rem solid #000;
 		text-transform: uppercase;
 	}
 	.comment {
@@ -181,11 +183,11 @@
 		font-size: 2rem;
 		font-family: $primary-font-semi;
 	}
-	
+
 	@media screen and (max-width: 500px) {
 		img.d-block {
-			width: 28rem!important;
-			margin: 0!important;
+			width: 28rem !important;
+			margin: 0 !important;
 		}
 		.clients {
 			font-size: 3rem;
@@ -202,11 +204,11 @@
 		color: #000;
 	}
 	button {
-		border-radius: .5rem;
+		border-radius: 0.5rem;
 		background-color: #fff;
 		border: none;
 		margin: 0 0 0 1rem;
-		transition: .3s;
+		transition: 0.3s;
 		border-bottom: none;
 		a {
 			text-decoration: none;
@@ -214,7 +216,7 @@
 	}
 	.container:nth-child(1) {
 		button:hover {
-			background-color: #FF8E3A;
+			background-color: #ff8e3a;
 			a {
 				color: #fff;
 			}
@@ -222,29 +224,157 @@
 	}
 	.carousel-control-prev-icon,
 	.carousel-control-next-icon {
-		width: 4rem!important;
-		height: 4rem!important;
-	
+		width: 4rem !important;
+		height: 4rem !important;
+
 		@media screen and (max-width: 500px) {
-			width: 1rem!important;
+			width: 1rem !important;
 		}
 	}
 	.carousel-control-prev-icon {
-		background-image: url('../svg/prev_arrow.svg')!important;
+		background-image: url('../svg/prev_arrow.svg') !important;
 	}
-	
+
 	.carousel-control-next-icon {
-		background-image: url('../svg/next_arrow.svg')!important;
+		background-image: url('../svg/next_arrow.svg') !important;
 	}
-	
+
 	.carousel-indicators {
 		.active {
-			background-color: #000!important;
+			background-color: #000 !important;
 		}
 		li {
-			background-color: rgba(0, 0, 0, 0.5)!important;
+			background-color: rgba(0, 0, 0, 0.5) !important;
 		}
 	}
 }
 
+@media screen and (max-width: 900px) {
+	.homepage {
+		&_banner {
+			height: 45rem;
+			&-header {
+				font-size: 6rem;
+				width: 100%;
+			}
+			&-minor {
+				font-size: 2em;
+				margin-bottom: 3rem;
+				width: 80%;
+				margin: 1rem auto 3rem;
+			}
+		}
+		&_intro,
+		&_about,
+		&_process {
+			width: 90%;
+			margin: 5rem auto;
+		}
+		&_intro {
+			flex-direction: column;
+			align-items: center;
+			&-header {
+				font-size: 3.6rem;
+				width: 90%;
+				margin-right: 0;
+				margin-bottom: 5rem;
+			}
+			&-desc {
+				width: 90%;
+				padding: 2rem;
+			}
+			&-info {
+				line-height: 1.5;
+			}
+		}
+		&_about {
+			flex-direction: column;
+			&-card {
+				position: relative;
+				&:nth-child(2) {
+					border-left: 0.5rem solid #000;
+					border-right: 0.5rem solid #000;
+				}
+				&:nth-child(1) {
+					border-bottom: none;
+				}
+				&:nth-child(3) {
+					border-top: none;
+				}
+			}
+			&-image {
+				height: 90vw;
+			}
+			&-info {
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: 1;
+				color: #fff;
+				display: flex;
+				justify-content: center;
+				align-items: flex-start;
+				flex-direction: column;
+				height: 100%;
+			}
+		}
+		&_process {
+			flex-direction: column;
+			&-header {
+				width: 100%;
+				font-size: 4.8rem;
+			}
+			&-steps {
+				width: 100%;
+			}
+		}
+	}
+	#about-branding {
+		background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+			url('../images/branding.jpg');
+	}
+	#about-survey {
+		background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+			url('../images/survey.jpg');
+	}
+	#about-service {
+		background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+			url('../images/clock.jpg');
+	}
+}
 
+@media screen and (max-width: 500px) {
+	.homepage {
+		&_banner {
+			&-header {
+				font-size: 4.5rem;
+			}
+		}
+		&_intro {
+			&-info {
+				font-size: 1.8rem;
+			}
+		}
+		&_about {
+			&-info {
+				padding: 4rem;
+				& h4 {
+					font-size: 2.2rem;
+					margin: 0;
+				}
+				& p {
+					font-size: 1.8rem;
+				}
+			}
+		}
+		&_process {
+			&-header {
+				font-size: 3.5rem;
+			}
+			&-steps p {
+				font-size: 1.8rem;
+				margin-bottom: 1.5rem;
+			}
+		}
+	}
+}

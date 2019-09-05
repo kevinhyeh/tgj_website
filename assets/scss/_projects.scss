@@ -1,10 +1,10 @@
 .projects {
 	&_banner {
 		background-image: url('../images/main-pic.jpg');
-    background-repeat: no-repeat;
+		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center;
-    background-attachment: fixed;
+		background-attachment: fixed;
 		height: 75rem;
 		display: flex;
 		justify-content: center;
@@ -76,7 +76,7 @@
 			&-title {
 				color: #fff;
 				text-decoration: underline;
-				background-color: rgba(0,0,0,0.3);
+				background-color: rgba(0, 0, 0, 0.3);
 				padding: 2rem 0;
 			}
 		}
@@ -84,7 +84,7 @@
 			overflow: hidden;
 			width: 48%;
 			height: 350px;
-			transition: .3s all;
+			transition: 0.3s all;
 			position: relative;
 			&:hover .projects_sec-client {
 				opacity: 1;
@@ -92,7 +92,7 @@
 			&:hover .projects_sec-image {
 				filter: brightness(50%);
 				transform: scale(1.1);
-				border-radius: .3rem;
+				border-radius: 0.3rem;
 			}
 			&:nth-child(odd) {
 				margin-right: 4%;
@@ -103,7 +103,7 @@
 			text-decoration: none;
 		}
 		&-image {
-			border-radius: .3rem;
+			border-radius: 0.3rem;
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -112,24 +112,24 @@
 			background-repeat: no-repeat;
 			height: 350px;
 			width: 100%;
-			transition: .3s all;
+			transition: 0.3s all;
 		}
 		&-client {
 			position: absolute;
 			top: 50%;
 			left: 50%;
-			transform: translate(-50%,-50%);
+			transform: translate(-50%, -50%);
 			color: #fff;
 			font-size: 3rem;
 			text-align: center;
 			padding: 0 2rem;
 			opacity: 0;
-			transition: .3s all;
+			transition: 0.3s all;
 			z-index: 100;
 			width: 90%;
 		}
 		#stories {
-		 	background-image: url('../images/projects/project-1/project-1-bg.jpg');
+			background-image: url('../images/projects/project-1/project-1-bg.jpg');
 		}
 		#forest {
 			background-image: url('../images/projects/project-3/project-3-bg.jpg');
@@ -159,7 +159,7 @@
 		}
 		&-title {
 			text-align: left;
-			font-size: 5rem;
+			font-size: 4vw;
 			margin: 0;
 			line-height: 1;
 		}
@@ -169,7 +169,7 @@
 			background-size: cover;
 			background-position: center;
 			background-repeat: no-repeat;
-			border-radius: .5rem;
+			border-radius: 0.5rem;
 			margin: 0 1.3vw 2vw 1.3vw;
 		}
 		#illustration_1 {
@@ -200,25 +200,24 @@
 	perspective: 150rem;
 	-moz-perspective: 150rem;
 	position: relative;
-	height: 45rem;
-	width: 35rem;
-	
+	height: 28vw;
+	width: 24%;
+
 	&:not(:last-child) {
-		margin-right: 5rem;
+		margin-right: 2%;
 	}
 
 	&_side {
-		border-radius: .5rem;
-		height: 45rem;
-		width: 35rem;
+		border-radius: 0.5rem;
+		height: 28vw;
+		width: 100%;
 		color: #fff;
 		font-size: 2.8rem;
 		text-align: center;
-		transition: .5s all ease;
+		transition: 0.5s all ease;
 		position: absolute;
 		top: 0;
 		left: 0;
-		width: 100%;
 		backface-visibility: hidden;
 
 		&-front {
@@ -234,7 +233,12 @@
 		}
 
 		&-back {
-			background-image: linear-gradient(0deg,rgba(0,0,0,0.5	), rgba(0,0,0,0.5	)), url('../images/tgj_retro-text-flip.jpg');
+			background-image: linear-gradient(
+					0deg,
+					rgba(0, 0, 0, 0.5),
+					rgba(0, 0, 0, 0.5)
+				),
+				url('../images/tgj_retro-text-flip.jpg');
 			background-size: cover;
 			background-position: center;
 			background-repeat: no-repeat;
@@ -349,5 +353,91 @@
 	}
 	100% {
 		background-image: url('../images/contact-1.jpg');
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.projects {
+		&_banner {
+			height: 45rem;
+			padding-top: 12rem;
+			&-image {
+				width: 10rem;
+			}
+			&-secondary {
+				font-size: 6rem;
+				margin: 0;
+			}
+		}
+		&_sec {
+			&-box,
+			&-image {
+				height: 39.5vw;
+			}
+			&-client {
+				font-size: 2rem;
+			}
+		}
+	}
+	.card-flip {
+		width: 32%;
+		height: 36vw;
+		&_side {
+			height: 36vw;
+			font-size: 2.2rem;
+		}
+	}
+	.insert {
+		height: 20rem;
+		width: 1rem;
+	}
+}
+@media screen and (max-width: 500px) {
+	.projects {
+		&_banner {
+			padding-top: 16rem;
+			&-secondary {
+				font-size: 3rem;
+			}
+			&-image {
+				width: 5rem;
+			}
+		}
+		&_sec {
+			&-title {
+				font-size: 2.6rem;
+			}
+		}
+		&_tgj {
+			padding: 5rem 0;
+			&-container {
+				flex-direction: column;
+			}
+			&-title {
+				font-size: 3.5rem;
+			}
+			&-header {
+				padding-left: 5rem;
+				margin: 0;
+			}
+			&-image {
+				width: 90%;
+				height: 270px;
+				margin: 1rem auto;
+			}
+		}
+	}
+	.card-flip {
+		width: 48%;
+		height: 52vw;
+		&_side {
+			height: 52vw;
+			font-size: 1.6rem;
+		}
+	}
+	.insert {
+		height: 11rem;
+		width: 0.5rem;
+		margin: 0 2rem;
 	}
 }

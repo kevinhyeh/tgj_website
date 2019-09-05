@@ -1,10 +1,11 @@
 .faq {
 	padding: 15rem 10rem 5rem;
-	background: linear-gradient(to bottom,rgb(210, 184, 158) 0%, #F9F2DF 10%);
+	background: linear-gradient(to bottom, rgb(210, 184, 158) 0%, #f9f2df 10%);
 	display: flex;
 	justify-content: center;
 	align-items: flex-start;
-	&_questions, &_contact {
+	&_questions,
+	&_contact {
 		width: 48%;
 	}
 	&_questions {
@@ -28,16 +29,52 @@
 	text-align: center;
 }
 .card {
-	border: none!important;
-	width: 100%!important;
+	border: none !important;
+	width: 100% !important;
 	background-color: transparent;
 }
 .card-header {
-	background-color: transparent!important;
-	border-bottom: .2rem solid #000;
+	background-color: transparent !important;
+	border-bottom: 0.2rem solid #000;
 	margin-bottom: 2rem;
 }
 .card-body {
-	font-size: 2rem!important;
-	text-align: justify!important;
+	font-size: 2rem !important;
+	text-align: justify !important;
+}
+
+@media screen and (max-width: 900px) {
+	.faq {
+		flex-direction: column;
+		padding: 5rem 8rem;
+		&_questions,
+		&_contact {
+			width: 100%;
+		}
+		&_questions {
+			margin: 0 0 5rem;
+		}
+		&-header {
+			margin: 0 auto 3rem;
+		}
+	}
+	.faq .btn-link {
+		font-size: 2rem !important;
+	}
+}
+@media screen and (max-width: 500px) {
+	.faq {
+		padding: 3rem;
+		&-header {
+			line-height: 1.5;
+			font-size: 3rem;
+		}
+	}
+	.faq .btn-link {
+		font-size: 1.5rem !important;
+		padding: 0;
+	}
+	.card-body {
+		font-size: 1.4rem !important;
+	}
 }

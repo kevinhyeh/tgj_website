@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
@@ -19,7 +20,7 @@ $primary-blue: #1be5ea;
 $primary-orange: #eaa04b;
 $primary-gold: #f3c953;
 $primary-white: #fff;
-$primary-off-white: rgba(0,0,0,0.05);
+$primary-off-white: rgba(0, 0, 0, 0.05);
 $secondary-blue: #19c7cd;
 $bg-blue: #0098ff;
 $primary-font-reg: 'montserratlight';
@@ -32,64 +33,70 @@ $regular-size: 3rem;
 $secondary-size: 2.5rem;
 @font-face {
 	font-family: 'britannic_boldregular';
-  src: url('../custom_fonts/britannic_bold_regular-webfont.woff2') format('woff2'), url('britannic_bold_regular-webfont.woff') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'montserratbold';
-  src: url('../custom_fonts/montserrat-bold-webfont.woff2') format('woff2'), url('montserrat-bold-webfont.woff') format('woff');
-  font-weight: normal;
+	src: url('../custom_fonts/britannic_bold_regular-webfont.woff2')
+			format('woff2'),
+		url('britannic_bold_regular-webfont.woff') format('woff2');
+	font-weight: normal;
 	font-style: normal;
-}	
-@font-face {
-  font-family: 'montserratregular';
-  src: url('../custom_fonts/montserrat-regular-webfont.woff2') format('woff2'), url('montserrat-regular-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
 }
 @font-face {
-  font-family: 'montserratlight';
-  src: url('../custom_fonts/montserrat-light-webfont.woff2') format('woff2'), url('montserrat-light-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+	font-family: 'montserratbold';
+	src: url('../custom_fonts/montserrat-bold-webfont.woff2') format('woff2'),
+		url('montserrat-bold-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
 }
 @font-face {
-  font-family: 'montserratthin';
-  src: url('../custom_fonts/montserrat-thin-webfont.woff2') format('woff2'), url('montserrat-thin-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+	font-family: 'montserratregular';
+	src: url('../custom_fonts/montserrat-regular-webfont.woff2') format('woff2'),
+		url('montserrat-regular-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'montserratlight';
+	src: url('../custom_fonts/montserrat-light-webfont.woff2') format('woff2'),
+		url('montserrat-light-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'montserratthin';
+	src: url('../custom_fonts/montserrat-thin-webfont.woff2') format('woff2'),
+		url('montserrat-thin-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
 }
 // GRID variables
 $grid-width: 124rem;
 $gutter-vertical: 8rem;
 $gutter-horizontal: 6rem;
 @keyframes fadeIn {
-  from {
-    opacity: 0;
+	from {
+		opacity: 0;
 	}
 	to {
-    opacity: 1;
+		opacity: 1;
 	}
 }
 .bold {
-  font-family: $primary-font-bold!important;
+	font-family: $primary-font-bold !important;
 }
 .italic {
-  font-style: italic;
+	font-style: italic;
 }
 .color-blue {
-	color: $primary-blue!important;
+	color: $primary-blue !important;
 }
 .hidden {
-	display: none!important;
+	display: none !important;
 }
 .tu {
-	text-transform: uppercase!important;
+	text-transform: uppercase !important;
 }
 .group {
 	width: 90%;
-  margin: auto;
+	margin: auto;
 }
 .insert {
 	height: 30rem;
@@ -99,28 +106,28 @@ $gutter-horizontal: 6rem;
 	margin: 0 5rem;
 }
 h3 {
-  font-size: 10rem;
-  font-weight: bold;
-  font-family: $primary-font-semi;
-  text-align: center;
-  margin-bottom: 5rem;
+	font-size: 10rem;
+	font-weight: bold;
+	font-family: $primary-font-semi;
+	text-align: center;
+	margin-bottom: 5rem;
 }
 .email {
-  text-decoration: underline;
+	text-decoration: underline;
 }
 .banner {
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  background-color: rgba(0,0,0,.5);
-  transform: translate(-50%, -50%);
-  animation: fadeIn 1s;
-  z-index: 1000;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	background-color: rgba(0, 0, 0, 0.5);
+	transform: translate(-50%, -50%);
+	animation: fadeIn 1s;
+	z-index: 1000;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	align-items: center;
 
 	&-button {
@@ -139,51 +146,46 @@ h3 {
 	}
 }
 %background-image {
-  background-size: cover;
-  background-position: center;
-  filter: grayscale(10%);
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -10;
+	background-size: cover;
+	background-position: center;
+	filter: grayscale(10%);
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -10;
 }
 %center-img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 // clearing floats
 @mixin clearfix {
-  &:after {
-    content: "";
-    display: table;
-    clear: both;
+	&:after {
+		content: '';
+		display: table;
+		clear: both;
 	}
 }
 @mixin design-button {
-  .start-design {
-    display: block;
+	.start-design {
+		display: block;
 		border-radius: 4.3rem;
-    background-color: #f3c953;
-    border: none;
-    color: #fff;
-    font-size: 1.8rem;
-    text-transform: uppercase;
-    padding: .3rem;
-    padding: 1rem 2rem;
-    transition: .3s all;
-    cursor: pointer;
-    margin: auto;
-    font-family: "montserratregular";
-	}
-	@media screen and (max-width: 500px) {
-		width: 14rem;
-		height: 3.2rem;
+		background-color: #f3c953;
+		border: none;
+		color: #fff;
 		font-size: 1.8rem;
+		text-transform: uppercase;
+		padding: 0.3rem;
+		padding: 1rem 2rem;
+		transition: 0.3s all;
+		cursor: pointer;
+		margin: auto;
+		font-family: 'montserratregular';
 	}
 	.start-design span {
 		cursor: pointer;
@@ -199,7 +201,7 @@ h3 {
 		right: -1rem;
 		transition: 0.5s;
 		font-size: 2rem;
-    line-height: 1;
+		line-height: 1;
 	}
 	.start-design:hover span {
 		padding-right: 1.8rem;
@@ -213,6 +215,12 @@ h3 {
 	}
 }
 
+@media screen and (max-width: 500px) {
+	.design-button a .start-design {
+		font-size: 1.4rem;
+	}
+}
+
 @import '_navbar';
 @import '_homepage';
 @import '_footer';
@@ -221,4 +229,4 @@ h3 {
 @import '_client-pages';
 @import '_policies';
 @import '_about';
-@import "_faq";
+@import '_faq';

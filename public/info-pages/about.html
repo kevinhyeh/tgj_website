@@ -20,24 +20,64 @@
   <body>
     <!-- navigation bar -->
     <header>
+			<input class="nav-checkbox" hidden id="nav-hamburger" type="checkbox"/>
 			<nav class="nav">
-				<a href="../../index.html" class="nav_brand">
-					<img src="../../assets/svg/tgj_new_logo(white).svg" class="nav_brand-logo" alt="tgj_logo">
-					<h1 class="nav_brand-name">the<span>graphic</span>jar</h1>
-				</a>
-				<div class="nav-icon">
-					<i class="fa fa-bars"></i>
-				</div>
-				<div class="design-button" id="nav-button">
-					<a href="../../contact.html">
-						<button class="start-design"><span>Contact Us</span></button>
+				<div class="nav_mobile">
+					<a class="nav_brand" href="../../index.html">
+						<img
+							alt="tgj_logo"
+							class="nav_brand-logo"
+							src="../../assets/svg/tgj_new_logo.svg"
+						/>
+						<h1 class="nav_brand-name">the<span>graphic</span>jar</h1>
 					</a>
+					<label class="nav-icon" for="nav-hamburger">
+						<i class="fa fa-bars"></i>
+					</label>
+					<div class="nav_mobile-elements">
+						<ul class="nav-links">
+							<li>
+								<a href="../../index.html">Home</a>
+							</li>
+							<li>
+								<a href="../../projects.html">Projects</a>
+							</li>
+							<li>
+								<a href="../../contact.html">Contact</a>
+							</li>
+						</ul>
+					</div>
 				</div>
-				<ul class="nav-links">
-					<li><a href="../../index.html">Home</a></li>
-					<li><a href="../../projects.html">Projects</a></li>
-					<li><a href="../../contact.html">Contact</a></li>
-				</ul>
+				<div class="nav-desktop">
+					<a class="nav_brand" href="../../index.html">
+						<img
+							alt="tgj_logo"
+							class="nav_brand-logo"
+							src="../../assets/svg/tgj_new_logo(white).svg"
+						/>
+						<h1 class="nav_brand-name">the<span>graphic</span>jar</h1>
+					</a>
+					<div class="design-button-container">
+						<div class="design-button" id="nav-button">
+							<a href="../../contact.html">
+								<button class="start-design">
+									<span>Contact Us</span>
+								</button>
+							</a>
+						</div>
+					</div>
+					<ul class="nav-links">
+						<li>
+							<a href="../../index.html">Home</a>
+						</li>
+						<li>
+							<a href="../../projects.html">Projects</a>
+						</li>
+						<li>
+							<a href="../../contact.html">Contact</a>
+						</li>
+					</ul>
+				</div>
 			</nav>
     </header>
     <main class="about">
@@ -71,15 +111,12 @@
 					</div>
 					<label class="about_people-christina-image" for="about-christina">
 						<img src="../../assets/images/Christina_pic.jpg" alt="Christina Sayegh">
+						<p class="about_people-click tu">Click Me</p>
 						<div class="about_people-christina-bg"></div>
 					</label>
 				</div>
 				<div class="about_people-kevin">
 					<input type="checkbox" id="about-kevin" hidden>
-						<label class="about_people-kevin-image" for="about-kevin">
-							<img src="../../assets/images/Kevin_pic.jpg" alt="Kevin Yeh" for="about-kevin">
-							<div class="about_people-kevin-bg"></div>
-						</label>
 						<div class="about_people-kevin-info">
 							<div class="about_people-kevin-name">
 								<p class="tu bold">Kevin Yeh</p>
@@ -92,6 +129,11 @@
 								<li class="tu bold">Fav. Food: Fried Rice</li>
 							</ul>
 						</div>
+						<label class="about_people-kevin-image" for="about-kevin">
+							<img src="../../assets/images/Kevin_pic.jpg" alt="Kevin Yeh" for="about-kevin">
+							<p class="about_people-click tu">Click Me</p>
+							<div class="about_people-kevin-bg"></div>
+						</label>
 				</div>
 			</section>
     </main>

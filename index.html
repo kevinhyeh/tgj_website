@@ -2,191 +2,292 @@
 <html>
   <head>
     <title>The Graphic Jar</title>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"/>
     <!-- favicon -->
-    <link rel="shortcut icon" type="image/ico" href="assets/favicon/favicon.ico"/>
+    <link href="assets/favicon/favicon.ico" rel="shortcut icon" type="image/ico"/>
     <!-- <meta http-equiv="refresh" content="5"> -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet"/>
     <!-- External CSS -->
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css"/>
     <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
   </head>
   <body>
     <!-- navigation bar -->
     <header>
+      <input class="nav-checkbox" hidden id="nav-hamburger" type="checkbox"/>
       <nav class="nav">
-				<a href="index.html" class="nav_brand">
-					<img src="assets/svg/tgj_new_logo(white).svg" class="nav_brand-logo" alt="tgj_logo">
-					<h1 class="nav_brand-name">the<span>graphic</span>jar</h1>
-				</a>
-        <div class="nav-icon">
-          <i class="fa fa-bars"></i>
+        <div class="nav_mobile">
+          <a class="nav_brand" href="index.html">
+            <img alt="tgj_logo" class="nav_brand-logo" src="assets/svg/tgj_new_logo.svg"/>
+            <h1 class="nav_brand-name">the<span>graphic</span>jar</h1>
+          </a>
+          <label class="nav-icon" for="nav-hamburger">
+            <i class="fa fa-bars"></i>
+          </label>
+          <div class="nav_mobile-elements">
+            <ul class="nav-links">
+              <li>
+                <a class="active" href="index.html">Home</a>
+              </li>
+              <li>
+                <a href="projects.html">Projects</a>
+              </li>
+              <li>
+                <a href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="design-button" id="nav-button">
-					<a href="contact.html">
-						<button class="start-design"><span>Contact Us</span></button>
-					</a>
+        <div class="nav-desktop">
+          <a class="nav_brand" href="index.html">
+            <img alt="tgj_logo" class="nav_brand-logo" src="assets/svg/tgj_new_logo(white).svg"/>
+            <h1 class="nav_brand-name">the<span>graphic</span>jar</h1>
+          </a>
+          <div class="design-button-container">
+            <div class="design-button" id="nav-button">
+              <a href="contact.html">
+                <button class="start-design">
+                  <span>Contact Us</span>
+                </button>
+              </a>
+            </div>
+          </div>
+          <ul class="nav-links">
+            <li>
+              <a class="active" href="index.html">Home</a>
+            </li>
+            <li>
+              <a href="projects.html">Projects</a>
+            </li>
+            <li>
+              <a href="contact.html">Contact</a>
+            </li>
+          </ul>
         </div>
-				<ul class="nav-links">
-					<li><a class="active" href="index.html">Home</a></li>
-					<li><a href="projects.html">Projects</a></li>
-					<li><a href="contact.html">Contact</a></li>
-				</ul>
       </nav>
     </header>
     <!-- welcome section -->
-		<main class="homepage">
-			<section class="homepage_banner">
-				<div class="homepage_banner-text">
-					<h2 class="homepage_banner-header">Create designs fun
-						 and effortlessly.</h2>
-					<p class="homepage_banner-minor"><span class="color-blue">The Graphic Jar</span> is here to turn your ideas into reality.</p>
-					<div class="design-button" id="intro-button">
-						<a href="contact.html">
-							<button class="start-design"><span>Contact Us</span></button>
-						</a>
-					</div>
-				</div>
-			</section>
-			<!-- who are we -->
-			<section class="homepage_intro">
-				<div class="homepage_intro-header">
-					Better designs to better your business.
-					<a href="public/info-pages/about.html" class="learn-more tu">Get to know us</a>
-				</div>
-				<div class="homepage_intro-desc">
-					<p class="homepage_intro-title">Easy. Fun. Unique.</p>
-					<p class="homepage_intro-info">We pride ourselves in creating genuine designs and relationships with you. You are more than just your brand and we want to get to know what made you start your company, what inspires and motivates you. This way we can create designs that stay true to who you are and will speak of the essence of your brand.</p>
-				</div>
-			</section>
-			<!-- why we are different -->
-			<section class="homepage_about">
-				<div class="homepage_about-card">
-					<div class="homepage_about-image" id="about-branding"></div>
-					<div class="homepage_about-info">
-						<h4><span class="homepage_about-header">Branding</span>Is Our Niche</h4>
-						<p>Want to make your company stand out? We are filled with new ideas and are itching to create something special for you.</p>
-					</div>
-				</div>
-				<div class="homepage_about-card">
-					<div class="homepage_about-image" id="about-survey"></div>
-					<div class="homepage_about-info">
-						<h4><span class="homepage_about-header">Custom</span>Design Survey</h4>
-						<p>We have created a one of kind survey that is effortless for you and detailed for us. Why make simple complicated?</p>
-						<p class="tu bold">(Coming Soon!)</p>
-					</div>
-				</div>
-				<div class="homepage_about-card">
-					<div class="homepage_about-image" id="about-service"></div>
-					<div class="homepage_about-info">
-						<h4><span class="homepage_about-header">Continuous</span>Full Service</h4>
-						<p>Customer first is our motto. We pride ourselves on our turn around time as well as our quality of work.</p>
-					</div>
-				</div>
-			</section>
-			<!-- 3 step process -->
-			<section class="homepage_process">
-				<p class="homepage_process-header bold">How to Create Your Project Easily</p>
-				<div class="homepage_process-steps">
-					<p class="homepage_process-title">Create a project with TGJ's free project builder in 5 easy steps.</p>
-					<p class="homepage_process-step">1. Starting a project with us is easy. Just click on "Start Design" up top to begin.</p>
-					<p class="homepage_process-step">2. We have several projects for you to pick from. If there's something you need but we don't have, just choose the "other" option.</p>
-					<p class="homepage_process-step">3. Customize your project by choosing how complex you'd like it as well as the color scheme if you have one. Don't worry, it's optional.</p>
-					<p class="homepage_process-step">4. Add some information about the project and yourself. We'd like to know as much information as we can to give you the best possible experience.</p>
-					<p class="homepage_process-step">5. Once you submit then you're done. You can also add more projects if needed. Some of your information will still be there so you don't have to re-type them.</p>
-				</div>
-			</section>
-			<!-- client showcase slide show -->
-			<section class="testimonial">
-				<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="false">
-					<ol class="carousel-indicators">
-						<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-						<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-						<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-					</ol>
-					<div class="carousel-inner">
-						<div class="carousel-item active mb-5">
-							<div class="container">
-								<div class="row">
-									<div class="col-lg-5">
-										<img class="d-block w-100" src="assets/images/carousel4.png" alt="First slide">
-									</div>
-									<div class="col-lg-7 my-auto ml-0">
-										<p class="clients">Tell Their Stories</p>
-										<p class="comment">"Tell their Stories is a multi-media project that aims to give a voice to individuals who have been affected by mass incarceration."</p>
-										<p class="author">- Marie-Pier Frigon, Founder</p>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="carousel-item mb-5">
-							<div class="container">
-								<div class="row">
-									<div class="col-lg-5">
-										<img class="d-block w-100" src="assets/images/carousel5.png" alt="Second slide">
-									</div>
-									<div class="col-lg-7 my-auto ml-0">
-										<p class="clients">Gusto di Roma</p>
-										<p class="comment">"Eating authentic Italian food at home can be simple. I personally select a variety of ready-to-eat small bites and mail flavors of Italy to you once a month."</p>
-										<p class="author">- Matthew De Bellis, Founder</p>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="carousel-item mb-5">
-							<div class="container">
-								<div class="row">
-									<div class="col-lg-5">
-										<img class="d-block w-100" src="assets/images/carousel2.png" alt="Third slide">
-									</div>
-									<div class="col-lg-7 my-auto ml-0">
-										<p class="clients">The Forest Floor</p>
-										<p class="comment">The Forest Floor wanted a logo that represents their brand and had the similar feel to the National Forest Sign that we all know and love.</p>
-										<p class="author">- The Graphic Jar</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-						<span class="sr-only">Previous</span>
-					</a>
-					<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-						<span class="carousel-control-next-icon" aria-hidden="true"></span>
-						<span class="sr-only">Next</span>
-					</a>
-				</div>
-			</section>
-		</main>
+    <main class="homepage">
+      <section class="homepage_banner">
+        <div class="homepage_banner-text">
+          <h2 class="homepage_banner-header">
+            Create designs fun and effortlessly.
+          </h2>
+          <p class="homepage_banner-minor">
+            <span class="color-blue">The Graphic Jar</span>
+            is here to turn your ideas into reality.
+          </p>
+          <div class="design-button" id="intro-button">
+            <a href="contact.html">
+              <button class="start-design">
+                <span>Contact Us</span>
+              </button>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- who are we -->
+      <section class="homepage_intro">
+        <div class="homepage_intro-header">
+          Better designs to better your business.
+          <a class="learn-more tu" href="public/info-pages/about.html">Get to know us</a>
+        </div>
+        <div class="homepage_intro-desc">
+          <p class="homepage_intro-title">Easy. Fun. Unique.</p>
+          <p class="homepage_intro-info">
+            We pride ourselves in creating genuine designs and relationships with you. You are more than just your brand and we want to get to
+                                                                                                            						know what made you start your company, what inspires and motivates
+                                                                                                            						you. This way we can create designs that stay true to who you are
+                                                                                                            						and will speak of the essence of your brand.
+          </p>
+        </div>
+      </section>
+      <!-- why we are different -->
+      <section class="homepage_about">
+        <div class="homepage_about-card">
+          <div class="homepage_about-image" id="about-branding"></div>
+          <div class="homepage_about-info">
+            <h4>
+              <span class="homepage_about-header">Branding</span>Is Our Niche
+            </h4>
+            <p>
+              Want to make your company stand out? We are filled with new ideas
+                                                                                                                              							and are itching to create something special for you.
+            </p>
+          </div>
+        </div>
+        <div class="homepage_about-card">
+          <div class="homepage_about-image" id="about-survey"></div>
+          <div class="homepage_about-info">
+            <h4>
+              <span class="homepage_about-header">Custom</span>Design Survey
+            </h4>
+            <p>
+              We have created a one of kind survey that is effortless for you
+                                                                                                                              							and detailed for us. Why make simple complicated?
+            </p>
+            <p class="tu bold">(Coming Soon!)</p>
+          </div>
+        </div>
+        <div class="homepage_about-card">
+          <div class="homepage_about-image" id="about-service"></div>
+          <div class="homepage_about-info">
+            <h4>
+              <span class="homepage_about-header">Continuous</span>Full Service
+            </h4>
+            <p>
+              Customer first is our motto. We pride ourselves on our turn around
+                                                                                                                              							time as well as our quality of work.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- 3 step process -->
+      <section class="homepage_process">
+        <p class="homepage_process-header bold">
+          How to Create Your Project Easily
+        </p>
+        <div class="homepage_process-steps">
+          <p class="homepage_process-title">
+            Create a project with TGJ's free project builder in 5 easy steps.
+          </p>
+          <p class="homepage_process-step">
+            1. Starting a project with us is easy. Just click on "Start Design"
+                                                                                                            						up top to begin.
+          </p>
+          <p class="homepage_process-step">
+            2. We have several projects for you to pick from. If there's
+                                                                                                            						something you need but we don't have, just choose the "other"
+                                                                                                            						option.
+          </p>
+          <p class="homepage_process-step">
+            3. Customize your project by choosing how complex you'd like it as
+                                                                                                            						well as the color scheme if you have one. Don't worry, it's
+                                                                                                            						optional.
+          </p>
+          <p class="homepage_process-step">
+            4. Add some information about the project and yourself. We'd like to
+                                                                                                            						know as much information as we can to give you the best possible
+                                                                                                            						experience.
+          </p>
+          <p class="homepage_process-step">
+            5. Once you submit then you're done. You can also add more projects
+                                                                                                            						if needed. Some of your information will still be there so you don't
+                                                                                                            						have to re-type them.
+          </p>
+        </div>
+      </section>
+      <!-- client showcase slide show -->
+      <section class="testimonial">
+        <div class="carousel slide" data-interval="false" data-ride="carousel" id="carouselExampleIndicators">
+          <ol class="carousel-indicators">
+            <li class="active" data-slide-to="0" data-target="#carouselExampleIndicators"></li>
+            <li data-slide-to="1" data-target="#carouselExampleIndicators"></li>
+            <li data-slide-to="2" data-target="#carouselExampleIndicators"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active mb-5">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-5">
+                    <img alt="First slide" class="d-block w-100" src="assets/images/carousel4.png"/>
+                  </div>
+                  <div class="col-lg-7 my-auto ml-0">
+                    <p class="clients">Tell Their Stories</p>
+                    <p class="comment">
+                      "Tell their Stories is a multi-media project that aims to
+                                                                                                                                                                                                      											give a voice to individuals who have been affected by mass
+                                                                                                                                                                                                      											incarceration."
+                    </p>
+                    <p class="author">- Marie-Pier Frigon, Founder</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item mb-5">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-5">
+                    <img alt="Second slide" class="d-block w-100" src="assets/images/carousel5.png"/>
+                  </div>
+                  <div class="col-lg-7 my-auto ml-0">
+                    <p class="clients">Gusto di Roma</p>
+                    <p class="comment">
+                      "Eating authentic Italian food at home can be simple. I
+                                                                                                                                                                                                      											personally select a variety of ready-to-eat small bites
+                                                                                                                                                                                                      											and mail flavors of Italy to you once a month."
+                    </p>
+                    <p class="author">- Matthew De Bellis, Founder</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item mb-5">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-5">
+                    <img alt="Third slide" class="d-block w-100" src="assets/images/carousel2.png"/>
+                  </div>
+                  <div class="col-lg-7 my-auto ml-0">
+                    <p class="clients">The Forest Floor</p>
+                    <p class="comment">
+                      The Forest Floor wanted a logo that represents their brand
+                                                                                                                                                                                                      											and had the similar feel to the National Forest Sign that
+                                                                                                                                                                                                      											we all know and love.
+                    </p>
+                    <p class="author">- The Graphic Jar</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="carousel-control-prev" data-slide="prev" href="#carouselExampleIndicators" role="button">
+            <span aria-hidden="true" class="carousel-control-prev-icon"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" data-slide="next" href="#carouselExampleIndicators" role="button">
+            <span aria-hidden="true" class="carousel-control-next-icon"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </section>
+    </main>
     <footer class="footer">
-			<div class="footer-info">
-				<img class="footer-image" src="assets/svg/tgj_new_logo(white).svg">
-				<ul class="footer-list">
-					<li class="footer-list-link"><a href="public/info-pages/about.html">About Us</a></li>
-					<li class="footer-list-link"><a href="public/info-pages/policies.html">TGJ Policies</a></li>
-					<li class="footer-list-link"><a href="public/info-pages/faq.html">More FAQ</a></li>
-					<li class="footer-list-link"><a href="contact.html">Contact Us</a></li>
-				</ul>
-				<div class="footer-social">
-					<a href="https://www.facebook.com/thegraphicjar/" target="_blank">
-						<img src="assets/svg/facebook-logo.svg" alt="facebook logo">
-					</a>
-					<a href="https://www.instagram.com/thegraphicjar/?hl=en" target="_blank">
-						<img src="assets/svg/instagram.svg" alt="instagram">
-					</a>
-				</div>
-			</div>
+      <div class="footer-info">
+        <img class="footer-image" src="assets/svg/tgj_new_logo(white).svg"/>
+        <ul class="footer-list">
+          <li class="footer-list-link">
+            <a href="public/info-pages/about.html">About Us</a>
+          </li>
+          <li class="footer-list-link">
+            <a href="public/info-pages/policies.html">TGJ Policies</a>
+          </li>
+          <li class="footer-list-link">
+            <a href="public/info-pages/faq.html">More FAQ</a>
+          </li>
+          <li class="footer-list-link">
+            <a href="contact.html">Contact Us</a>
+          </li>
+        </ul>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/thegraphicjar/" target="_blank">
+            <img alt="facebook logo" src="assets/svg/facebook-logo.svg"/>
+          </a>
+          <a href="https://www.instagram.com/thegraphicjar/?hl=en" target="_blank">
+            <img alt="instagram" src="assets/svg/instagram.svg"/>
+          </a>
+        </div>
+      </div>
     </footer>
     <!-- Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script crossorigin="anonymous" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script crossorigin="anonymous" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script crossorigin="anonymous" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- javascript file -->
-    <script type="text/javascript" src="assets/js/javascript.js"></script>
+    <script src="assets/js/javascript.js" type="text/javascript"></script>
   </body>
 </html>
